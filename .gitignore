@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Temp & build files
+tmp/
+.DS_Store
+**/.DS_Store
+
+# Sub projects managed in separate repositories
+BusinessWeb/

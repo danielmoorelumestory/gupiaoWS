@@ -1,0 +1,11 @@
+code,名称,URL,抓取时间,行数,起,止
+H00300,沪深300全收益,https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00300&startDate=20080101&endDate=20260930,2026-10-05T19:22:36,4559,2008-01-01,2026-09-30
+H00922,中证红利全收益,https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00922&startDate=20080101&endDate=20260930,2026-10-05T19:22:44,4559,2008-01-01,2026-09-30
+H00905,中证500全收益,https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00905&startDate=20080101&endDate=20260930,2026-10-05T19:22:52,4559,2008-01-01,2026-09-30
+000300,沪深300（价格，用于对照）,https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000300&startDate=20080101&endDate=20260930,2026-10-05T19:22:58,4558,2008-01-01,2026-09-30
+000922,中证红利（价格，用于对照）,https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000922&startDate=20080101&endDate=20260930,2026-10-05T19:23:04,4559,2008-01-01,2026-09-30
+sz399606,创业板R（全收益）,"https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz399606,day,<年>-01-01,<年>-12-31,800,qfq",2026-10-05T19:24:18,3967,2010-06-02,2026-09-30
+^SP500TR,标普500全收益（美元）,https://query1.finance.yahoo.com/v8/finance/chart/%5ESP500TR?period1=1199145600&period2=1759363200&interval=1d,2026-10-05T19:24:19,4466,2008-01-02,2025-10-01
+^GSPC,标普500价格（美元，用于对照）,https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1199145600&period2=1759363200&interval=1d,2026-10-05T19:24:19,4466,2008-01-02,2025-10-01
+^SP500TR,标普500全收益（美元）（重抓：修正截止日）,https://query1.finance.yahoo.com/v8/finance/chart/%5ESP500TR?period1=1199145600&period2=1790899200&interval=1d,2026-10-05T19:24:31,4717,2008-01-02,2026-10-01
+^GSPC,标普500价格（美元，用于对照）（重抓：修正截止日）,https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1199145600&period2=1790899200&interval=1d,2026-10-05T19:24:31,4717,2008-01-02,2026-10-01

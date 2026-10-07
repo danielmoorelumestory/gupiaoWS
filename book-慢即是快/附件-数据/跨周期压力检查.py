@@ -1,0 +1,47 @@
+"""已有数据下的人民币双资产代理检查；不代表第9章五项组合，不含股票分红和产品成本。"""
+import csv
+from bisect import bisect_right
+from pathlib import Path
+ROOT=Path(__file__).resolve().parent
+series={}
+for code in ['sh000300','sh000012']:
+ with (ROOT/(code+'.csv')).open() as f:
+  series[code]={d:float(v) for d,v in list(csv.reader(f))[1:]}
+rows=[]
+for start,end in [('2008-01-02','2008-12-31'),('2015-01-05','2015-12-31'),('2018-01-02','2019-12-31'),('2022-01-04','2022-12-30')]:
+ days=sorted(set(series['sh000300'])|set(series['sh000012']))
+ days=[d for d in days if start<=d<=end]
+ values={}
+ for code,s in series.items():
+  keys=sorted(s); aligned=[]
+  for day in days:
+   idx=bisect_right(keys,day)-1
+   assert idx>=0
+   aligned.append(s[keys[idx]])
+  values[code]=[x/aligned[0] for x in aligned]
+ portfolio=[.5*a+.5*z for a,z in zip(values['sh000300'],values['sh000012'])]
+ peak=portfolio[0]; drawdown=0
+ for value in portfolio:
+  peak=max(peak,value); drawdown=max(drawdown,1-value/peak)
+ assert abs(portfolio[-1]-(sum(v[-1] for v in values.values())/2))<1e-12
+ rows.append(f"| {days[0]}—{days[-1]} | {(values['sh000300'][-1]-1)*100:+.2f}% | {(values['sh000012'][-1]-1)*100:+.2f}% | {(portfolio[-1]-1)*100:+.2f}% | {drawdown*100:.2f}% |")
+report='''# 跨周期压力检查：双资产代理，不是原五项组合
+
+核算日期：2026-10-03。为检验更长区间下的亏损路径，使用本地沪深300与上证国债指数各50%的双资产代理，期初一次投入、区间内不再平衡，无新增本金、无提款。不按结果优化权重。
+
+它不含黄金、境外股票、恒生科技或主动个股，不能证明第9章五项组合的跨周期效果。权益为价格指数，不含股息；国债指数公式含全价、利息及再投资收益。未计基金跟踪差异、交易费用和税费。
+
+| 实际估值窗口 | 沪深300价格累计变化 | 上证国债累计变化 | 双资产累计变化 | 双资产窗口内最大回撤 |
+|---|---:|---:|---:|---:|
+'''+ '\n'.join(rows)+'''
+
+收益以窗口首个估值日收盘为基准，因此不是包含首日涨跌的完整自然年收益。日期并集估值，休市沿用最后可用值；回撤从窗口初始点追踪峰值，非整个历史的最大回撤。2018—2019一行包含两个年度，累计收益与期间最大回撤须分开读。
+
+双资产结果缓冲了本样本中的部分权益跌幅，仍会亏损；它不能验证所有组合在危机中都安全。需要原五项组合的跨周期测试时，应先取得同币种全收益数据，披露回填资产的选择、可得日期及交易条件，并进行不同权重和窗口的敏感性检查。
+
+历史价格没有同时给出林家的工资路径。市场下跌叠加失业由第7章与附录H单独做合成现金流压力，不能把它标成2008年真实家庭经历。
+
+复现：运行附件-数据/跨周期压力检查.py；输入为sh000300.csv与sh000012.csv，输出覆盖本文件。数据来源为本地腾讯接口日线，仍须与指数机构序列交叉核对，算式通过不代表原始数据已全面验证。
+'''
+(ROOT/'跨周期压力检查.md').write_text(report)
+print(report)
