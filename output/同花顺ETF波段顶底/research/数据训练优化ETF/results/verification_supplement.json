@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "metrics": 16,
+  "trades": 240,
+  "daily_nav": 9168,
+  "max_error": 4.9960036108132044e-15,
+  "use": "frozen-parameter transfer only; excluded from training, selection and primary test pool"
+}

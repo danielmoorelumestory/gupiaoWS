@@ -1,0 +1,89 @@
+{
+  "status": "no_joint_win_rate_and_annual_advantage_over_MACD_supported",
+  "primary_compromise": {
+    "target": "full",
+    "label": "compromise",
+    "id": "e6ecc034065e",
+    "config": {
+      "entry": "E2",
+      "exit": "X2",
+      "ma": 10,
+      "n": 9,
+      "lo": 20,
+      "macd": [
+        12,
+        26,
+        9
+      ],
+      "hi": null,
+      "cap": null,
+      "wait": 5
+    },
+    "qualified": true,
+    "descriptive_only": false,
+    "validation_stats": {
+      "etfs": 48,
+      "wr_supported_etfs": 48,
+      "annual_etfs": 47,
+      "wr_eq": 0.38391550579050576,
+      "pooled_wr": 0.35844155844155845,
+      "cagr_med": -0.03692231529107926,
+      "cagr_mean": -0.0381411187323533,
+      "mdd_med": -0.20513867159135252,
+      "natural": 385,
+      "entries": 393,
+      "natural_fraction": 0.9796437659033079,
+      "one_trade_coverage": 1.0,
+      "wr_coverage": 1.0,
+      "trades_per_year": 4.3078531384983,
+      "max_etf_trade_share": 0.033766233766233764,
+      "total_etf_years": 89.37166324435319
+    },
+    "rank_score": 0.6666666666666666
+  },
+  "prelocked_annual_candidate": {
+    "target": "full",
+    "label": "annual_leader",
+    "id": "825cd1230879",
+    "config": {
+      "entry": "E1",
+      "exit": "X3",
+      "ma": 10,
+      "n": 9,
+      "lo": 30,
+      "macd": [
+        16,
+        35,
+        9
+      ],
+      "hi": 70,
+      "cap": null,
+      "wait": null
+    },
+    "qualified": true,
+    "descriptive_only": false,
+    "validation_stats": {
+      "etfs": 48,
+      "wr_supported_etfs": 48,
+      "annual_etfs": 47,
+      "wr_eq": 0.3502645502645503,
+      "pooled_wr": 0.3465346534653465,
+      "cagr_med": -0.03394688218870253,
+      "cagr_mean": -0.04319597550923247,
+      "mdd_med": -0.2166568472686664,
+      "natural": 303,
+      "entries": 312,
+      "natural_fraction": 0.9711538461538461,
+      "one_trade_coverage": 1.0,
+      "wr_coverage": 1.0,
+      "trades_per_year": 3.3903363661428174,
+      "max_etf_trade_share": 0.033003300330033,
+      "total_etf_years": 89.37166324435319
+    },
+    "rank_score": 0.5
+  },
+  "roles_not_changed_using_test": true,
+  "good_specialist_promoted": false,
+  "headline": "B raises observed win rate and median annual return slightly versus USER, but annual CI crosses0; A/B annual returns below pureMACD and HOLD",
+  "parameters_are_research_candidates_not_official_indicator_changes": true
+}

@@ -1,0 +1,21 @@
+{
+  "selection_lock_sha256": "721b0c733b0231aab4201bb54c6fce04fe61557c77b3b96cad5e1d9fadd48cef",
+  "source_hashes": {
+    "engine.py": "d9c971cb75a636241125b81aae3c4709f035e8524635047d77ed37023a1d62c1",
+    "grid.py": "a7b1680e114021330217752e7f3e9bba690101fb37e78817a36327efc14225c0",
+    "search.py": "eb93facbd17e6dab12e7633533a3a18bd885df9daf1626788d1b82aca054cf88",
+    "protocol.json": "5f3572dc5c9e54bace1769dba58115806f15065411506dde92d1e442b31be566",
+    "implementation_choices.json": "60403a952400ba0ef2e88e00f8e89557b8fa64f7360be435b6f04f4054acc728"
+  },
+  "configs_tested": [
+    "e6ecc034065e",
+    "825cd1230879",
+    "d94a863f367d",
+    "b744c5f64edc",
+    "HOLD",
+    "MA10",
+    "MACD",
+    "USER"
+  ],
+  "selection_from_test": false
+}
