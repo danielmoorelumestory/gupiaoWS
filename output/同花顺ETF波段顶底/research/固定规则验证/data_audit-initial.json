@@ -1,0 +1,363 @@
+{
+  "prepared_at_utc": "2026-11-13T11:08:10.091617+00:00",
+  "protocol_sha256": "619121e24afad79ca1e57b01b5cec01fa8742485303035c0c00b182e367cd69b",
+  "data_design_sha256": "fe745286d5055df3ddf934c27776b69e3119833b7b75848566461a47e3f6a76f",
+  "symbols": [
+    {
+      "code": "159915",
+      "label": "创业板",
+      "group": "A股成长",
+      "provider_name": "创业板ETF易方达",
+      "rows": 3620,
+      "first": "2011-12-09",
+      "last": "2026-11-10",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "factor_mismatch_count": 0,
+      "factor_max_abs_difference": "0",
+      "factor_mismatches": [],
+      "sources": [
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=0.159915&klt=101&fqt=0&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=0.159915&klt=101&fqt=2&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://finance.sina.com.cn/realstock/company/sz159915/hfq.js"
+      ],
+      "status": "eligible",
+      "normalized_sha256": "aaa31c9f3b5c8d70954bc97d8214ae1a187feb97798974e8f049aae2d2ace583",
+      "normalized_file": "data/159915.csv.gz"
+    },
+    {
+      "code": "510300",
+      "label": "沪深300",
+      "group": "A股宽基",
+      "provider_name": "沪深300ETF华泰柏瑞",
+      "rows": 3512,
+      "first": "2012-05-28",
+      "last": "2026-11-10",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2012-12-18",
+          "1.0000000000000000",
+          "0.0330000000000000"
+        ],
+        [
+          "2014-01-21",
+          "1.0000000000000000",
+          "0.0810000000000000"
+        ],
+        [
+          "2015-01-20",
+          "1.0000000000000000",
+          "0.1160000000000000"
+        ],
+        [
+          "2016-01-20",
+          "1.0000000000000000",
+          "0.1670000000000000"
+        ],
+        [
+          "2017-01-23",
+          "1.0000000000000000",
+          "0.2220000000000000"
+        ],
+        [
+          "2018-01-23",
+          "1.0000000000000000",
+          "0.2680000000000000"
+        ],
+        [
+          "2019-01-16",
+          "1.0000000000000000",
+          "0.3270000000000000"
+        ],
+        [
+          "2019-12-11",
+          "1.0000000000000000",
+          "0.3890000000000000"
+        ],
+        [
+          "2021-01-18",
+          "1.0000000000000000",
+          "0.4610000000000000"
+        ],
+        [
+          "2022-01-19",
+          "1.0000000000000000",
+          "0.5360000000000000"
+        ],
+        [
+          "2023-01-16",
+          "1.0000000000000000",
+          "0.6000000000000000"
+        ],
+        [
+          "2024-01-18",
+          "1.0000000000000000",
+          "0.6690000000000000"
+        ],
+        [
+          "2025-06-18",
+          "1.0000000000000000",
+          "0.7570000000000000"
+        ],
+        [
+          "2026-01-19",
+          "1.0000000000000000",
+          "0.8800000000000000"
+        ]
+      ],
+      "factor_mismatch_count": 0,
+      "factor_max_abs_difference": "0",
+      "factor_mismatches": [],
+      "sources": [
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=1.510300&klt=101&fqt=0&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=1.510300&klt=101&fqt=2&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://finance.sina.com.cn/realstock/company/sh510300/hfq.js"
+      ],
+      "status": "eligible",
+      "normalized_sha256": "861253bce3b76cfdee7384792475da3a1faff0e2ff11f3cbe28cf3572e2ef571",
+      "normalized_file": "data/510300.csv.gz"
+    },
+    {
+      "code": "510500",
+      "label": "中证500",
+      "group": "A股宽基",
+      "status": "data_error",
+      "error": "ValueError: 累积因子非单调，须人工审查：{'d': '2015-04-15', 'f': '1', 's': '0.2803248300000000', 'u': '0.0000000000000000'}"
+    },
+    {
+      "code": "510880",
+      "label": "上证红利",
+      "group": "A股红利",
+      "provider_name": "红利ETF华泰柏瑞",
+      "rows": 4091,
+      "first": "2010-01-04",
+      "last": "2026-11-10",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2009-03-24",
+          "1.0000000000000000",
+          "0.0240000000000000"
+        ],
+        [
+          "2009-10-22",
+          "1.0000000000000000",
+          "0.0470000000000000"
+        ],
+        [
+          "2010-07-15",
+          "1.0000000000000000",
+          "0.0670000000000000"
+        ],
+        [
+          "2010-10-22",
+          "1.0000000000000000",
+          "0.0880000000000000"
+        ],
+        [
+          "2011-10-24",
+          "1.0000000000000000",
+          "0.1230000000000000"
+        ],
+        [
+          "2012-12-18",
+          "1.0000000000000000",
+          "0.1640000000000000"
+        ],
+        [
+          "2014-01-21",
+          "1.0000000000000000",
+          "0.2230000000000000"
+        ],
+        [
+          "2015-01-20",
+          "1.0000000000000000",
+          "0.3030000000000000"
+        ],
+        [
+          "2016-01-20",
+          "1.0000000000000000",
+          "0.3530000000000000"
+        ],
+        [
+          "2017-01-23",
+          "1.0000000000000000",
+          "0.4440000000000000"
+        ],
+        [
+          "2018-01-23",
+          "1.0000000000000000",
+          "0.5530000000000000"
+        ],
+        [
+          "2019-01-16",
+          "1.0000000000000000",
+          "0.6510000000000000"
+        ],
+        [
+          "2020-01-17",
+          "1.0000000000000000",
+          "0.7950000000000000"
+        ],
+        [
+          "2021-01-18",
+          "1.0000000000000000",
+          "0.9360000000000000"
+        ],
+        [
+          "2022-01-17",
+          "1.0000000000000000",
+          "1.0220000000000000"
+        ],
+        [
+          "2023-01-16",
+          "1.0000000000000000",
+          "1.1600000000000000"
+        ],
+        [
+          "2024-01-23",
+          "1.0000000000000000",
+          "1.2910000000000000"
+        ],
+        [
+          "2025-01-21",
+          "1.0000000000000000",
+          "1.4330000000000000"
+        ],
+        [
+          "2026-01-21",
+          "1.0000000000000000",
+          "1.5760000000000000"
+        ]
+      ],
+      "factor_mismatch_count": 0,
+      "factor_max_abs_difference": "0",
+      "factor_mismatches": [],
+      "sources": [
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=1.510880&klt=101&fqt=0&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=1.510880&klt=101&fqt=2&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://finance.sina.com.cn/realstock/company/sh510880/hfq.js"
+      ],
+      "status": "eligible",
+      "normalized_sha256": "c036f59b02d036d50ed4df8edd32b5e384a8082a2546d09a572120476c6d296d",
+      "normalized_file": "data/510880.csv.gz"
+    },
+    {
+      "code": "511010",
+      "label": "国债",
+      "group": "债券",
+      "status": "data_error",
+      "error": "RuntimeError: Remote end closed connection without response"
+    },
+    {
+      "code": "512480",
+      "label": "半导体",
+      "group": "A股行业",
+      "status": "data_error",
+      "error": "RuntimeError: Remote end closed connection without response"
+    },
+    {
+      "code": "512660",
+      "label": "军工",
+      "group": "A股行业",
+      "status": "data_error",
+      "error": "RuntimeError: Remote end closed connection without response"
+    },
+    {
+      "code": "513100",
+      "label": "纳斯达克100",
+      "group": "跨境股票",
+      "status": "data_error",
+      "error": "RuntimeError: Remote end closed connection without response"
+    },
+    {
+      "code": "518880",
+      "label": "黄金",
+      "group": "商品",
+      "provider_name": "黄金ETF华安",
+      "rows": 3229,
+      "first": "2013-07-29",
+      "last": "2026-11-10",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "factor_mismatch_count": 0,
+      "factor_max_abs_difference": "0",
+      "factor_mismatches": [],
+      "sources": [
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=1.518880&klt=101&fqt=0&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=1.518880&klt=101&fqt=2&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://finance.sina.com.cn/realstock/company/sh518880/hfq.js"
+      ],
+      "status": "eligible",
+      "normalized_sha256": "62156c62eeffa911509b91a0d9afbcce86f523f676b1abe9750efe42ae7d7e97",
+      "normalized_file": "data/518880.csv.gz"
+    },
+    {
+      "code": "588000",
+      "label": "科创50",
+      "group": "A股成长，已见过同指数样本",
+      "provider_name": "科创50ETF华夏",
+      "rows": 1451,
+      "first": "2020-11-16",
+      "last": "2026-11-10",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "factor_mismatch_count": 0,
+      "factor_max_abs_difference": "0",
+      "factor_mismatches": [],
+      "sources": [
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=1.588000&klt=101&fqt=0&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=1.588000&klt=101&fqt=2&beg=20100101&end=20261110&lmt=100000&fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61",
+        "https://finance.sina.com.cn/realstock/company/sh588000/hfq.js"
+      ],
+      "status": "eligible",
+      "normalized_sha256": "8001e8a4e90b22fbe041eea2aeacaec5ef36c9e22a3fb03e59901ecdacbc8f9b",
+      "normalized_file": "data/588000.csv.gz"
+    }
+  ],
+  "raw_file_sha256": {
+    "data/raw/159915-em-0.json.gz": "806833351a8897ded30344d9e48a99bd11b80a6b0113b2c8855a73a6dd8f14ac",
+    "data/raw/159915-em-2.json.gz": "a3d0bd8b9068b095a68510532d1394b43a490fcbb53a58487c16beb88646f834",
+    "data/raw/159915-sina-factors.js.gz": "5adeda50d9c7fea68910732208d71df928ed0d27748d39e1071a777affcd6ddb",
+    "data/raw/510300-em-0.json.gz": "49766dbc8b34ee901cb0280bc67d20416e9755ff8dd62329cb23d60e658b1d9c",
+    "data/raw/510300-em-2.json.gz": "20f5ede11248e1a18ae30644523c0b3cb98d8cafa6892315db638de2da3031c9",
+    "data/raw/510300-sina-factors.js.gz": "64a5b9fe31037e06ae1622cc4fa6a3159c98f6ddd0771959709923b608fefaad",
+    "data/raw/510500-em-0.json.gz": "9ddc2221ab8224603f264e049d37d07ce641df65f3f14a412db248a0b802adbc",
+    "data/raw/510500-em-2.json.gz": "48358244460982e153ce5a014a9e3143a759046435125ce6c6097e81b1116538",
+    "data/raw/510500-sina-factors.js.gz": "38fe29e7e12eb07baf57657315079004fdc10c9db6193f31997e3e2350acf67e",
+    "data/raw/510880-em-0.json.gz": "ba4f6ea70840f4100b51077caaecb86f5edc6a58037a25783af2c66e07ff834e",
+    "data/raw/510880-em-2.json.gz": "d62a244b33369eb5db6023a9fec9182f20b0f8ad800fa51200fa1fb04faf02ca",
+    "data/raw/510880-sina-factors.js.gz": "b34335d47f95c3719f74c69aa1f221eab80582dbf67614291b89eeb71e641a23",
+    "data/raw/513100-em-0.json.gz": "a7805efad995bb9a63ee20661e6af1c97c999e94a71149f16b359f5d4547ef56",
+    "data/raw/518880-em-0.json.gz": "011b225ee7a2cfab077cac7d5325a66c2c2dc694ab6eca26bff272e583dfcaca",
+    "data/raw/518880-em-2.json.gz": "efe9f03cbaba83d33e92a33d11f4a9e0f25e8375c988f3ccdd963de0464009c7",
+    "data/raw/518880-sina-factors.js.gz": "a1a5ad1e66d7dfd9414f87b78290c2f961b909e8f7ab7da58a067ee4654a5a71",
+    "data/raw/588000-em-0.json.gz": "169378e0e1a0c8a7ca3a4a1651fb2ec7a89112613494b77613bbad58b084667e",
+    "data/raw/588000-em-2.json.gz": "4bf09b4ec5bb40e85bace7a239f8cfa88c1f93d065d8e9385452f5f022c95cd8",
+    "data/raw/588000-sina-factors.js.gz": "701710260883d9b98c0ccb04b656ec7c8e5dc42c95f9e46902118b4291cca730"
+  }
+}

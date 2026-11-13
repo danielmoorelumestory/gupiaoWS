@@ -132,6 +132,80 @@ def calculate_rows(rows: list[dict], period: int = PERIOD) -> list[dict]:
              "zone": zone(value)} for day, r, value in zip(dates, rows, values)]
 
 
+def explain_rows(rows: list[dict], period: int = PERIOD) -> list[dict]:
+    """增加变化来源；核心读数沿用 calculate_rows，不改变原版公式。
+
+    贡献统一按“先移出过期变化、再加入当前变化”分解，单位为指标点。
+    比值非线性，此分解不是唯一因果归因；中间零分母时不强行分配贡献。
+    normalized_close_movement=A/(period*C)，不是 ATR 或收益率标准差。
+    """
+    readings = calculate_rows(rows, period)
+    prices = [_price(r["close"]) for r in rows]
+    changes = [None] + [b-a if a is not None and b is not None else None
+                        for a, b in zip(prices, prices[1:])] if prices else []
+
+    def parts(i):
+        if i < period:
+            return None
+        window = changes[i-period+1:i+1]
+        if any(x is None for x in window):
+            return None
+        return sum((max(x, Decimal(0)) for x in window), Decimal(0)), sum(
+            (max(-x, Decimal(0)) for x in window), Decimal(0))
+
+    result = []
+    for i, reading in enumerate(readings):
+        incoming = changes[i]
+        outgoing = changes[i-period] if i > period else None
+        current, previous = parts(i), parts(i-1)
+        up, down = current if current is not None else (None, None)
+        absolute = up+down if current is not None else None
+        net = up-down if current is not None else None
+        expiry_effect = incoming_effect = difference = None
+        status = "无完整前后窗口"
+        if current is not None and previous is not None and sum(current) and sum(previous):
+            prev_up, prev_down = previous
+            before = 100*prev_up/(prev_up+prev_down)
+            after = 100*up/absolute
+            difference = after-before
+            remaining_up = prev_up-max(outgoing, Decimal(0))
+            remaining_down = prev_down-max(-outgoing, Decimal(0))
+            if remaining_up+remaining_down:
+                middle = 100*remaining_up/(remaining_up+remaining_down)
+                expiry_effect, incoming_effect = middle-before, after-middle
+                status = "已分解：先移出、后加入"
+            else:
+                status = "移出后零波动，贡献未定义"
+        mechanism = "无完整变化比较"
+        if difference is not None and incoming is not None:
+            if difference > 0 and incoming <= 0:
+                mechanism = "价格未涨而指标回升，移出项占优"
+            elif difference < 0 and incoming >= 0:
+                mechanism = "价格未跌而指标回落，移出项占优"
+            elif difference == 0:
+                mechanism = "指标不变"
+            else:
+                mechanism = "价格与指标同向；仍须查看两项贡献"
+        prev_value = readings[i-1]["value"] if i else None
+        value = reading["value"]
+        comparable = value is not None and prev_value is not None
+        cross_up = comparable and prev_value < LOW_LINE <= value
+        number = lambda x: None if x is None else float(x)
+        result.append({**reading, "incoming_change": number(incoming),
+                       "outgoing_change": number(outgoing), "up_sum": number(up),
+                       "down_sum": number(down), "absolute_move_sum": number(absolute),
+                       "net_change": number(net), "normalized_close_movement":
+                       number(absolute/(period*prices[i])) if absolute is not None else None,
+                       "value_change_points": number(difference),
+                       "expiry_contribution_points": number(expiry_effect),
+                       "incoming_contribution_points": number(incoming_effect),
+                       "decomposition_status": status, "mechanism": mechanism,
+                       "cross_below_30": bool(comparable and prev_value >= LOW_LINE > value),
+                       "cross_above_30": bool(cross_up), "cross_above_30_price_up":
+                       bool(cross_up and incoming is not None and incoming > 0)})
+    return result
+
+
 def _save(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = None
@@ -140,7 +214,7 @@ def _save(path: Path, payload: dict) -> None:
                                          dir=path.parent, delete=False) as stream:
             temporary = Path(stream.name)
             if path.suffix.lower() == ".csv":
-                writer = csv.DictWriter(stream, fieldnames=["date", "close", "value", "display_value", "zone"],
+                writer = csv.DictWriter(stream, fieldnames=list(payload["rows"][0]),
                                         lineterminator="\n")
                 writer.writeheader()
                 writer.writerows(payload["rows"])
@@ -159,6 +233,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--symbol", help="腾讯标的，例如 sh588060；文件只有一只时可省略")
     parser.add_argument("--period", type=int, default=PERIOD, help="默认已核验周期 13；其他周期未核验")
     parser.add_argument("--output", type=Path, help="导出全序列，.csv 为表格，其他后缀为 JSON")
+    parser.add_argument("--explain", action="store_true", help="同时显示当日/移出变化、波动尺度和固定顺序贡献")
     args = parser.parse_args(argv)
     try:
         if args.output and args.input.resolve() == args.output.resolve():
@@ -166,11 +241,14 @@ def main(argv: list[str] | None = None) -> int:
         rows, source = load_prices(args.input, args.symbol)
         if not rows:
             raise ValueError("行情输入为空")
-        readings = calculate_rows(rows, args.period)
+        readings = (explain_rows if args.explain else calculate_rows)(rows, args.period)
         payload = {"indicator": "ETF波段顶底", "formula_version": FORMULA_VERSION,
                    "provenance": "截图核验复现，非官方源码", **source,
                    "period": args.period, "high_line": HIGH_LINE, "low_line": LOW_LINE,
                    "final_bar_confirmed": False, "latest": readings[-1], "rows": readings}
+        if args.explain:
+            payload["explanation_version"] = "1.0.0"
+            payload["decomposition_order"] = "先移出过期变化，后加入当前变化；不是唯一因果归因"
         if args.output:
             _save(args.output, payload)
         print(json.dumps({k: v for k, v in payload.items() if k != "rows"},

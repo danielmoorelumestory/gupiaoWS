@@ -15,6 +15,10 @@ def percentage(value, digits=2):
     return "—" if value is None or value == "" else f"{float(value)*100:+.{digits}f}%"
 
 
+def points(value):
+    return "—" if value is None or value == "" else f"{float(value)*100:+.3f}个百分点"
+
+
 def main():
     summary = json.loads((ROOT / "results/summary.json").read_text())
     audit = json.loads((ROOT / "data_audit.json").read_text())
@@ -29,8 +33,8 @@ def main():
     lines = ["# ETF波段顶底：固定三规则事件研究", "",
              "研究结果，不是真实交易记录，也不是完整仓位策略的收益回测。原13周期公式未改。", "",
              "## 主结果", "", interpretation, "",
-             f"预定10日持有、往返10基点成本的B+减B，按共同ETF等权：**{percentage(summary['primary_equal_weight_delta'], 3)}**（单次事件收益差，百分比数字之差为百分点）。",
-             f"日期块自助法区间：**{percentage(ci['ci_low'], 3)} 至 {percentage(ci['ci_high'], 3)}**；改善方向的ETF **{summary['primary_positive_etfs']}/{summary['primary_common_etfs']}**。",
+             f"预定10日持有、往返10基点成本的B+减B，按共同ETF等权：**{points(summary['primary_equal_weight_delta'])}**（单次事件收益差）。",
+             f"95%日期块自助法区间：**{points(ci['ci_low'])} 至 {points(ci['ci_high'])}**；改善方向的ETF **{summary['primary_positive_etfs']}/{summary['primary_common_etfs']}**。",
              "该区间描述历史抽样不确定性，不是未来收益或真实样本外有效性的保证。", "",
              "## 先固定的方案与输入", "",
              "- 方案在计算策略结果前写入protocol.json并提交Git：81faf38；周期13和阈值30不寻优。",
@@ -58,7 +62,7 @@ def main():
             lines.append(f"|{r['rule']}|{r['common_etfs']}|{r['events']}|{percentage(r['equal_weight_mean_net'])}|{percentage(r['equal_weight_mean_net_excess'])}|{percentage(r['equal_weight_win_rate'])}|{percentage(r['equal_weight_mean_mae'])}|")
     lines += ["", "|ETF|B事件|B+事件|B净均值|B+净均值|差额|", "|---|---:|---:|---:|---:|---:|"]
     for r in primary:
-        lines.append(f"|{r['code']} {r['label']}|{r['B_events']}|{r['B_plus_events']}|{percentage(r['B_mean_net'])}|{percentage(r['B_plus_mean_net'])}|{percentage(r['delta_mean_net'])}|")
+        lines.append(f"|{r['code']} {r['label']}|{r['B_events']}|{r['B_plus_events']}|{percentage(r['B_mean_net'])}|{percentage(r['B_plus_mean_net'])}|{points(r['delta_mean_net'])}|")
     lines += ["", "## 同一批B事件中，上涨条件实际剔除了什么", "",
               "该表在已经去重的B事件中分组，避免把B+独立去重引入的新事件混入过滤解释；仅为描述性检查。", "",
               "|ETF|B事件|保留|剔除|保留毛收益均值|剔除毛收益均值|", "|---|---:|---:|---:|---:|---:|"]

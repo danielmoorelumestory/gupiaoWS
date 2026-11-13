@@ -2,7 +2,7 @@
 import unittest
 from pathlib import Path
 
-from bruce_replica.etf_band import calculate_rows, etf_band, load_prices, zone
+from bruce_replica.etf_band import calculate_rows, etf_band, explain_rows, load_prices, zone
 
 ARCHIVE = Path(__file__).resolve().parents[3] / "同花顺ETF波段顶底"
 
@@ -56,6 +56,37 @@ class EtfBandTests(unittest.TestCase):
         self.assertEqual(zone(30), "中间区")
         self.assertEqual(zone(70), "中间区")
         self.assertEqual(zone(None), "无有效值")
+
+    def test_explanation_keeps_verified_values_and_explains_expiry(self):
+        rows, _ = load_prices(ARCHIVE / "evidence/tencent-588060.json")
+        plain, explained = calculate_rows(rows), explain_rows(rows)
+        self.assertEqual([r["value"] for r in plain], [r["value"] for r in explained])
+        last = explained[-1]
+        self.assertAlmostEqual(last["incoming_change"], -0.016)
+        self.assertAlmostEqual(last["outgoing_change"], -0.036)
+        self.assertAlmostEqual(last["expiry_contribution_points"], 6.209209475645462)
+        self.assertAlmostEqual(last["incoming_contribution_points"], -2.9406092234386523)
+        self.assertIn("价格未涨", last["mechanism"])
+        for r in explained:
+            if r["expiry_contribution_points"] is not None:
+                self.assertAlmostEqual(r["value_change_points"], r["expiry_contribution_points"]
+                                       + r["incoming_contribution_points"], places=11)
+
+    def test_explanation_does_not_invent_intermediate_zero_denominator(self):
+        rows = [{"date": f"2026-01-{i+1:02d}", "close": c}
+                for i, c in enumerate([1, 2, 2, 3])]
+        last = explain_rows(rows, 2)[-1]
+        self.assertEqual(last["value"], 100)
+        self.assertIsNone(last["expiry_contribution_points"])
+        self.assertIn("零波动", last["decomposition_status"])
+
+    def test_explanation_respects_missing_values_and_prefix_causality(self):
+        rows = [{"date": f"2026-01-{i+1:02d}", "close": c}
+                for i, c in enumerate([1, 2, 1, None, 2, 3, 4])]
+        explained = explain_rows(rows, 2)
+        self.assertIsNone(explained[5]["value"])
+        self.assertEqual(explained[6]["value"], 100)
+        self.assertEqual(explain_rows(rows[:6], 2), explained[:6])
 
 
 if __name__ == "__main__":

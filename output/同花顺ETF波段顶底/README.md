@@ -6,7 +6,7 @@
 可调用实现已加入现有 Python 指标包：[etf_band.py](../布鲁斯的金融宝藏/replica/bruce_replica/etf_band.py)。
 它是本项目新增的同花顺指标，不属于布鲁斯视频中公开的指标。
 
-原理与使用改进的讨论见 [Codex / Claude 整合结论](research/原理与优化-整合结论.md)。目前只讨论数学机制与待检验假设，尚未进行收益回测，没有修改已核验的原版公式。
+原理讨论见 [Codex / Claude 整合结论](research/原理与优化-整合结论.md)。现已加入变化解释，并完成 [首轮固定三规则事件研究](research/固定规则验证/结果报告.md)：9只通过数据审查的ETF，主口径未支持把“重返30且当天上涨”升级为默认规则。原13周期公式未改；事件研究不是完整仓位策略回测。
 
 ## 核心计算
 
@@ -62,6 +62,11 @@ python3 output/布鲁斯的金融宝藏/replica/bruce_replica/etf_band.py \
   --input output/同花顺ETF波段顶底/evidence/tencent-588060.json \
   --symbol sh588060 \
   --output /tmp/etf-band.csv
+
+# 解释为什么价格下跌、指标却回升；可同时保存CSV或JSON
+python3 output/布鲁斯的金融宝藏/replica/bruce_replica/etf_band.py \
+  --input output/同花顺ETF波段顶底/evidence/tencent-588060.json \
+  --explain
 ```
 
 在 `output/布鲁斯的金融宝藏/replica/` 中也可以：
@@ -85,6 +90,20 @@ df["etf_band"] = values
 日期必须严格升序，价格必须为有限正数；`None` / CSV 空值会中断窗口。
 CLI 默认打印最后一根读数，`--output` 可保存全序列；CSV 的 `value` 保留计算精度，`display_value` 才保留三位小数。
 计算函数支持自定义周期，但只有默认 13 周期经过本次核验。
+
+## 变化解释与规则标记
+
+`--explain` 或 Python 的 `explain_rows(rows)` 增加解释字段，原来的 `value` 不变：
+
+- `incoming_change` / `outgoing_change`：当前进入和移出窗口的价格变化。
+- `expiry_contribution_points` / `incoming_contribution_points`：先移出、再加入的固定顺序分解，单位为指标点。它不是唯一因果归因；中间零分母时返回空值，不填造贡献。
+- `normalized_close_movement`：`A/(13*C)` 的归一化收盘波动尺度，不能当作ATR或收益率标准差。
+- `mechanism`：例如“价格未涨而指标回升，移出项占优”。
+- `cross_below_30` / `cross_above_30` / `cross_above_30_price_up`：研究用事件标记，不是已经验证有效的买卖指令。
+
+[完整解释示例](examples/588060-20261113-explained.json) 的末根：移出项贡献约 `+6.209` 点，当前价格贡献约 `-2.941` 点，合计 `+3.269` 点。最后仍显示 `53.115`。
+
+固定规则的方案、原始输入、分红/份额口径、事件表和离线复算方法见 [研究目录](research/固定规则验证/README.md)。历史留出段是回顾验证，尚无真正新数据的前向确认；不据此更换原公式或继续挑选参数。
 
 ## 未验证的边界与项目选择
 
