@@ -1,0 +1,269 @@
+{
+  "thresholds": {
+    "ser": 0.04431856888743114,
+    "cross60": 9.0,
+    "width60": 0.2238238377218862
+  },
+  "checks": [
+    {
+      "code": "sh000300",
+      "filter": "base",
+      "nav_error": 3.774758283725532e-15
+    },
+    {
+      "code": "sh000300",
+      "filter": "F1",
+      "nav_error": 1.1102230246251565e-15
+    },
+    {
+      "code": "sh000300",
+      "filter": "F2",
+      "nav_error": 3.4416913763379853e-15
+    },
+    {
+      "code": "sh000300",
+      "filter": "F3",
+      "nav_error": 1.5543122344752192e-15
+    },
+    {
+      "code": "sh000300",
+      "filter": "F4",
+      "nav_error": 2.220446049250313e-15
+    },
+    {
+      "code": "sh000300",
+      "filter": "F5",
+      "nav_error": 7.771561172376096e-16
+    },
+    {
+      "code": "sh000300",
+      "seeded_adx_error": 0.0,
+      "F4_changed": 0
+    },
+    {
+      "code": "sh000001",
+      "filter": "base",
+      "nav_error": 2.55351295663786e-15
+    },
+    {
+      "code": "sh000001",
+      "filter": "F1",
+      "nav_error": 3.3306690738754696e-15
+    },
+    {
+      "code": "sh000001",
+      "filter": "F2",
+      "nav_error": 3.3306690738754696e-15
+    },
+    {
+      "code": "sh000001",
+      "filter": "F3",
+      "nav_error": 2.1094237467877974e-15
+    },
+    {
+      "code": "sh000001",
+      "filter": "F4",
+      "nav_error": 1.9984014443252818e-15
+    },
+    {
+      "code": "sh000001",
+      "filter": "F5",
+      "nav_error": 1.3322676295501878e-15
+    },
+    {
+      "code": "sh000001",
+      "seeded_adx_error": 0.0,
+      "F4_changed": 0
+    },
+    {
+      "code": "sh000905",
+      "filter": "base",
+      "nav_error": 3.9968028886505635e-15
+    },
+    {
+      "code": "sh000905",
+      "filter": "F1",
+      "nav_error": 1.5543122344752192e-15
+    },
+    {
+      "code": "sh000905",
+      "filter": "F2",
+      "nav_error": 1.887379141862766e-15
+    },
+    {
+      "code": "sh000905",
+      "filter": "F3",
+      "nav_error": 1.6653345369377348e-15
+    },
+    {
+      "code": "sh000905",
+      "filter": "F4",
+      "nav_error": 1.2212453270876722e-15
+    },
+    {
+      "code": "sh000905",
+      "filter": "F5",
+      "nav_error": 1.2212453270876722e-15
+    },
+    {
+      "code": "sh000905",
+      "seeded_adx_error": 0.0,
+      "F4_changed": 0
+    },
+    {
+      "code": "sh000016",
+      "filter": "base",
+      "nav_error": 3.774758283725532e-15
+    },
+    {
+      "code": "sh000016",
+      "filter": "F1",
+      "nav_error": 5.88418203051333e-15
+    },
+    {
+      "code": "sh000016",
+      "filter": "F2",
+      "nav_error": 4.440892098500626e-15
+    },
+    {
+      "code": "sh000016",
+      "filter": "F3",
+      "nav_error": 1.9984014443252818e-15
+    },
+    {
+      "code": "sh000016",
+      "filter": "F4",
+      "nav_error": 3.552713678800501e-15
+    },
+    {
+      "code": "sh000016",
+      "filter": "F5",
+      "nav_error": 1.1102230246251565e-15
+    },
+    {
+      "code": "sh000016",
+      "seeded_adx_error": 0.0,
+      "F4_changed": 0
+    },
+    {
+      "code": "sh000852",
+      "filter": "base",
+      "nav_error": 2.6645352591003757e-15
+    },
+    {
+      "code": "sh000852",
+      "filter": "F1",
+      "nav_error": 1.7763568394002505e-15
+    },
+    {
+      "code": "sh000852",
+      "filter": "F2",
+      "nav_error": 2.886579864025407e-15
+    },
+    {
+      "code": "sh000852",
+      "filter": "F3",
+      "nav_error": 3.552713678800501e-15
+    },
+    {
+      "code": "sh000852",
+      "filter": "F4",
+      "nav_error": 2.55351295663786e-15
+    },
+    {
+      "code": "sh000852",
+      "filter": "F5",
+      "nav_error": 1.9984014443252818e-15
+    },
+    {
+      "code": "sh000852",
+      "seeded_adx_error": 9.569924230845572e-08,
+      "F4_changed": 0
+    },
+    {
+      "code": "sz399006",
+      "filter": "base",
+      "nav_error": 2.4424906541753444e-15
+    },
+    {
+      "code": "sz399006",
+      "filter": "F1",
+      "nav_error": 5.329070518200751e-15
+    },
+    {
+      "code": "sz399006",
+      "filter": "F2",
+      "nav_error": 5.329070518200751e-15
+    },
+    {
+      "code": "sz399006",
+      "filter": "F3",
+      "nav_error": 1.887379141862766e-15
+    },
+    {
+      "code": "sz399006",
+      "filter": "F4",
+      "nav_error": 2.7755575615628914e-15
+    },
+    {
+      "code": "sz399006",
+      "filter": "F5",
+      "nav_error": 1.9984014443252818e-15
+    },
+    {
+      "code": "sz399006",
+      "seeded_adx_error": 0.0,
+      "F4_changed": 0
+    },
+    {
+      "code": "sh000688",
+      "filter": "base",
+      "nav_error": 2.6645352591003757e-15
+    },
+    {
+      "code": "sh000688",
+      "filter": "F1",
+      "nav_error": 1.4432899320127035e-15
+    },
+    {
+      "code": "sh000688",
+      "filter": "F2",
+      "nav_error": 2.6645352591003757e-15
+    },
+    {
+      "code": "sh000688",
+      "filter": "F3",
+      "nav_error": 3.9968028886505635e-15
+    },
+    {
+      "code": "sh000688",
+      "filter": "F4",
+      "nav_error": 5.551115123125783e-15
+    },
+    {
+      "code": "sh000688",
+      "filter": "F5",
+      "nav_error": 1.5543122344752192e-15
+    },
+    {
+      "code": "sh000688",
+      "seeded_adx_error": 0.00508765287013091,
+      "F4_changed": 0
+    }
+  ],
+  "input_sha256": {
+    "sh000300": "fbb3100d8d43ca638c22a3a04136e8805034a07f87f694d4be948f0653155e08",
+    "sh000001": "8953e5a134583db0569655e4edca0dd47deebf843822b6c84a5f5ba020c86c2d",
+    "sh000905": "58548db8c28d1f075aebed97a22aeeac4111c634d1be41a025a6143ec77d711f",
+    "sh000016": "a26b7f85271f9bb4f9b5872812332bdd90b8c845aa2bae583986b5eb0ff9db73",
+    "sh000852": "9fad82f692ad4afdd48afd80a34504895fb54bf21b53fdf3ee78b7049fc64ea9",
+    "sz399006": "d3e2f56163da0de7d3796346a2d6ac3543d8d92ee5fb575626162fc204f6174f",
+    "sh000688": "ea8e4596262bb87bccb3090a3b55c54a3fa0e413683b3b23d175aa235d983408"
+  },
+  "original_sha256": "f6fe76f0d1a556f69c198e2e6acdd0d843df0e51656e6a205845a537361a5153",
+  "random_reps": {
+    "legacy": 300,
+    "fixedK": 2000
+  },
+  "mean_pair_correlation": 0.8073677244833829
+}

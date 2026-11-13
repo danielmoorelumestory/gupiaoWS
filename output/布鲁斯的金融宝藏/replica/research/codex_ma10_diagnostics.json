@@ -1,0 +1,619 @@
+{
+  "synthetic_checks": "passed",
+  "input_hashes": {
+    "index_sh000300_ohlc.csv": "fbb3100d8d43ca638c22a3a04136e8805034a07f87f694d4be948f0653155e08",
+    "index_sh000001_ohlc.csv": "8953e5a134583db0569655e4edca0dd47deebf843822b6c84a5f5ba020c86c2d",
+    "index_sh000688_ohlc.csv": "ea8e4596262bb87bccb3090a3b55c54a3fa0e413683b3b23d175aa235d983408",
+    "tr_H00300.csv": "aaca66f6c5c4160fed9b32895a87f2ecb3f826ebd6a31520497f6e4d7e2d1c4f",
+    "codex_etf_510300_sina_raw.csv": "3599292ab6d91572c590237aa192c716fe407d2827a1cc7b46d08776e4206a34",
+    "codex_etf_510300_dividends_sina.csv": "89274d9daf8923c54553b551058186052ebcea797b817ca9c88887b5d71a8ef1",
+    "codex_etf_510300_dividend_payments_sina.csv": "578596eb8c20f10b876e7c0c8b007f0eef9f4dd0654641060a152a527df6c00b",
+    "codex_etf_510300_em_raw.csv": "b8ce7603c5091365e3bc3c7f5c91387511653709dc9078a25ff35713ada9ba1a",
+    "codex_ma10_etf_588000_sina_raw.csv": "0fa7461d41f68758f3f73aeea8deeaefa41a3aebfad9c6368e168c7fca002d0a",
+    "codex_ma10_etf_588000_em_raw.csv": "a6c7dbcc765ce16f2b09ed9b4e0b0d7342d0565c4d411a427670a3647aa32f1e"
+  },
+  "data": {
+    "300": {
+      "first": "2002-01-04",
+      "last": "2026-11-10",
+      "rows": 6027,
+      "equal_open_close_2005_on": 0,
+      "ohlc_violations": 0
+    },
+    "001": {
+      "first": "1990-12-19",
+      "last": "2026-11-10",
+      "rows": 8760,
+      "equal_open_close_2005_on": 0,
+      "ohlc_violations": 0
+    },
+    "688": {
+      "first": "2020-01-02",
+      "last": "2026-11-10",
+      "rows": 1660,
+      "equal_open_close_2005_on": 0,
+      "ohlc_violations": 0
+    }
+  },
+  "official_checks": [
+    {
+      "file": "codex_ma10_official_000300_20050104.json",
+      "url": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000300&startDate=20050104&endDate=20051230",
+      "rows": 241,
+      "max_abs_open_error": 0.005000000000109139,
+      "samples": [
+        {
+          "date": "2005-01-04",
+          "local_open": 994.769,
+          "official_open": 994.77,
+          "open_error": -0.0009999999999763531,
+          "close_error": 0.004000000000019099
+        },
+        {
+          "date": "2005-01-05",
+          "local_open": 981.577,
+          "official_open": 981.58,
+          "open_error": -0.0030000000000427463,
+          "close_error": 0.004000000000019099
+        },
+        {
+          "date": "2005-01-06",
+          "local_open": 993.331,
+          "official_open": 993.33,
+          "open_error": 0.0009999999999763531,
+          "close_error": 0.004000000000019099
+        }
+      ]
+    },
+    {
+      "file": "codex_ma10_official_000300_20081020.json",
+      "url": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000300&startDate=20081020&endDate=20081105",
+      "rows": 12,
+      "max_abs_open_error": 0.0039999999999054126,
+      "samples": [
+        {
+          "date": "2008-10-20",
+          "local_open": 1828.414,
+          "official_open": 1828.41,
+          "open_error": 0.0039999999999054126,
+          "close_error": 0.0029999999999290594
+        },
+        {
+          "date": "2008-10-21",
+          "local_open": 1901.244,
+          "official_open": 1901.24,
+          "open_error": 0.0039999999999054126,
+          "close_error": -0.004000000000132786
+        },
+        {
+          "date": "2008-10-22",
+          "local_open": 1854.6,
+          "official_open": 1854.6,
+          "open_error": 0.0,
+          "close_error": 0.003000000000156433
+        }
+      ]
+    },
+    {
+      "file": "codex_ma10_official_000300_20120104.json",
+      "url": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000300&startDate=20120104&endDate=20120110",
+      "rows": 4,
+      "max_abs_open_error": 0.0019999999999527063,
+      "samples": [
+        {
+          "date": "2012-01-04",
+          "local_open": 2361.499,
+          "official_open": 2361.5,
+          "open_error": -0.0010000000002037268,
+          "close_error": 0.003000000000156433
+        },
+        {
+          "date": "2012-01-05",
+          "local_open": 2290.78,
+          "official_open": 2290.78,
+          "open_error": 0.0,
+          "close_error": -0.004999999999654392
+        },
+        {
+          "date": "2012-01-06",
+          "local_open": 2274.352,
+          "official_open": 2274.35,
+          "open_error": 0.0019999999999527063,
+          "close_error": 0.0010000000002037268
+        }
+      ]
+    },
+    {
+      "file": "codex_ma10_official_000300_20240924.json",
+      "url": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000300&startDate=20240924&endDate=20241010",
+      "rows": 8,
+      "max_abs_open_error": 0.0039999999999054126,
+      "samples": [
+        {
+          "date": "2024-09-24",
+          "local_open": 3244.647,
+          "official_open": 3244.65,
+          "open_error": -0.003000000000156433,
+          "close_error": -0.0009999999997489795
+        },
+        {
+          "date": "2024-09-25",
+          "local_open": 3403.702,
+          "official_open": 3403.7,
+          "open_error": 0.0020000000004074536,
+          "close_error": 0.0029999999997016857
+        },
+        {
+          "date": "2024-09-26",
+          "local_open": 3399.319,
+          "official_open": 3399.32,
+          "open_error": -0.0010000000002037268,
+          "close_error": 0.0
+        }
+      ]
+    },
+    {
+      "file": "codex_ma10_official_000300_20261030.json",
+      "url": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000300&startDate=20261030&endDate=20261110",
+      "rows": 8,
+      "max_abs_open_error": 0.00400000000036016,
+      "samples": [
+        {
+          "date": "2026-10-30",
+          "local_open": 3985.236,
+          "official_open": 3985.24,
+          "open_error": -0.0039999999999054126,
+          "close_error": 0.0010000000002037268
+        },
+        {
+          "date": "2026-11-02",
+          "local_open": 4005.94,
+          "official_open": 4005.94,
+          "open_error": 0.0,
+          "close_error": -0.0019999999999527063
+        },
+        {
+          "date": "2026-11-03",
+          "local_open": 4005.251,
+          "official_open": 4005.25,
+          "open_error": 0.0010000000002037268,
+          "close_error": 0.005000000000109139
+        }
+      ]
+    },
+    {
+      "file": "codex_ma10_official_000688_20200102.json",
+      "url": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000688&startDate=20200102&endDate=20200120",
+      "rows": 13,
+      "max_abs_open_error": 0.0039999999999054126,
+      "samples": [
+        {
+          "date": "2020-01-02",
+          "local_open": 1005.617,
+          "official_open": 1005.62,
+          "open_error": -0.0030000000000427463,
+          "close_error": 0.0029999999999290594
+        },
+        {
+          "date": "2020-01-03",
+          "local_open": 1021.669,
+          "official_open": 1021.67,
+          "open_error": -0.0009999999999763531,
+          "close_error": 0.0019999999999527063
+        },
+        {
+          "date": "2020-01-06",
+          "local_open": 1019.999,
+          "official_open": 1020.0,
+          "open_error": -0.0009999999999763531,
+          "close_error": -0.0029999999999290594
+        }
+      ]
+    }
+  ],
+  "negative_residual_2005-01-04": {
+    "count": 1653,
+    "sum": -0.02131456553353095,
+    "min": -0.011744033092347728,
+    "largest": {
+      "2005-12-30": -0.011744033092347728,
+      "2005-10-24": -0.001393236849085655,
+      "2005-11-21": -0.001262456556969882,
+      "2005-10-26": -0.0007475444856249736,
+      "2010-01-25": -0.0006908557747538069,
+      "2005-11-07": -0.0005279627344588755,
+      "2005-10-28": -0.00048768561977008407,
+      "2005-10-27": -0.0004852220511036842,
+      "2005-11-14": -0.0003770638236068047,
+      "2005-08-22": -0.00030481680283700463
+    }
+  },
+  "negative_residual_2012-01-01": {
+    "count": 1045,
+    "sum": -0.000841715969539969,
+    "min": -4.104045305597381e-06,
+    "largest": {
+      "2012-01-10": -4.104045305597381e-06,
+      "2012-11-21": -3.6695594050062397e-06,
+      "2012-12-14": -3.659371887287932e-06,
+      "2013-09-30": -3.654995544888351e-06,
+      "2012-03-16": -3.5675632708009886e-06,
+      "2013-05-06": -3.3928695393203867e-06,
+      "2014-03-26": -3.2653485610989463e-06,
+      "2014-03-04": -3.2497643319695513e-06,
+      "2012-10-10": -3.1699462874623663e-06,
+      "2012-04-13": -3.1340456367878744e-06
+    }
+  },
+  "tr_missing_2005_on": 0,
+  "source_calendar_missing": {
+    "sse_on_300_2005_on": 0,
+    "sse_on_688": 0
+  },
+  "signal_equality_days": {
+    "300": 0,
+    "001": 0,
+    "688": 0
+  },
+  "kc_year_dependence": {
+    "1": {
+      "annual_return": {
+        "2020": 0.087837949973949,
+        "2021": -0.05599575790764322,
+        "2022": 0.015373873117981773,
+        "2023": -0.04397524650729123,
+        "2024": 0.13301046774815983,
+        "2025": 0.10233818148112839,
+        "2026": 0.32061564386124153
+      },
+      "through_2025_cagr_pct": 3.7472690927707664,
+      "annual_log_excess": {
+        "2020": -0.13708092541431527,
+        "2021": -0.06132694572253372,
+        "2022": 0.391359254175052,
+        "2023": 0.07427045238400509,
+        "2024": -0.02415799018478032,
+        "2025": -0.20949216962577394,
+        "2026": 0.33880755195476964
+      },
+      "share_2022_and_2026": 1.960815083326788
+    },
+    "2": {
+      "annual_return": {
+        "2020": -0.02337891771402445,
+        "2021": -0.08114089044847894,
+        "2022": 0.05325296157140236,
+        "2023": -0.10692888875292716,
+        "2024": 0.12582508952976723,
+        "2025": -0.016371313588657843,
+        "2026": 0.5112623653927622
+      },
+      "through_2025_cagr_pct": -1.1262088249033186,
+      "annual_log_excess": {
+        "2020": -0.24492965987200233,
+        "2021": -0.08832480342851912,
+        "2022": 0.427985795319156,
+        "2023": 0.006152856454691338,
+        "2024": -0.030520031397782504,
+        "2025": -0.32343251737822964,
+        "2026": 0.4736548323629779
+      },
+      "share_2022_and_2026": 4.087470184643479
+    }
+  },
+  "original_daily_comparison": [
+    {
+      "file": "ma10_backtest.py",
+      "start": "2005-01-04",
+      "rule": 0,
+      "cost": 0.0,
+      "max_abs_nav_error": 2.930988785010413e-14
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2005-01-04",
+      "rule": 1,
+      "cost": 0.0,
+      "max_abs_nav_error": 4.1300296516055823e-14
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2005-01-04",
+      "rule": 1,
+      "cost": 0.001,
+      "max_abs_nav_error": 1.354472090042691e-14
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2005-01-04",
+      "rule": 2,
+      "cost": 0.0,
+      "max_abs_nav_error": 2.6201263381153694e-14
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2005-01-04",
+      "rule": 2,
+      "cost": 0.001,
+      "max_abs_nav_error": 2.3092638912203256e-14
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2012-01-01",
+      "rule": 0,
+      "cost": 0.0,
+      "max_abs_nav_error": 2.531308496145357e-14
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2012-01-01",
+      "rule": 1,
+      "cost": 0.0,
+      "max_abs_nav_error": 7.327471962526033e-15
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2012-01-01",
+      "rule": 1,
+      "cost": 0.001,
+      "max_abs_nav_error": 8.43769498715119e-15
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2012-01-01",
+      "rule": 2,
+      "cost": 0.0,
+      "max_abs_nav_error": 7.771561172376096e-15
+    },
+    {
+      "file": "ma10_backtest.py",
+      "start": "2012-01-01",
+      "rule": 2,
+      "cost": 0.001,
+      "max_abs_nav_error": 5.551115123125783e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2005-01-04",
+      "rule": 0,
+      "cost": 0.0,
+      "max_abs_nav_error": 7.72715225139109e-14
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2005-01-04",
+      "rule": 1,
+      "cost": 0.0,
+      "max_abs_nav_error": 5.3734794391857577e-14
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2005-01-04",
+      "rule": 1,
+      "cost": 0.001,
+      "max_abs_nav_error": 1.2434497875801753e-14
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2005-01-04",
+      "rule": 2,
+      "cost": 0.0,
+      "max_abs_nav_error": 2.6645352591003757e-14
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2005-01-04",
+      "rule": 2,
+      "cost": 0.001,
+      "max_abs_nav_error": 8.659739592076221e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "sse",
+      "start": "2005-01-04",
+      "rule": 1,
+      "cost": 0.0,
+      "max_abs_nav_error": 1.1324274851176597e-14
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "sse",
+      "start": "2005-01-04",
+      "rule": 1,
+      "cost": 0.001,
+      "max_abs_nav_error": 1.199040866595169e-14
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "sse",
+      "start": "2005-01-04",
+      "rule": 2,
+      "cost": 0.0,
+      "max_abs_nav_error": 6.439293542825908e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "sse",
+      "start": "2005-01-04",
+      "rule": 2,
+      "cost": 0.001,
+      "max_abs_nav_error": 1.3322676295501878e-14
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2012-01-01",
+      "rule": 0,
+      "cost": 0.0,
+      "max_abs_nav_error": 3.597122599785507e-14
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2012-01-01",
+      "rule": 1,
+      "cost": 0.0,
+      "max_abs_nav_error": 9.325873406851315e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2012-01-01",
+      "rule": 1,
+      "cost": 0.001,
+      "max_abs_nav_error": 6.5503158452884236e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2012-01-01",
+      "rule": 2,
+      "cost": 0.0,
+      "max_abs_nav_error": 6.217248937900877e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "own",
+      "start": "2012-01-01",
+      "rule": 2,
+      "cost": 0.001,
+      "max_abs_nav_error": 2.7755575615628914e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "sse",
+      "start": "2012-01-01",
+      "rule": 1,
+      "cost": 0.0,
+      "max_abs_nav_error": 3.552713678800501e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "sse",
+      "start": "2012-01-01",
+      "rule": 1,
+      "cost": 0.001,
+      "max_abs_nav_error": 3.552713678800501e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "sse",
+      "start": "2012-01-01",
+      "rule": 2,
+      "cost": 0.0,
+      "max_abs_nav_error": 3.9968028886505635e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "300",
+      "source": "sse",
+      "start": "2012-01-01",
+      "rule": 2,
+      "cost": 0.001,
+      "max_abs_nav_error": 2.6645352591003757e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "own",
+      "start": "2020-01-16",
+      "rule": 0,
+      "cost": 0.0,
+      "max_abs_nav_error": 5.10702591327572e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "own",
+      "start": "2020-01-16",
+      "rule": 1,
+      "cost": 0.0,
+      "max_abs_nav_error": 2.6645352591003757e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "own",
+      "start": "2020-01-16",
+      "rule": 1,
+      "cost": 0.001,
+      "max_abs_nav_error": 4.440892098500626e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "own",
+      "start": "2020-01-16",
+      "rule": 2,
+      "cost": 0.0,
+      "max_abs_nav_error": 3.3306690738754696e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "own",
+      "start": "2020-01-16",
+      "rule": 2,
+      "cost": 0.001,
+      "max_abs_nav_error": 3.1086244689504383e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "sse",
+      "start": "2020-01-16",
+      "rule": 1,
+      "cost": 0.0,
+      "max_abs_nav_error": 2.6645352591003757e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "sse",
+      "start": "2020-01-16",
+      "rule": 1,
+      "cost": 0.001,
+      "max_abs_nav_error": 3.219646771412954e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "sse",
+      "start": "2020-01-16",
+      "rule": 2,
+      "cost": 0.0,
+      "max_abs_nav_error": 1.6653345369377348e-15
+    },
+    {
+      "file": "ma10_cross_signal.py",
+      "target": "688",
+      "source": "sse",
+      "start": "2020-01-16",
+      "rule": 2,
+      "cost": 0.001,
+      "max_abs_nav_error": 1.6653345369377348e-15
+    }
+  ]
+}

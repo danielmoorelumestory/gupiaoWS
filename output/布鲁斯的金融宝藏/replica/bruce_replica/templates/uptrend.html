@@ -1,0 +1,231 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ETF 主升浪</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@600&display=swap">
+<style>
+/* 布局：顶部一行当前读数与状态，下面是快照日期、筛选和名单表格；点一行展开该 ETF 的历史上涨区间与来源 AI 原因 */
+:root {
+  --bg: #f6f8fa; --surface: #fbfcfd; --ink: #10161d; --ink-2: #4a5663; --ink-3: #7d8894;
+  --rule: #dfe5ea; --grid: #e9eef2; --accent: #2a78d6; --warn: #eb6834; --ok: #1baf7a; --warn-bg: #eb68341a;
+  --font-body: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-display: "Noto Serif SC", "Songti SC", serif;
+  --font-num: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1215; --surface: #15181c; --ink: #eef1f4; --ink-2: #b4bdc6; --ink-3: #7f8a95;
+  --rule: #2a3036; --grid: #22272c; --accent: #3987e5; --warn: #d95926; --ok: #199e70; --warn-bg: #d959262a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f1215; --surface: #15181c; --ink: #eef1f4; --ink-2: #b4bdc6; --ink-3: #7f8a95;
+  --rule: #2a3036; --grid: #22272c; --accent: #3987e5; --warn: #d95926; --ok: #199e70; --warn-bg: #d959262a; color-scheme: dark }
+
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 28px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 20px; }
+header h1 { font-family: var(--font-display); font-size: 28px; line-height: 1.25; margin: 0 0 6px; text-wrap: balance; }
+header p { margin: 0; color: var(--ink-2); max-width: 46em; }
+a { color: var(--accent); }
+.num { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
+
+.now { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 0; border-block: 1px solid var(--rule); }
+.now > div { padding: 14px 16px 14px 0; min-width: 0; }
+.now dt { font-size: 12px; color: var(--ink-3); letter-spacing: .04em; }
+.now dd { margin: 2px 0 0; font-size: 22px; }
+.now dd small { font-size: 13px; color: var(--ink-2); font-family: var(--font-body); }
+
+.banner { border: 1px solid var(--warn); background: var(--warn-bg); border-radius: 6px; padding: 10px 14px; font-size: 14px; }
+.banner b { color: var(--warn); }
+.banner.info { border-color: var(--rule); background: var(--surface); color: var(--ink-2); }
+.banner p { margin: 0; }
+
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; min-width: 0; }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-bottom: 12px; }
+.seg { display: flex; flex-wrap: wrap; gap: 4px; }
+.seg button { font: inherit; font-size: 13px; padding: 4px 11px; border: 1px solid var(--rule); background: transparent;
+  color: var(--ink-2); border-radius: 4px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.seg button:focus-visible, select:focus-visible, input:focus-visible, tr.row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+select, input[type=search] { font: inherit; font-size: 13px; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--bg); color: var(--ink); }
+input[type=search] { flex: 1 1 160px; min-width: 0; max-width: 260px; }
+label.sm { font-size: 13px; color: var(--ink-3); display: inline-flex; gap: 6px; align-items: center; }
+
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: right; padding: 6px 8px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; padding-left: 0; }
+th.l, td.l { text-align: left; }
+th { font-weight: 500; color: var(--ink-3); font-size: 12px; }
+td { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
+td.name { text-align: left; font-family: var(--font-body); white-space: normal; min-width: 9em; }
+tr.row { cursor: pointer; }
+tr.row:hover td { background: var(--grid); }
+tr.row[aria-expanded="true"] td { background: var(--grid); }
+.tag { display: inline-block; font-family: var(--font-body); font-size: 11px; line-height: 1.5; padding: 0 6px; border-radius: 3px;
+  border: 1px solid currentColor; margin-right: 4px; }
+.tag.r { color: var(--warn); } .tag.n { color: var(--ok); } .tag.e { color: var(--accent); }
+.muted { color: var(--ink-3); }
+.count { font-size: 13px; color: var(--ink-3); }
+.empty { padding: 28px 0; text-align: center; color: var(--ink-3); font-family: var(--font-body); }
+
+td.detail { white-space: normal; text-align: left; font-family: var(--font-body); padding: 12px 0 18px; background: var(--bg); }
+.detail h4 { margin: 0 0 4px; font-size: 13px; }
+.detail .src { font-size: 12px; color: var(--ink-3); margin: 0 0 8px; }
+.detail table { margin-bottom: 12px; }
+.reasons { display: grid; gap: 8px; }
+.reasons div { border-left: 2px solid var(--rule); padding-left: 10px; font-size: 13px; color: var(--ink-2); }
+.reasons b { color: var(--ink); display: block; }
+.gone { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+.notes { color: var(--ink-2); font-size: 13px; max-width: 62em; }
+.notes ul { margin: 6px 0 0; padding-left: 1.2em; }
+.notes h2 { font-size: 14px; color: var(--ink); margin: 0; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>同花顺 ETF 主升浪</h1>
+    <p>同花顺「ETF 主升浪」榜单每日采集的名单快照，含趋势回踩、新入池标签，以及单只 ETF 的历史上涨区间和来源 AI 上涨原因。名单为接口原序，不是涨幅排行。</p>
+  </header>
+
+  <dl class="now" id="now"></dl>
+  <div id="banners" style="display:flex;flex-direction:column;gap:8px"></div>
+
+  <section class="panel">
+    <div class="bar">
+      <label class="sm">快照日期 <select id="day" aria-label="快照日期"></select></label>
+      <div class="seg" role="group" aria-label="筛选" id="seg">
+        <button data-f="all">全部</button>
+        <button data-f="r">趋势回踩</button>
+        <button data-f="n">新入池</button>
+        <button data-f="e">较上次新进</button>
+      </div>
+      <input type="search" id="q" placeholder="代码或名称" aria-label="搜索代码或名称">
+      <span class="count" id="count"></span>
+    </div>
+    <div class="scroll"><table id="tbl"></table></div>
+    <div class="gone" id="gone"></div>
+  </section>
+
+  <section class="notes">
+    <h2>口径与限制</h2>
+    <ul>
+      <li>「采集时间」是本机请求时间；「来源截止日」取本次新取到的在池 ETF 当前上涨区间的截止日，名单接口本身不带日期。两者不同（周末、休市、来源未更新）时，名单不代表采集日的行情。</li>
+      <li>今日涨幅、盘中累计涨幅、连续上涨天数、涨停指标需要登录才能取得，这里没有，也没有用别的数据冒充。</li>
+      <li>区间列来自历史上涨区间接口，截至各自的截止日；<code>period_rise</code> 等字段按来源原值显示，单位未经核实，不等于 App 上的盘中累计涨幅。历史区间按预算轮流刷新，展开后可看到该数据的取数时间。</li>
+      <li>上涨原因是同花顺生成的 AI 文本，按原文展示，未独立核实。</li>
+      <li>「较上次新进」与上一份快照比较，是本地计算；「新入池」是来源的标签。历史快照只从开始采集之日起积累。</li>
+      <li>来源：<a id="srcpage" target="_blank" rel="noopener">同花顺 ETF 主升浪页面</a>。每天北京时间 <span id="sched"></span> 自动采集。</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+const D = __DATA__;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmtT = s => s ? s.replace("T", " ").slice(0, 16) : "—";
+const H = D.history || [];
+const days = H.map(h => h.d);
+let state = { day: days[days.length - 1], f: "all", q: "", open: null };
+try { const f = localStorage.getItem("uptrend-filter"); if (f) state.f = f; } catch (e) {}
+
+$("#srcpage").href = D.source_page;
+$("#sched").textContent = D.schedule ? D.schedule.time : "20:30";
+
+function latestPeriod(c) {
+  const d = D.detail[c]; if (!d || !d.periods || !d.periods.length) return null;
+  return d.periods.reduce((a, b) => (b.start_day > a.start_day ? b : a));
+}
+
+function renderHead() {
+  const st = D.status || {}, lr = st.last_run, ls = st.last_success;
+  const h = H.find(x => x.d === state.day);
+  const b = [];
+  if (lr && lr.status === "failed") {
+    b.push(`<div class="banner"><p><b>最近一次采集失败</b>（${esc(fmtT(lr.started_at))}）：${esc(lr.message)}。下面显示的是此前最近一次成功的数据${ls ? `（${esc(fmtT(ls.finished_at))}）` : ""}，未被覆盖。</p></div>`);
+  }
+  if (h) for (const n of h.notes || []) b.push(`<div class="banner info"><p>${esc(n)}</p></div>`);
+  if (h && h.st === "partial") b.push(`<div class="banner info"><p>这份快照名单完整，但部分历史区间或 AI 原因没取到，下次采集会补。</p></div>`);
+  $("#banners").innerHTML = b.join("");
+  if (!h) {
+    $("#now").innerHTML = `<div><dt>状态</dt><dd><small>${lr ? "尚无成功采集" : "尚未采集"}</small></dd></div>`;
+    return;
+  }
+  const cell = (t, v, s) => `<div><dt>${t}</dt><dd>${v}${s ? ` <small>${s}</small>` : ""}</dd></div>`;
+  $("#now").innerHTML = [
+    cell("主升浪 ETF", `<span class="num">${h.n.all ?? h.rows.length}</span>`, "只"),
+    cell("趋势回踩", `<span class="num">${h.n.trend_retracement ?? 0}</span>`, "只"),
+    cell("新入池", `<span class="num">${h.n.new_pool ?? 0}</span>`, "只"),
+    cell("来源截止日", `<span class="num">${esc(h.asof || "未知")}</span>`),
+    cell("采集时间", `<span class="num" style="font-size:16px">${esc(fmtT(h.at))}</span>`, h.d === days[days.length - 1] ? "" : "历史快照"),
+  ].join("");
+}
+
+function renderTable() {
+  const h = H.find(x => x.d === state.day);
+  const tbl = $("#tbl");
+  if (!h) { tbl.innerHTML = `<tr><td class="empty" colspan="8">还没有快照。运行 <code>python -m bruce_replica uptrend run</code> 采集第一份。</td></tr>`; $("#count").textContent = ""; $("#gone").textContent = ""; return; }
+  const i = days.indexOf(state.day), prev = i > 0 ? H[i - 1] : null;
+  const prevSet = prev ? new Set(prev.rows.map(r => r[0])) : null;
+  const cur = new Set(h.rows.map(r => r[0]));
+  const q = state.q.trim().toLowerCase();
+  const rows = h.rows.filter(r => {
+    if (state.f === "r" && !r[2]) return false;
+    if (state.f === "n" && !r[3]) return false;
+    if (state.f === "e" && (!prevSet || prevSet.has(r[0]))) return false;
+    return !q || r[0].toLowerCase().includes(q) || (r[1] || "").toLowerCase().includes(q);
+  });
+  $("#count").textContent = `${rows.length} / ${h.rows.length} 只`;
+  let html = `<thead><tr><th>代码</th><th class="l">名称</th><th class="l">标签</th><th>当前区间起</th><th>区间止</th><th>天数</th><th>period_rise</th><th>回踩次数</th></tr></thead><tbody>`;
+  if (!rows.length) html += `<tr><td class="empty" colspan="8">${state.f === "e" && !prevSet ? "这是第一份快照，没有可比较的上一次。" : "没有符合条件的 ETF。"}</td></tr>`;
+  for (const r of rows) {
+    const [tc, name, rt, np] = r, code = tc.split(":")[1], lp = latestPeriod(tc), open = state.open === tc;
+    const tags = (rt ? `<span class="tag r">趋势回踩</span>` : "") + (np ? `<span class="tag n">新入池</span>` : "") +
+      (prevSet && !prevSet.has(tc) ? `<span class="tag e">较上次新进</span>` : "");
+    html += `<tr class="row" tabindex="0" data-c="${esc(tc)}" aria-expanded="${open}"><td>${esc(code)}</td><td class="name">${esc(name)}</td><td class="l">${tags}</td>` +
+      (lp ? `<td>${esc(lp.start_day)}</td><td>${esc(lp.end_day)}</td><td>${esc(lp.duration ?? "—")}</td><td>${esc(lp.period_rise ?? "—")}</td><td>${esc(lp.step_signal_count ?? 0)}</td>`
+          : `<td class="muted" colspan="5" style="text-align:right;font-family:var(--font-body)">区间待取</td>`) + `</tr>`;
+    if (open) html += `<tr><td class="detail" colspan="8">${detailHtml(tc, name)}</td></tr>`;
+  }
+  tbl.innerHTML = html + "</tbody>";
+  const gone = prev ? prev.rows.filter(r => !cur.has(r[0])) : [];
+  $("#gone").innerHTML = prev ? (gone.length ? `较上一份快照（${esc(prev.d)}）移出 ${gone.length} 只：${gone.map(r => esc(r[1] || r[0])).join("、")}` : `较上一份快照（${esc(prev.d)}）没有移出。`) : "";
+}
+
+function detailHtml(tc, name) {
+  const d = D.detail[tc];
+  if (!d) return `<p class="muted">该 ETF 的历史上涨区间还没取到，后续采集会按顺序补上。</p>`;
+  const ps = [...d.periods].sort((a, b) => (a.start_day < b.start_day ? 1 : -1));
+  let h = `<h4>${esc(name)} 历史上涨区间</h4><p class="src">同花顺历史区间接口，取数于 ${esc(fmtT(d.at))}；字段为来源原值。</p>`;
+  h += `<div class="scroll"><table><thead><tr><th>起</th><th>止</th><th>天数</th><th>period_rise</th><th>period_change</th><th>main_amount_in</th><th class="l">回踩日期</th></tr></thead><tbody>`;
+  for (const p of ps) h += `<tr><td>${esc(p.start_day)}</td><td>${esc(p.end_day)}</td><td>${esc(p.duration ?? "—")}</td><td>${esc(p.period_rise ?? "—")}</td><td>${esc(p.period_change ?? "—")}</td><td>${esc(p.main_amount_in ?? "—")}</td><td class="l">${(p.step_signal_dates || []).map(esc).join("、") || "—"}</td></tr>`;
+  h += `</tbody></table></div>`;
+  const rs = Object.entries(d.reasons || {}).sort((a, b) => (a[0] < b[0] ? 1 : -1));
+  if (!rs.length) return h + `<p class="muted">上涨原因尚未取到。</p>`;
+  for (const [start, items] of rs) {
+    h += `<h4>上涨原因（${esc(start)} 起的区间）</h4><p class="src">同花顺生成的 AI 文本，原文展示，未独立核实。</p><div class="reasons">`;
+    h += (items || []).map(it => `<div><b>${esc(it.title)}</b>${esc(it.content)}</div>`).join("") || `<div class="muted">来源返回为空。</div>`;
+    h += `</div>`;
+  }
+  return h;
+}
+
+function render() {
+  document.querySelectorAll("#seg button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.f === state.f)));
+  renderHead(); renderTable();
+}
+$("#day").innerHTML = days.slice().reverse().map(d => {
+  const h = H.find(x => x.d === d);
+  return `<option value="${d}">${d}${h.asof && h.asof !== d ? `（来源截止 ${h.asof}）` : ""}</option>`;
+}).join("") || `<option>无</option>`;
+$("#day").addEventListener("change", e => { state.day = e.target.value; state.open = null; render(); });
+document.querySelectorAll("#seg button").forEach(b => b.addEventListener("click", () => {
+  state.f = b.dataset.f; try { localStorage.setItem("uptrend-filter", state.f); } catch (e) {} render();
+}));
+$("#q").addEventListener("input", e => { state.q = e.target.value; renderTable(); });
+const toggle = el => { const c = el.dataset.c; state.open = state.open === c ? null : c; renderTable(); };
+$("#tbl").addEventListener("click", e => { const tr = e.target.closest("tr.row"); if (tr) toggle(tr); });
+$("#tbl").addEventListener("keydown", e => { const tr = e.target.closest("tr.row"); if (tr && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(tr); } });
+render();
+</script>

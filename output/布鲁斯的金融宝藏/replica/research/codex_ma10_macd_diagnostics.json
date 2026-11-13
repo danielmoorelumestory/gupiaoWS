@@ -1,0 +1,17 @@
+{
+  "original_sha256": "8e5416bfc8f69f6264a7699084eed8466b336d7996b5f9cfc29c2aef522cc2bd",
+  "input_sha256": {
+    "sh000300": "fbb3100d8d43ca638c22a3a04136e8805034a07f87f694d4be948f0653155e08",
+    "sh000001": "8953e5a134583db0569655e4edca0dd47deebf843822b6c84a5f5ba020c86c2d",
+    "sh000016": "a26b7f85271f9bb4f9b5872812332bdd90b8c845aa2bae583986b5eb0ff9db73",
+    "sh000905": "58548db8c28d1f075aebed97a22aeeac4111c634d1be41a025a6143ec77d711f",
+    "sh000852": "9fad82f692ad4afdd48afd80a34504895fb54bf21b53fdf3ee78b7049fc64ea9",
+    "sz399006": "d3e2f56163da0de7d3796346a2d6ac3543d8d92ee5fb575626162fc204f6174f",
+    "sh000688": "ea8e4596262bb87bccb3090a3b55c54a3fa0e413683b3b23d175aa235d983408"
+  },
+  "backtest_globals_is_exec_namespace": true,
+  "max_daily_nav_error": 1.0125233984581428e-13,
+  "compared_paths": 112,
+  "random_reps": 3000,
+  "synthetic_window_and_fee_checks": "passed"
+}

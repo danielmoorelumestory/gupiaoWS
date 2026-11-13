@@ -1,0 +1,41 @@
+No future-return labels or strategy NAV calculated.
+
+FILE below_net_asset_all.csv rows 5293 start 2005-01-05 00:00:00 end 2026-11-09 00:00:00 duplicate_extras 5
+missing 16 by_year {2018: 1, 2019: 4, 2020: 3, 2023: 1, 2024: 2, 2025: 3, 2026: 2}
+nulls {'below_net_asset': 0, 'total_company': 0, 'below_net_asset_ratio': 0}
+nonpositive {'below_net_asset': 315, 'total_company': 0, 'below_net_asset_ratio': 315}
+duplicate rows
+             below_net_asset  total_company  below_net_asset_ratio
+date                                                             
+2019-05-09              226           3613                 0.0626
+2019-05-09              226           3613                 0.0626
+2019-05-09              226           3613                 0.0626
+2020-02-21              358           3793                 0.0944
+2020-02-21              358           3794                 0.0944
+2020-12-14              331           4110                 0.0805
+2020-12-14              331           4110                 0.0805
+2021-04-16              318           4263                 0.0746
+2021-04-16              318           4263                 0.0746
+max ratio rounding error 5.000000000000143e-05
+invalid counts 0
+
+FILE margin_sh.csv rows 4027 start 2010-03-31 00:00:00 end 2026-11-05 00:00:00 duplicate_extras 0
+missing 4 by_year {2010: 1, 2014: 1, 2017: 2}
+nulls {'融资余额': 0, '融资买入额': 0}
+nonpositive {'融资余额': 0, '融资买入额': 0}
+largest gaps [(datetime.date(2010, 11, 22), datetime.date(2010, 11, 22), 1), (datetime.date(2014, 9, 5), datetime.date(2014, 9, 5), 1), (datetime.date(2017, 3, 13), datetime.date(2017, 3, 13), 1), (datetime.date(2017, 9, 14), datetime.date(2017, 9, 14), 1)]
+zero balance dates []
+
+FILE margin_sz.csv rows 3829 start 2010-03-31 00:00:00 end 2026-11-05 00:00:00 duplicate_extras 0
+missing 202 by_year {2010: 9, 2017: 4, 2018: 7, 2023: 5, 2024: 68, 2025: 109}
+nulls {'融资余额': 0, '融资买入额': 0}
+nonpositive {'融资余额': 1, '融资买入额': 1}
+largest gaps [(datetime.date(2024, 10, 21), datetime.date(2025, 6, 18), 161), (datetime.date(2024, 6, 14), datetime.date(2024, 7, 5), 16), (datetime.date(2018, 8, 1), datetime.date(2018, 8, 9), 7), (datetime.date(2023, 9, 21), datetime.date(2023, 9, 27), 5), (datetime.date(2010, 4, 1), datetime.date(2010, 4, 7), 4)]
+zero balance dates [Timestamp('2024-08-08 00:00:00')]
+
+FILE csindex_000985.csv rows 5308 start 2005-01-01 00:00:00 end 2026-11-10 00:00:00 duplicate_extras 0
+missing 0 by_year {}
+nulls {'成交金额': 0}
+nonpositive {'成交金额': 1}
+dates outside equity calendar [Timestamp('2005-01-01 00:00:00'), Timestamp('2018-06-18 00:00:00')]
+nonpositive turnover on trading dates []

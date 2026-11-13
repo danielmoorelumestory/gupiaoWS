@@ -1,0 +1,78 @@
+ period  cost_bp     vol  n  rho_vol_ex         b         c  rho_vol_hold  rank  condition
+   full     10.0 vol_pre 20    0.813534  0.219395 -0.307452     -0.706767     3  31.365407
+   full     10.0  vol_in 20    0.533835  0.334775 -0.603024     -0.341353     3  29.100984
+window1     10.0 vol_pre 20    0.768421  0.226848 -0.585706     -0.893233     3  31.834424
+window1     10.0  vol_in 20    0.640602 -0.060975 -0.857824     -0.775940     3  37.711716
+window2     10.0 vol_pre 20   -0.424060 -0.287550 -0.529934      0.236090     3  21.293948
+window2     10.0  vol_in 20   -0.643609 -0.595568 -0.487524      0.560902     3  42.578247
+window3     10.0 vol_pre 21    0.431169 -0.133411 -0.679782     -0.629870     3  20.910163
+window3     10.0  vol_in 21    0.376623  0.019968 -0.620892     -0.484416     3  19.030441
+window4     10.0 vol_pre 21    0.336364  0.403517 -0.470555     -0.202597     3  13.890610
+window4     10.0  vol_in 21   -0.157143  0.512944 -0.709920      0.425974     3  16.694497
+   full      0.0 vol_pre 20    0.809023  0.216799 -0.294126     -0.706767     3  31.365407
+   full      0.0  vol_in 20    0.530827  0.328899 -0.586697     -0.341353     3  29.100984
+window1      0.0 vol_pre 20    0.771429  0.223645 -0.574998     -0.893233     3  31.834424
+window1      0.0  vol_in 20    0.643609 -0.056670 -0.842038     -0.775940     3  37.711716
+window2      0.0 vol_pre 20   -0.424060 -0.304010 -0.516750      0.236090     3  21.293948
+window2      0.0  vol_in 20   -0.643609 -0.624629 -0.472564      0.560902     3  42.578247
+window3      0.0 vol_pre 21    0.425974 -0.131942 -0.666564     -0.629870     3  20.910163
+window3      0.0  vol_in 21    0.371429  0.024754 -0.606555     -0.484416     3  19.030441
+window4      0.0 vol_pre 21    0.337662  0.396158 -0.461209     -0.202597     3  13.890610
+window4      0.0  vol_in 21   -0.141558  0.500170 -0.694900      0.425974     3  16.694497
+Sensitivity             period                  model  n  rho_vol_ex         b         c  rho_vol_hold  rank  condition
+              full               original 20    0.813534  0.219395 -0.307452     -0.706767     3  31.365407
+              full               group_FE 20    0.813534  0.085949 -0.318361     -0.706767     4  41.600876
+              full            exclude_DAX 19    0.833333  0.220713 -0.288920     -0.671930     3  30.801303
+              full                 A_only 10    0.490909  0.584642 -0.488350      0.127273     3  49.106456
+              full          overseas_only 10    0.006061 -0.366471 -0.533612     -0.466667     3  37.024147
+           window1               original 20    0.768421  0.226848 -0.585706     -0.893233     3  31.834424
+           window1               group_FE 20    0.768421 -0.452179 -0.606797     -0.893233     4  44.495555
+           window1            exclude_DAX 19    0.805263  0.183938 -0.618018     -0.878947     3  31.235391
+           window1                 A_only 10    0.587879  0.054222 -0.548515     -0.709091     3  55.830628
+           window1          overseas_only 10   -0.454545 -0.597996 -0.371555     -0.430303     3  34.755957
+           window2               original 20   -0.424060 -0.287550 -0.529934      0.236090     3  21.293948
+           window2               group_FE 20   -0.424060 -0.308348 -0.531561      0.236090     4  33.194423
+           window2            exclude_DAX 19   -0.436842 -0.313286 -0.527797      0.238596     3  21.377958
+           window2                 A_only 10   -0.260606 -0.595375 -0.571151      0.103030     3  27.085412
+           window2          overseas_only 10    0.321212  0.254921 -0.479309     -0.175758     3  34.077326
+           window3               original 21    0.431169 -0.133411 -0.679782     -0.629870     3  20.910163
+           window3               group_FE 21    0.431169 -0.182766 -0.632359     -0.629870     4  23.689597
+           window3            exclude_DAX 20    0.415038 -0.132704 -0.680426     -0.604511     3  20.448664
+           window3                 A_only 10    0.054545 -0.333211 -0.625313     -0.260606     3  24.310420
+           window3          overseas_only 11    0.300000 -0.098837 -0.591923     -0.381818     3  24.166880
+           window4               original 21    0.336364  0.403517 -0.470555     -0.202597     3  13.890610
+           window4               group_FE 21    0.336364  0.179540 -0.358846     -0.202597     4  17.044365
+           window4            exclude_DAX 20    0.353383  0.457478 -0.475934     -0.145865     3  14.174148
+           window4                 A_only 10    0.272727  0.905298 -0.306760      0.503030     3  27.255703
+           window4          overseas_only 11   -0.072727 -0.133291 -0.525626     -0.263636     3  13.104705
+        common2022               original 21    0.529870 -0.012665 -0.534174     -0.697403     3  23.732765
+        common2022               group_FE 21    0.529870 -0.097925 -0.335975     -0.697403     4  26.831221
+              full exclude_DAX_and_SENSEX 18    0.830753  0.222633 -0.294399     -0.644995     3  30.147348
+           window1 exclude_DAX_and_SENSEX 18    0.818369  0.179157 -0.631690     -0.884417     3  30.937909
+           window2 exclude_DAX_and_SENSEX 18   -0.459236 -0.413196 -0.512824      0.283798     3  22.901461
+           window3 exclude_DAX_and_SENSEX 19    0.371930 -0.131631 -0.685156     -0.568421     3  19.980106
+           window4 exclude_DAX_and_SENSEX 19    0.410526  0.546843 -0.448585     -0.163158     3  14.616927
+ strict_Jan4_start               original 20    0.813534  0.219411 -0.307467     -0.706767     3  31.365015
+vendor_sensitivity               original 20    0.813534  0.220125 -0.309278     -0.706767     3  31.365407
+ drop_suspect_open               original 20    0.813534  0.219287 -0.306748     -0.706767     3  31.365407
+Panel        sample                                model   n  rho_vol_ex         b         c  rho_vol_hold  rank  condition
+    all_years      asset_year_FE_and_realized_hold 225   -0.019207  0.124398 -0.517262      0.031621    33  34.532178
+    all_years                   asset_year_FE_only 225   -0.019207  0.054045       NaN      0.031621    32  34.409125
+    all_years       asset_year_FE_and_prior_return 225   -0.019207  0.037278       NaN      0.031621    33  36.356404
+  through2025      asset_year_FE_and_realized_hold 204   -0.037211  0.122540 -0.500670      0.044195    32  33.856625
+  through2025                   asset_year_FE_only 204   -0.037211  0.091115       NaN      0.044195    31  33.778971
+  through2025       asset_year_FE_and_prior_return 204   -0.037211  0.084275       NaN      0.044195    32  35.320294
+       ex_DAX      asset_year_FE_and_realized_hold 214   -0.008639  0.144332 -0.510957      0.027655    32  33.795556
+       ex_DAX                   asset_year_FE_only 214   -0.008639  0.076308       NaN      0.027655    31  33.680340
+       ex_DAX       asset_year_FE_and_prior_return 214   -0.008639  0.063169       NaN      0.027655    32  35.701114
+       A_only      asset_year_FE_and_realized_hold 110   -0.005991 -0.287693 -0.464961      0.157099    22  49.478606
+       A_only                   asset_year_FE_only 110   -0.005991 -0.414375       NaN      0.157099    21  49.439087
+       A_only       asset_year_FE_and_prior_return 110   -0.005991 -0.465111       NaN      0.157099    22  51.596169
+overseas_only      asset_year_FE_and_realized_hold 115   -0.214890 -0.500090 -0.400630      0.170015    23  40.309660
+overseas_only                   asset_year_FE_only 115   -0.214890 -0.847006       NaN      0.170015    22  38.461672
+overseas_only       asset_year_FE_and_prior_return 115   -0.214890 -0.850678       NaN      0.170015    23  38.694196
+    all_years asset_groupyear_FE_and_realized_hold 225   -0.019207 -0.398802 -0.443298      0.031621    43  54.040411
+    all_years  asset_groupyear_FE_and_prior_return 225   -0.019207 -0.690430       NaN      0.031621    43  53.920910
+  through2025 asset_groupyear_FE_and_realized_hold 204   -0.037211 -0.534097 -0.419441      0.044195    41  53.551177
+  through2025  asset_groupyear_FE_and_prior_return 204   -0.037211 -0.809666       NaN      0.044195    41  52.865439
+Independent prices, states, NAV, OLS/Spearman and verdict matched.
