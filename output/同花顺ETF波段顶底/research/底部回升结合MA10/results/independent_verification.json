@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "independent": "Fraction signals, interval search, closed-form share/coupon ledger",
+  "metrics_checked": 324,
+  "trades_checked": 18627,
+  "daily_account_nav_checked": 213296,
+  "aggregate_nav_checked": 5668,
+  "max_absolute_numeric_error": 4.085620730620576e-14
+}

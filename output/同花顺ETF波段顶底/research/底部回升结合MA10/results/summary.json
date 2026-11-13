@@ -1,0 +1,30 @@
+{
+  "protocol_sha256": "e90f063dc2cf593e13d0eaa2ebc3f10801db234beffd549f177551787df72193",
+  "input_audit_sha256": "92ce7d35e64667b31ea2d0a2a32de2116b89defae69c59ed221ee9b60f395861",
+  "primary_period": [
+    "2021-01-01",
+    "2026-11-10"
+  ],
+  "primary_cost_bps_round_trip": 10,
+  "eligible_etfs": 9,
+  "positive_etfs_combo_minus_ma": 3,
+  "primary_cagr_difference": -0.0277648742537283,
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261113,
+    "block_sessions": 20,
+    "method": "resample nonoverlapping joint date blocks of realized aggregate paired log returns; scale by observed sessions/calendar-year; no resimulated signal/price concatenation",
+    "ci": [
+      2.5,
+      97.5
+    ],
+    "blocks": 71,
+    "valid_draws": 2000,
+    "cagr_difference_ci_low": -0.10263740014852471,
+    "cagr_difference_ci_high": 0.027849593833452736,
+    "scope": "paired realized aggregate-return blocks; retrospective uncertainty only"
+  },
+  "historical_return_support": false,
+  "retrospective": true,
+  "parameter_search": false
+}
