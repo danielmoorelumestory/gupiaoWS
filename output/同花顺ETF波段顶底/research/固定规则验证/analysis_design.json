@@ -1,0 +1,21 @@
+{
+  "recorded_before_strategy_results_at_utc": "2026-11-13T11:09:13.280419+00:00",
+  "primary": "B_plus minus B, historical_holdout,10sessions,10bps roundtrip, equal-weight common ETFs",
+  "bootstrap": {
+    "method": "nonoverlapping20trading-date-block cluster resampling; all ETFs/rules resampled together",
+    "block_sessions": 20,
+    "replicates": 2000,
+    "seed": 20261113,
+    "ci_percentiles": [
+      2.5,
+      97.5
+    ],
+    "valid_draw": "all fixed common ETFs have B and B_plus events in resampled blocks"
+  },
+  "criterion": "do not claim confirmed optimization without genuinely unseen forward validation. Historical evidence is supportive only if primary mean delta>0, lower CI>0, and >half common ETFs positive; report all missing/contradictory outcomes. Fewer than8 eligible ETFs => incomplete planned panel.",
+  "baseline": "unconditional same-ETF same-segment next-open to hth-close gross return; net excess subtracts this gross drift reference, explicitly not a portfolio",
+  "paired_filter_diagnostic": "also partition already-retained B cohort by same-day adjusted price up; report retained/excluded counts and outcomes, never rename negative-day crosses invalid without return evidence",
+  "secondary": "all prespecified horizons/costs/rules shown, no best variant selected",
+  "event_summary": "no annualization, portfolio allocation, idle-cash or overlapping-signal compounding; MAE is gross adverse excursion from entry equity",
+  "signal_adjustment_limit": "causal cumulative share/cash-unit adjusted closes; not verified identical to App qfq at every corporate action"
+}

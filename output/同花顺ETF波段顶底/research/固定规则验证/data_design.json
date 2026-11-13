@@ -1,0 +1,13 @@
+{
+  "recorded_before_strategy_results_at_utc": "2026-11-13T11:07:44.281936+00:00",
+  "quote_source": "Eastmoney kline fqt=0 and fqt=2, daily, cutoff20261110",
+  "corporate_action_source": "Sina ETF hfq.js cumulative share multiplier s and cumulative cash u; require f=1",
+  "signal_price": "raw_close*s+u, chronological cumulative-unit adjusted close; no future factor application",
+  "holding_value": "one entry share: price_t*(s_t/s_entry)+(u_t-u_entry)/s_entry, cash dividends held as cash/receivable; no forced reinvestment",
+  "dividend_timing": "economic entitlement at ex-date, payment-date cash settlement not modeled",
+  "factor_validation": "compare raw_close*s+u with vendor hfq close on exact dates; record all differences",
+  "factor_tolerance": "max(0.003 currency units, 0.001*abs(vendor_hfq_price)); if more than 0.5% of matched bars exceed threshold quarantine entire symbol",
+  "no_price_fit_event_remapping": true,
+  "quality": "reject duplicate dates, nonfinite/nonpositive OHLC, inconsistent OHLC, or nonmonotone cash/share factors; record all exclusions, never swap panel based on returns",
+  "oos_warning": "Historical split is retrospective and known-market context, not claimed truly unseen. Forward data after20261113 remain unavailable."
+}

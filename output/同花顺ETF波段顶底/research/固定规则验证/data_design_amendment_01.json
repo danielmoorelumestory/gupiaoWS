@@ -1,0 +1,14 @@
+{
+  "recorded_before_strategy_results_at_utc": "2026-11-13T11:10:14.877880+00:00",
+  "change": "share multiplier must be finite positive; remove requirement that cumulative share multiplier be nondecreasing",
+  "reason": "A valid consolidation can reduce share count while unit price rises. Initial audit rejected510500 solely because s fell to0.28032483 on2015-04-15. No strategy returns computed or inspected.",
+  "retained_checks": [
+    "cash cumulative nondecreasing",
+    "f=1",
+    "positive finite multiplier",
+    "exact-date raw*s+cash agrees with independent vendor hfq under original tolerance",
+    "no price-fit remapping of event dates"
+  ],
+  "initial_audit_preserved": "data_audit-initial.json",
+  "network_change": "retry missing public payloads serially to reduce concurrent-provider disconnects; no universe substitution"
+}

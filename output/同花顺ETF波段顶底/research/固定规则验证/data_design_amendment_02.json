@@ -1,0 +1,8 @@
+{
+  "recorded_before_strategy_results_at_utc": "2026-11-13T11:17:11.619345+00:00",
+  "change": "allow Tencent daily raw/hfq chunks as transport fallback when missing Eastmoney payloads repeatedly disconnect",
+  "scope": "same fixed ten ETFs and same cutoff; no replacement of symbols or loosening of factor tolerance",
+  "chunking": "two calendar years per request,700 bars max; source payloads stored; filter normalized data<=20261110, reject conflicting duplicate dates",
+  "validation": "same exact-date comparison against Sina share/cash-unit adjusted close; reject if dates differ or mismatch fraction exceeds0.5%",
+  "reason": "Eastmoney repeatedly disconnected for511010/512480/512660/513100. Tencent probe for512660 2020-2021 returned486 rows. No strategy returns computed or inspected."
+}
