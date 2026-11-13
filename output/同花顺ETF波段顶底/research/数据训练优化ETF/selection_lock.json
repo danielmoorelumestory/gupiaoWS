@@ -1,0 +1,321 @@
+{
+  "source_hashes": {
+    "engine.py": "d9c971cb75a636241125b81aae3c4709f035e8524635047d77ed37023a1d62c1",
+    "grid.py": "a7b1680e114021330217752e7f3e9bba690101fb37e78817a36327efc14225c0",
+    "search.py": "eb93facbd17e6dab12e7633533a3a18bd885df9daf1626788d1b82aca054cf88",
+    "protocol.json": "5f3572dc5c9e54bace1769dba58115806f15065411506dde92d1e442b31be566",
+    "implementation_choices.json": "60403a952400ba0ef2e88e00f8e89557b8fa64f7360be435b6f04f4054acc728"
+  },
+  "train_state_sha256": "f763daaa71c08ad70151b75186681ae3e1f7b02ba7f83b523a1be590ed511dbd",
+  "selections": [
+    {
+      "target": "full",
+      "label": "compromise",
+      "id": "e6ecc034065e",
+      "config": {
+        "entry": "E2",
+        "exit": "X2",
+        "ma": 10,
+        "n": 9,
+        "lo": 20,
+        "macd": [
+          12,
+          26,
+          9
+        ],
+        "hi": null,
+        "cap": null,
+        "wait": 5
+      },
+      "qualified": true,
+      "descriptive_only": false,
+      "validation_stats": {
+        "etfs": 48,
+        "wr_supported_etfs": 48,
+        "annual_etfs": 47,
+        "wr_eq": 0.38391550579050576,
+        "pooled_wr": 0.35844155844155845,
+        "cagr_med": -0.03692231529107926,
+        "cagr_mean": -0.0381411187323533,
+        "mdd_med": -0.20513867159135252,
+        "natural": 385,
+        "entries": 393,
+        "natural_fraction": 0.9796437659033079,
+        "one_trade_coverage": 1.0,
+        "wr_coverage": 1.0,
+        "trades_per_year": 4.3078531384983,
+        "max_etf_trade_share": 0.033766233766233764,
+        "total_etf_years": 89.37166324435319
+      },
+      "rank_score": 0.6666666666666666
+    },
+    {
+      "target": "full",
+      "label": "annual_leader",
+      "id": "825cd1230879",
+      "config": {
+        "entry": "E1",
+        "exit": "X3",
+        "ma": 10,
+        "n": 9,
+        "lo": 30,
+        "macd": [
+          16,
+          35,
+          9
+        ],
+        "hi": 70,
+        "cap": null,
+        "wait": null
+      },
+      "qualified": true,
+      "descriptive_only": false,
+      "validation_stats": {
+        "etfs": 48,
+        "wr_supported_etfs": 48,
+        "annual_etfs": 47,
+        "wr_eq": 0.3502645502645503,
+        "pooled_wr": 0.3465346534653465,
+        "cagr_med": -0.03394688218870253,
+        "cagr_mean": -0.04319597550923247,
+        "mdd_med": -0.2166568472686664,
+        "natural": 303,
+        "entries": 312,
+        "natural_fraction": 0.9711538461538461,
+        "one_trade_coverage": 1.0,
+        "wr_coverage": 1.0,
+        "trades_per_year": 3.3903363661428174,
+        "max_etf_trade_share": 0.033003300330033,
+        "total_etf_years": 89.37166324435319
+      },
+      "rank_score": 0.5
+    },
+    {
+      "target": "full",
+      "label": "win_leader",
+      "id": "e6ecc034065e",
+      "config": {
+        "entry": "E2",
+        "exit": "X2",
+        "ma": 10,
+        "n": 9,
+        "lo": 20,
+        "macd": [
+          12,
+          26,
+          9
+        ],
+        "hi": null,
+        "cap": null,
+        "wait": 5
+      },
+      "qualified": true,
+      "descriptive_only": false,
+      "validation_stats": {
+        "etfs": 48,
+        "wr_supported_etfs": 48,
+        "annual_etfs": 47,
+        "wr_eq": 0.38391550579050576,
+        "pooled_wr": 0.35844155844155845,
+        "cagr_med": -0.03692231529107926,
+        "cagr_mean": -0.0381411187323533,
+        "mdd_med": -0.20513867159135252,
+        "natural": 385,
+        "entries": 393,
+        "natural_fraction": 0.9796437659033079,
+        "one_trade_coverage": 1.0,
+        "wr_coverage": 1.0,
+        "trades_per_year": 4.3078531384983,
+        "max_etf_trade_share": 0.033766233766233764,
+        "total_etf_years": 89.37166324435319
+      },
+      "rank_score": 0.6666666666666666
+    },
+    {
+      "target": "good",
+      "label": "compromise",
+      "id": "d94a863f367d",
+      "config": {
+        "entry": "E1",
+        "exit": "X3",
+        "ma": 10,
+        "n": 13,
+        "lo": 20,
+        "macd": [
+          8,
+          17,
+          9
+        ],
+        "hi": 70,
+        "cap": null,
+        "wait": null
+      },
+      "qualified": false,
+      "descriptive_only": true,
+      "validation_stats": {
+        "etfs": 17,
+        "wr_supported_etfs": 2,
+        "annual_etfs": 17,
+        "wr_eq": 0.5,
+        "pooled_wr": 0.4,
+        "cagr_med": 0.0,
+        "cagr_mean": 0.005309676608841206,
+        "mdd_med": -0.05555555555555547,
+        "natural": 20,
+        "entries": 20,
+        "natural_fraction": 1.0,
+        "one_trade_coverage": 0.7647058823529411,
+        "wr_coverage": 0.11764705882352941,
+        "trades_per_year": 0.6196979979640312,
+        "max_etf_trade_share": 0.15,
+        "total_etf_years": 32.27378507871321
+      },
+      "rank_score": 0.9310344827586207,
+      "conditional_full_history_label": true,
+      "non_good_validation_no_worse_than_full": true
+    },
+    {
+      "target": "good",
+      "label": "annual_leader",
+      "id": "b744c5f64edc",
+      "config": {
+        "entry": "E2",
+        "exit": "X2",
+        "ma": 10,
+        "n": 13,
+        "lo": 20,
+        "macd": [
+          8,
+          17,
+          9
+        ],
+        "hi": null,
+        "cap": null,
+        "wait": 5
+      },
+      "qualified": false,
+      "descriptive_only": true,
+      "validation_stats": {
+        "etfs": 17,
+        "wr_supported_etfs": 15,
+        "annual_etfs": 17,
+        "wr_eq": 0.2862698412698413,
+        "pooled_wr": 0.3111111111111111,
+        "cagr_med": 0.0039215538397751985,
+        "cagr_mean": -0.010382297746914076,
+        "mdd_med": -0.15177588442733347,
+        "natural": 90,
+        "entries": 90,
+        "natural_fraction": 1.0,
+        "one_trade_coverage": 1.0,
+        "wr_coverage": 0.8823529411764706,
+        "trades_per_year": 2.7886409908381404,
+        "max_etf_trade_share": 0.1,
+        "total_etf_years": 32.27378507871321
+      },
+      "rank_score": 0.5344827586206896,
+      "conditional_full_history_label": true,
+      "non_good_validation_no_worse_than_full": true
+    },
+    {
+      "target": "good",
+      "label": "win_leader",
+      "id": "d94a863f367d",
+      "config": {
+        "entry": "E1",
+        "exit": "X3",
+        "ma": 10,
+        "n": 13,
+        "lo": 20,
+        "macd": [
+          8,
+          17,
+          9
+        ],
+        "hi": 70,
+        "cap": null,
+        "wait": null
+      },
+      "qualified": false,
+      "descriptive_only": true,
+      "validation_stats": {
+        "etfs": 17,
+        "wr_supported_etfs": 2,
+        "annual_etfs": 17,
+        "wr_eq": 0.5,
+        "pooled_wr": 0.4,
+        "cagr_med": 0.0,
+        "cagr_mean": 0.005309676608841206,
+        "mdd_med": -0.05555555555555547,
+        "natural": 20,
+        "entries": 20,
+        "natural_fraction": 1.0,
+        "one_trade_coverage": 0.7647058823529411,
+        "wr_coverage": 0.11764705882352941,
+        "trades_per_year": 0.6196979979640312,
+        "max_etf_trade_share": 0.15,
+        "total_etf_years": 32.27378507871321
+      },
+      "rank_score": 0.9310344827586207,
+      "conditional_full_history_label": true,
+      "non_good_validation_no_worse_than_full": true
+    }
+  ],
+  "controls": {
+    "HOLD": {
+      "ma": 10,
+      "n": null,
+      "lo": null,
+      "macd": null,
+      "hi": null,
+      "cap": null,
+      "wait": null,
+      "entry": "HOLD",
+      "exit": "HOLD"
+    },
+    "MA10": {
+      "ma": 10,
+      "n": null,
+      "lo": null,
+      "macd": null,
+      "hi": null,
+      "cap": null,
+      "wait": null,
+      "entry": "MA",
+      "exit": "X1"
+    },
+    "MACD": {
+      "ma": 10,
+      "n": null,
+      "lo": null,
+      "macd": [
+        12,
+        26,
+        9
+      ],
+      "hi": null,
+      "cap": null,
+      "wait": null,
+      "entry": "MACD",
+      "exit": "X2"
+    },
+    "USER": {
+      "ma": 10,
+      "n": 13,
+      "lo": 30,
+      "macd": [
+        12,
+        26,
+        9
+      ],
+      "hi": 70,
+      "cap": null,
+      "wait": null,
+      "entry": "E1",
+      "exit": "X3"
+    }
+  },
+  "code_commit": "becf2f3c82606d0349d0bfe97d29df107df5d891",
+  "test_has_not_run": true,
+  "warning": "selected on train/validation only; final historical test cannot choose or retune any candidate"
+}

@@ -1,0 +1,11 @@
+{
+  "phase": "development",
+  "status": "PASS",
+  "normalized_rows_checked": 86261,
+  "feature_rows": 86261,
+  "trades": 8069,
+  "daily_nav": 356688,
+  "metrics": 648,
+  "max_numeric_error": 3.4638958368304884e-14,
+  "method": "Fraction features, Decimal60 MACD, independent interval search and closed-form share/cash ledger"
+}
