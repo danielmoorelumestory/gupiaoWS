@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "recorded_before_new_strategy_returns_at_utc": "2026-11-13T12:22:17.143940+00:00",
+  "purpose": "complete long/cash portfolio ledger, not fixed-horizon events",
+  "user_exit_confirmation": "不必等到70，持有后跌破10日线就卖",
+  "entry_timing": "default: allow MA10 confirmation after V recovered30; strict same-day variant reported separately; user acknowledged 好的",
+  "formula_period": 13,
+  "bottom_threshold": 30,
+  "ma_period": 10,
+  "ma_definition": "simple arithmetic mean of latest10 continuous-adjusted closes, includes signal day",
+  "strategies": {
+    "BUY_HOLD": "cash start; buy at first permitted next quote open; hold to terminal liquidation estimate",
+    "MA10_ONLY": "flat and close>MA10 buys next quote open; held and close<MA10 sells next quote open; equality keeps current state",
+    "COMBO_WAIT": "observe V<30 (current/previous close), arm while flat; V>=30 and close>MA10 buys next quote open, allowing later MA confirmation; consume setup only on filled buy; no expiry parameter",
+    "COMBO_SAME": "buy only on same-day V previous<30<=current and close>MA10; sell same MA10 break as main"
+  },
+  "sell_for_both_combo_variants": "if holding and continuous close<MA10, sell next available quote open regardless V; never wait for70",
+  "cycle_after_exit": "ignore old lows during holding; on exit-confirmation close arm only if V<30; after flat, new observed low/current or prior close can arm again",
+  "no_pyramiding": true,
+  "start": "all strategies start trading cash=1, no inherited positions/orders; first signal at first eligible session close; prior-bar V can identify fresh rebound on that first session",
+  "segments": {
+    "historical_holdout": [
+      "2021-01-01",
+      "2026-11-10"
+    ],
+    "development": [
+      "2010-01-01",
+      "2020-12-31"
+    ],
+    "all_history": [
+      "2010-01-01",
+      "2026-11-10"
+    ]
+  },
+  "segment_policy": "per ETF first available quote on/after start with >=14 closes. Historical holdout is primary; full history/development are secondary, not untouched OOS. Do not annualize segments shorter than365 days.",
+  "cost_bps_round_trip": [
+    0,
+    10,
+    30
+  ],
+  "primary_cost_bps_round_trip": 10,
+  "cost_math": "side rate=roundtrip/2; buy shares=trading_cash/(open*(1+side)); sell receives shares*price*(1-side); all baselines pay both ends",
+  "cash_return": 0,
+  "dividends": "economic entitlement at ex-date into segregated dividend cash/receivable; never reinvest into later buys, no payment-date liquidity assumed",
+  "shares": "adjust held shares using cumulative share-factor ratio before next quote open; raw OHLC for fills/marks",
+  "price_for_signals": "raw_close*s+u as already-audited source adjusted_close; not independently matched to each ETF App qfq at every corporate action",
+  "quote_gaps": "next available per-ETF quote is execution session, not synthetic filled prices; zero-volume quote cancels that pending execution and reevaluates at close. For aggregated NAV only, forward-fill last mark on missing dates.",
+  "known_missing_holdout_quotes": {
+    "159915": [
+      "2021-02-08"
+    ],
+    "512480": [
+      "2021-03-26"
+    ],
+    "513100": [
+      "2022-01-13"
+    ]
+  },
+  "terminal": "mark/liquidate remaining shares at final close with estimated side cost; label forced_end separately, do not count it as rule-completed trade",
+  "primary_comparator": "COMBO_WAIT vs MA10_ONLY, net CAGR and closing-NAV max drawdown, time/capital exposure; BUY_HOLD secondary",
+  "aggregation": "9 independent equal-initial-capital subaccounts, no cross-ETF rebalancing; aggregate only primary common period. Also show per-ETF results and all cost cases.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261113,
+    "block_sessions": 20,
+    "method": "resample nonoverlapping joint date blocks of realized aggregate paired log returns; scale by observed sessions/calendar-year; no resimulated signal/price concatenation",
+    "ci": [
+      2.5,
+      97.5
+    ]
+  },
+  "historical_return_support_criterion": "aggregate net CAGR difference>0, paired date-block CI low>0, majority of same ETFs have positive CAGR difference; never claim future confirmed advantage from this retrospective data",
+  "risk_advantage": "report drawdown/time-exposure tradeoff separately, not relabel lower exposure as superior returns",
+  "inputs": {
+    "audit_relative": "../固定规则验证/data_audit.json",
+    "audit_sha256": "92ce7d35e64667b31ea2d0a2a32de2116b89defae69c59ed221ee9b60f395861",
+    "eligible_symbols": [
+      {
+        "code": "159915",
+        "label": "创业板",
+        "group": "A股成长",
+        "normalized_file": "data/159915.csv.gz",
+        "normalized_sha256": "aaa31c9f3b5c8d70954bc97d8214ae1a187feb97798974e8f049aae2d2ace583"
+      },
+      {
+        "code": "510300",
+        "label": "沪深300",
+        "group": "A股宽基",
+        "normalized_file": "data/510300.csv.gz",
+        "normalized_sha256": "861253bce3b76cfdee7384792475da3a1faff0e2ff11f3cbe28cf3572e2ef571"
+      },
+      {
+        "code": "510880",
+        "label": "上证红利",
+        "group": "A股红利",
+        "normalized_file": "data/510880.csv.gz",
+        "normalized_sha256": "c036f59b02d036d50ed4df8edd32b5e384a8082a2546d09a572120476c6d296d"
+      },
+      {
+        "code": "511010",
+        "label": "国债",
+        "group": "债券",
+        "normalized_file": "data/511010.csv.gz",
+        "normalized_sha256": "bbcf29137ff6a0de2a62af6106e2ab2e3913ac001d532009fb7bb8b71e8d313a"
+      },
+      {
+        "code": "512480",
+        "label": "半导体",
+        "group": "A股行业",
+        "normalized_file": "data/512480.csv.gz",
+        "normalized_sha256": "8c1010db76321f322389588ede253ea331f6d4c8a98b3dcce8e477b292c88667"
+      },
+      {
+        "code": "512660",
+        "label": "军工",
+        "group": "A股行业",
+        "normalized_file": "data/512660.csv.gz",
+        "normalized_sha256": "7a56644150ceb9c826eabfbab61bc7d1a352e8bff999d774484f07f02acd173b"
+      },
+      {
+        "code": "513100",
+        "label": "纳斯达克100",
+        "group": "跨境股票",
+        "normalized_file": "data/513100.csv.gz",
+        "normalized_sha256": "b201cefff0f4859964c53ba5623615e1115ef11a4aa425e00ec4de24aa3b5a75"
+      },
+      {
+        "code": "518880",
+        "label": "黄金",
+        "group": "商品",
+        "normalized_file": "data/518880.csv.gz",
+        "normalized_sha256": "62156c62eeffa911509b91a0d9afbcce86f523f676b1abe9750efe42ae7d7e97"
+      },
+      {
+        "code": "588000",
+        "label": "科创50",
+        "group": "A股成长，已见过同指数样本",
+        "normalized_file": "data/588000.csv.gz",
+        "normalized_sha256": "8001e8a4e90b22fbe041eea2aeacaec5ef36c9e22a3fb03e59901ecdacbc8f9b"
+      }
+    ],
+    "source_exclusion": "510500 remains excluded for604 adjustment mismatches; no added replacements"
+  },
+  "no_parameter_search": true,
+  "limitations": [
+    "current-survivor small panel",
+    "known recent-market and previous indicator work; not genuinely unseen",
+    "theoretical daily open/close fills, no orderbook/lot/minimum-fee/limit-queue model",
+    "closing-NAV drawdown, not intraday true maximum drawdown",
+    "dividends segregated without reinvestment; no actual distribution payment-date ledger"
+  ]
+}
