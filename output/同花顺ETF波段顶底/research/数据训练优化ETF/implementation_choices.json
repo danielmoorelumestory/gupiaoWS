@@ -1,0 +1,11 @@
+{
+  "recorded_before_returns_at_utc": "2026-11-13T13:34:20.058248+00:00",
+  "protocol_sha256": "5f3572dc5c9e54bace1769dba58115806f15065411506dde92d1e442b31be566",
+  "clarifications": [
+    "If no train candidate passes, descriptive top30 among valid-objective distinct training sequences may enter validation, labeled train-gates-failed; no promotion or gate relaxation",
+    "Rank-score ties use complexity then configid; three leaders may refer to same config, not three independent confirmations",
+    "Final support requires both WR and median CAGR improvement over same-fee pure MACD, with paired bootstrap lower bounds above0, on full pool; good-group conclusion always conditional. Failure does not authorize re-selection",
+    "Optional equal-initial-capital composite portfolio CAGR/MDD is descriptive only, unavailable pre-inception/warmup subaccounts stay cash1; never used for candidate selection"
+  ],
+  "reference": "independent candidate and control train/validation verification before test; independent arithmetic test verification after locked single policy test is validation, not a second parameter search"
+}
