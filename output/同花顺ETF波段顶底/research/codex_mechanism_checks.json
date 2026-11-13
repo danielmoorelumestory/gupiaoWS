@@ -1,0 +1,165 @@
+{
+  "source_sha256": "9291f6bc438ef8b5b69e41352c7ed0b684324cb1e94cc011377c463ba248477c",
+  "period": 13,
+  "closed_bar_event_counts": {
+    "excluded_final_intraday_date": "2026-11-13",
+    "up_crosses_30": 15,
+    "up_crosses_on_down_days": [
+      {
+        "date": "2025-11-19",
+        "previous_value": 28.846153846153847,
+        "value": 33.088235294117645,
+        "price_change": "-9/1000",
+        "outgoing_change": "-29/1000"
+      },
+      {
+        "date": "2025-12-03",
+        "previous_value": 29.6875,
+        "value": 33.92857142857143,
+        "price_change": "-3/500",
+        "outgoing_change": "-11/500"
+      },
+      {
+        "date": "2026-03-20",
+        "previous_value": 28.26086956521739,
+        "value": 34.21052631578947,
+        "price_change": "-3/200",
+        "outgoing_change": "-47/1000"
+      }
+    ],
+    "longest_below_30": {
+      "start": "2026-10-13",
+      "end": "2026-11-03",
+      "bars": 16
+    },
+    "longest_above_70": {
+      "start": "2026-04-17",
+      "end": "2026-05-21",
+      "bars": 22
+    }
+  },
+  "intraday_snapshot_decomposition": {
+    "date": "2026-11-13",
+    "before": 49.84615384615385,
+    "after_removing_expired": 56.055363321799305,
+    "after_adding_current": 53.114754098360656,
+    "expiry_contribution_points": 6.209209475645462,
+    "new_price_contribution_points": -2.9406092234386523,
+    "net_change_points": 3.2686002522068094,
+    "outgoing_change": "-9/250",
+    "incoming_change": "-2/125",
+    "note": "先移出再加入的约定分解；比值非线性，换操作顺序分配量会变化，总变化不变。"
+  },
+  "all_up_crosses_30": [
+    {
+      "date": "2025-04-01",
+      "previous_value": 27.722772277227723,
+      "value": 33.333333333333336,
+      "price_change": "1/1000",
+      "outgoing_change": "-3/200"
+    },
+    {
+      "date": "2025-04-10",
+      "previous_value": 28.985507246376812,
+      "value": 37.121212121212125,
+      "price_change": "9/1000",
+      "outgoing_change": "-3/200"
+    },
+    {
+      "date": "2025-05-29",
+      "previous_value": 23.91304347826087,
+      "value": 33.9622641509434,
+      "price_change": "1/100",
+      "outgoing_change": "3/1000"
+    },
+    {
+      "date": "2025-11-19",
+      "previous_value": 28.846153846153847,
+      "value": 33.088235294117645,
+      "price_change": "-9/1000",
+      "outgoing_change": "-29/1000"
+    },
+    {
+      "date": "2025-11-24",
+      "previous_value": 28.846153846153847,
+      "value": 31.055900621118013,
+      "price_change": "3/500",
+      "outgoing_change": "1/1000"
+    },
+    {
+      "date": "2025-11-28",
+      "previous_value": 26.771653543307085,
+      "value": 33.6,
+      "price_change": "1/125",
+      "outgoing_change": "-1/100"
+    },
+    {
+      "date": "2025-12-03",
+      "previous_value": 29.6875,
+      "value": 33.92857142857143,
+      "price_change": "-3/500",
+      "outgoing_change": "-11/500"
+    },
+    {
+      "date": "2026-03-20",
+      "previous_value": 28.26086956521739,
+      "value": 34.21052631578947,
+      "price_change": "-3/200",
+      "outgoing_change": "-47/1000"
+    },
+    {
+      "date": "2026-03-25",
+      "previous_value": 29.239766081871345,
+      "value": 32.77777777777778,
+      "price_change": "3/200",
+      "outgoing_change": "3/500"
+    },
+    {
+      "date": "2026-04-01",
+      "previous_value": 27.374301675977655,
+      "value": 38.0,
+      "price_change": "27/1000",
+      "outgoing_change": "-3/500"
+    },
+    {
+      "date": "2026-07-21",
+      "previous_value": 26.359143327841846,
+      "value": 44.570502431118314,
+      "price_change": "23/200",
+      "outgoing_change": "-21/200"
+    },
+    {
+      "date": "2026-08-04",
+      "previous_value": 29.52548330404218,
+      "value": 37.102473498233216,
+      "price_change": "21/500",
+      "outgoing_change": "-9/200"
+    },
+    {
+      "date": "2026-09-07",
+      "previous_value": 25.555555555555557,
+      "value": 41.9811320754717,
+      "price_change": "1/50",
+      "outgoing_change": "-39/500"
+    },
+    {
+      "date": "2026-09-16",
+      "previous_value": 25.945945945945947,
+      "value": 42.99516908212561,
+      "price_change": "41/1000",
+      "outgoing_change": "-19/1000"
+    },
+    {
+      "date": "2026-11-04",
+      "previous_value": 26.98961937716263,
+      "value": 44.148936170212764,
+      "price_change": "11/125",
+      "outgoing_change": "-1/1000"
+    }
+  ],
+  "claims_not_supported": [
+    "此过滤能提高收益",
+    "这些事件相互独立",
+    "A/(13*C)等于ATR或标准收益率波动率"
+  ]
+}
