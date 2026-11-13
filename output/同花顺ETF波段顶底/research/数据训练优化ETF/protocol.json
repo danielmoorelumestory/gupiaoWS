@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "locked_before_strategy_returns_at_utc": "2026-11-13T13:26:39.096020+00:00",
+  "objective": "ETF-equal natural completed-trade net win rate and median net CAGR, equal-rank compromise; full pool primary, frozen historical MACD-good group conditional specialist",
+  "source_url": "https://businessweb-c0u.pages.dev/note/lab/etf-review/",
+  "universe_sha256": "e4c202574f522e12ef24816de487acd3faa66832219ecefe141e58d5e1230d88",
+  "audit_sha256": "0532602aed3fd9809c7f66d6527891d9f387c7382d29c03d86f9266b1e559125",
+  "eligible_symbols": [
+    "159131",
+    "159206",
+    "159326",
+    "159509",
+    "159518",
+    "159529",
+    "159566",
+    "159611",
+    "159636",
+    "159667",
+    "159698",
+    "159732",
+    "159755",
+    "159766",
+    "159792",
+    "159819",
+    "159851",
+    "159852",
+    "159865",
+    "159869",
+    "159870",
+    "159883",
+    "159892",
+    "159928",
+    "159992",
+    "512010",
+    "512070",
+    "512170",
+    "512200",
+    "512400",
+    "512480",
+    "512660",
+    "512800",
+    "512880",
+    "512890",
+    "512950",
+    "512980",
+    "513050",
+    "513090",
+    "513120",
+    "513130",
+    "513190",
+    "513290",
+    "513310",
+    "513630",
+    "513750",
+    "515170",
+    "515210",
+    "515790",
+    "515880",
+    "516150",
+    "516160",
+    "516510",
+    "516750",
+    "517520",
+    "518880",
+    "560080",
+    "560860",
+    "562500",
+    "588170",
+    "588200"
+  ],
+  "money_etf_excluded": "511880; not an equity-swing training asset; fixed before returns",
+  "quarantined_symbols": [
+    "512690",
+    "515220"
+  ],
+  "macd_good_policy": "17 frozen labels use full history through2026-11-10; all subgroup results conditional with selection bias, not genuine forward validation",
+  "windows": {
+    "train": [
+      "2013-07-01",
+      "2022-06-30"
+    ],
+    "validation": [
+      "2022-07-01",
+      "2024-06-30"
+    ],
+    "test": [
+      "2024-07-01",
+      "2026-11-10"
+    ]
+  },
+  "test_subperiods": [
+    [
+      "2024-07-01",
+      "2025-06-30"
+    ],
+    [
+      "2025-07-01",
+      "2026-11-10"
+    ]
+  ],
+  "warmup_excluded_rows": 120,
+  "minimum_window_rows": 120,
+  "annual_stats_minimum_rows": 244,
+  "annual_stats_minimum_calendar_days": 365,
+  "entry_rules": {
+    "E1": "fresh V previous<lo<=current and C>MA10",
+    "E2": "fresh V crossinglo arms at close i; first C>MA10 with V>=lo within i..i+4 buys; belowlo cancels; ignore setups during holding; consume on buy",
+    "E3": "fresh MACD gold and C>MA10; if cap60, require valid V<=60"
+  },
+  "exit_rules": {
+    "X1": "C<MA10 state",
+    "X2": "fresh MACD death",
+    "X3": "fresh death AND (C<MA10 OR this holding has observed V>=hi and current V<hi)",
+    "X4": "C<MA10 OR fresh death"
+  },
+  "equality": "C=MA10 neither above nor below; low recovery previous<lo<=current; top seen>=hi and current<hi; MACD gold previousDIF<=DEA and currentDIF>DEA, death opposite >= then <",
+  "macd_ema": "recursive alpha2/(n+1), seed first available close; DEA firstDIF0; use all own prior history",
+  "grid": "grid.py canonical306; MA10 fixed; MACD8/17/9,12/26/9,16/35/9; band9/13/21; low20/30/40; high70/80 onlyX3; cap60/none onlyE3; E2wait5",
+  "unused_parameters": "None; canonical configurations dedup by actual used parameters, then dedup train entry/exit interval signatures across all eligible ETFs",
+  "primary_cost_bps_round_trip": 20,
+  "cost_sensitivity_bps_round_trip": [
+    0,
+    10,
+    40
+  ],
+  "ledger": "each window cash1, no inherited position/orders; close signal next observed open; raw fills/marks, split factor before open and exdate entitlement to separate non-reinvested dividend reserve; buy q=cash/(open*(1+side)), sell q*price*(1-side); cash0interest; terminalclose estimated liquidation with fee forced_end excluded from winrate",
+  "missing_volume": "cached OHLC has no volume; assume each observed row executable, no fabricated volume or prices; quote gaps execute next real row; corporate-action dates from independent Sina cumulative factors, no price-fit remapping",
+  "summary": "WR_eq mean across ETFs with>=3 natural exits; CAGR median among ETFs with>=244rows and>=365calendar days; pooled winrate, CAGRmean, coverage, MDD, exposure also reported; compare identical ETFs/dates per baseline",
+  "hard_gates": {
+    "train_min_natural_trades_full": 150,
+    "train_min_natural_trades_good": 40,
+    "validation_min_natural_trades_full": 60,
+    "validation_min_natural_trades_good": 20,
+    "natural_trades_per_etf_year": 1.0,
+    "one_trade_coverage": 0.8,
+    "three_trade_WR_coverage": 0.5,
+    "max_single_etf_trade_share": 0.15,
+    "natural_exit_fraction": 0.7,
+    "median_MDD_at_least_hold": true
+  },
+  "screening": "train Pareto in WR_eq,CAGRmedian plus points within1pp of a Pareto point in both dimensions, rank equally and keep at most30 per full/good target; train gate failures excluded; duplicate sequences keep lexicographically first id",
+  "stability": "validation WR_eq may not drop>10pp from train; median train CAGR of one-step parameter neighbors must be>=candidate trainCAGR-max(1pp,20%*abs(candidate trainCAGR)); no neighbor=>pass with flag",
+  "selection": "validation gates + stability; average percentile ranks WR_eq/CAGRmedian 0.5/0.5; tie fewer used numeric parameters then configid; lock compromise, highest qualified CAGR, highest qualified WR for each full/good target. If no qualified candidates, keep no promoted strategy and lock descriptive validation rank leaders with explicit failed-gate labels; never loosen gates after returns",
+  "good_specialist": "conditional separate selection on17 frozen labels; cannot be promoted unless non-good validation medianCAGR is at least full compromise; otherwise report conditional only",
+  "controls": "HOLD,MA10,pureMACD12/26/9,previous USER E1 N13 lo30 X3 MACD12/26/9 hi70; all same fees and ledger",
+  "final_test": "only after protocol, grid, code and selected parameter hashes locked; execute selected candidates and controls only, never select/re-tune from test; reporting differences via1000 ETF-cluster bootstrap seed20261113",
+  "limitations": [
+    "known historical market and prior9ETF experiments",
+    "current survivor pool and full-history MACD-good labels",
+    "no orderbook/lot/minimum-fee model",
+    "closing NAV MDD only",
+    "some ETFs have no train data; report frozen-parameter transfer separately",
+    "cached hfq only22 ETFs, others independent factor mapping plus action continuity not full daily second-source validation"
+  ],
+  "manager_changes_to_Claude": [
+    "exact-date Sina cumulative-factor mapping replaces potentially ambiguous cached events; quarantine2 before returns",
+    "WR>=3 support requires at least50% eligible coverage",
+    "platform stability uses additive1pp floor when trainCAGRnearzero/negative",
+    "explicit descriptive fallback without promoting a strategy if gates fail"
+  ]
+}
