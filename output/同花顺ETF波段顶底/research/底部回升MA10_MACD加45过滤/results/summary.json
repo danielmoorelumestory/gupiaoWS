@@ -1,0 +1,81 @@
+{
+  "protocol_sha256": "54cdd5ae3952a9ae9ac39971d540d89a49c3cd1a02f7f04b3b354c1ccfedebdf",
+  "audit_sha256": "92ce7d35e64667b31ea2d0a2a32de2116b89defae69c59ed221ee9b60f395861",
+  "period": [
+    "2021-01-01",
+    "2026-11-10"
+  ],
+  "primary_cost_bps_round_trip": 10,
+  "eligible_etfs": 9,
+  "comparisons": [
+    {
+      "comparator": "MACD_STATE",
+      "primary": true,
+      "cagr_difference": -0.010234857395459502,
+      "positive_etfs": 3,
+      "bootstrap": {
+        "replicates": 2000,
+        "seed": 20261113,
+        "block_sessions": 20,
+        "method": "resample nonoverlapping joint date blocks of realized aggregate paired log returns; scale by observed sessions/calendar-year; no resimulated signal/price concatenation",
+        "ci": [
+          2.5,
+          97.5
+        ],
+        "blocks": 71,
+        "valid_draws": 2000,
+        "cagr_difference_ci_low": -0.0219435540881804,
+        "cagr_difference_ci_high": 0.00011143342046039331,
+        "scope": "paired realized aggregate-return blocks; retrospective uncertainty only"
+      },
+      "historical_return_support": false
+    },
+    {
+      "comparator": "MA10_ONLY",
+      "primary": false,
+      "cagr_difference": -0.01596191137441767,
+      "positive_etfs": 5,
+      "bootstrap": {
+        "replicates": 2000,
+        "seed": 20261113,
+        "block_sessions": 20,
+        "method": "resample nonoverlapping joint date blocks of realized aggregate paired log returns; scale by observed sessions/calendar-year; no resimulated signal/price concatenation",
+        "ci": [
+          2.5,
+          97.5
+        ],
+        "blocks": 71,
+        "valid_draws": 2000,
+        "cagr_difference_ci_low": -0.07872276768435539,
+        "cagr_difference_ci_high": 0.03567734228685952,
+        "scope": "paired realized aggregate-return blocks; retrospective uncertainty only"
+      },
+      "historical_return_support": false
+    },
+    {
+      "comparator": "BUY_HOLD",
+      "primary": false,
+      "cagr_difference": -0.02644546338496605,
+      "positive_etfs": 2,
+      "bootstrap": {
+        "replicates": 2000,
+        "seed": 20261113,
+        "block_sessions": 20,
+        "method": "resample nonoverlapping joint date blocks of realized aggregate paired log returns; scale by observed sessions/calendar-year; no resimulated signal/price concatenation",
+        "ci": [
+          2.5,
+          97.5
+        ],
+        "blocks": 71,
+        "valid_draws": 2000,
+        "cagr_difference_ci_low": -0.12020937573833847,
+        "cagr_difference_ci_high": 0.053170297307384096,
+        "scope": "paired realized aggregate-return blocks; retrospective uncertainty only"
+      },
+      "historical_return_support": false
+    }
+  ],
+  "retrospective": true,
+  "parameter_search": false,
+  "user_chosen_cap": 45
+}
