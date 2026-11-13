@@ -1,0 +1,679 @@
+{
+  "created_at_utc": "2026-11-13T14:35:57.626594+00:00",
+  "purpose": "Claude independently retest each of61 ETFs, fixed parameters, no search or reselection",
+  "source_directory": "output/同花顺ETF波段顶底/research/数据训练优化ETF",
+  "window": [
+    "2024-07-01",
+    "2026-11-10"
+  ],
+  "cost_bps_round_trip": 20,
+  "primary_etfs": [
+    {
+      "code": "159131",
+      "name": "港股通信息技术ETF华宝",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/159131.csv.gz",
+      "normalized_sha256": "07e57981ccacb6df10f20554d0fba1484f70c0ab5fd633e743d17ff9aba378a5"
+    },
+    {
+      "code": "159206",
+      "name": "卫星ETF永赢",
+      "groups": [
+        "高端制造"
+      ],
+      "normalized_file": "data/159206.csv.gz",
+      "normalized_sha256": "3108c2f30a557ae2b702f299abe1c4ebbc366c8c1a12d4c6eeff4618bb9e4aa3"
+    },
+    {
+      "code": "159326",
+      "name": "电网设备ETF华夏",
+      "groups": [
+        "高端制造"
+      ],
+      "normalized_file": "data/159326.csv.gz",
+      "normalized_sha256": "ac607f068e111cfd3985ed5a7d4c5813703ba0f3825d27fbab2ae6e3e379fb84"
+    },
+    {
+      "code": "159509",
+      "name": "纳指科技ETF景顺",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/159509.csv.gz",
+      "normalized_sha256": "bc381b76cb9b06571a1891412c600718e86c0aeeea142a5ef7c0114dec624f34"
+    },
+    {
+      "code": "159518",
+      "name": "标普油气ETF嘉实",
+      "groups": [
+        "周期资源"
+      ],
+      "normalized_file": "data/159518.csv.gz",
+      "normalized_sha256": "eb379b1dc58b836b4a4c1ae0a391305578cca036f4f2c3b406f430c9592dd6e7"
+    },
+    {
+      "code": "159529",
+      "name": "标普消费ETF景顺",
+      "groups": [
+        "大消费"
+      ],
+      "normalized_file": "data/159529.csv.gz",
+      "normalized_sha256": "195c7b062dfe5be8c510af7bd2c13bd2a79ef72fa64afbd5696e8cb47aa14c48"
+    },
+    {
+      "code": "159566",
+      "name": "储能电池ETF易方达",
+      "groups": [
+        "高端制造"
+      ],
+      "normalized_file": "data/159566.csv.gz",
+      "normalized_sha256": "53655ca89c5da5b96f004dab2305d920c8d2e35392ebae1d7fc72c13ef2ab9a1"
+    },
+    {
+      "code": "159611",
+      "name": "电力ETF广发",
+      "groups": [
+        "周期资源"
+      ],
+      "normalized_file": "data/159611.csv.gz",
+      "normalized_sha256": "28701d3e3d2f818757ab5ca4f5688603f9b904d211c1537bab579c51941e7765"
+    },
+    {
+      "code": "159636",
+      "name": "港股通科技30ETF工银",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/159636.csv.gz",
+      "normalized_sha256": "d8f64347d4a3bf373ba2ffbdf654175a45375f5efe4ffd0d5d8f828fe95a7835"
+    },
+    {
+      "code": "159667",
+      "name": "工业母机ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ],
+      "normalized_file": "data/159667.csv.gz",
+      "normalized_sha256": "0ae1cd22f7d8cbd8104438b712c8fb7875dd0d21e6c44e9685bad793c38b10b9"
+    },
+    {
+      "code": "159698",
+      "name": "粮食ETF鹏华",
+      "groups": [
+        "农业周期"
+      ],
+      "normalized_file": "data/159698.csv.gz",
+      "normalized_sha256": "45f9171c4aa05366187d820c9ef2703f632fd9450bac8a83dfe34db6fc69fb97"
+    },
+    {
+      "code": "159732",
+      "name": "消费电子ETF华夏",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/159732.csv.gz",
+      "normalized_sha256": "61e43aec64a79328f1750bef77317e49dfc65ef5c218eb08f916869b65df9f36"
+    },
+    {
+      "code": "159755",
+      "name": "电池ETF广发",
+      "groups": [
+        "高端制造"
+      ],
+      "normalized_file": "data/159755.csv.gz",
+      "normalized_sha256": "bc95a294c95480e57540a19cf0512c420df73ebe4b4ab6c2bae59725613354d7"
+    },
+    {
+      "code": "159766",
+      "name": "旅游ETF富国",
+      "groups": [
+        "大消费"
+      ],
+      "normalized_file": "data/159766.csv.gz",
+      "normalized_sha256": "35ee874b285708fd778e2abfbe6d7b3c39716ebab6d0e0b4d50cec2d7cb32382"
+    },
+    {
+      "code": "159792",
+      "name": "港股通互联网ETF富国",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "normalized_file": "data/159792.csv.gz",
+      "normalized_sha256": "39b2e7f7b471bfa20497b7c2a1da4f1b949ad11c56eecd25f37d67691902effd"
+    },
+    {
+      "code": "159819",
+      "name": "人工智能ETF易方达",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/159819.csv.gz",
+      "normalized_sha256": "3ea888ff7202b0e60b2abd47405b684a9d71aae032da723dbeae3569730e79ab"
+    },
+    {
+      "code": "159851",
+      "name": "金融科技ETF华宝",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "normalized_file": "data/159851.csv.gz",
+      "normalized_sha256": "0f6afb4a8addd97a1af4b76b7700681b410045afc27255fdaab75c2a17799502"
+    },
+    {
+      "code": "159852",
+      "name": "软件ETF嘉实",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "normalized_file": "data/159852.csv.gz",
+      "normalized_sha256": "9abcdfa10705a020b8b9e038fabd44ecae57b7345d6d57f2931b992eae71726a"
+    },
+    {
+      "code": "159865",
+      "name": "养殖ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "农业周期"
+      ],
+      "normalized_file": "data/159865.csv.gz",
+      "normalized_sha256": "116c961e1e27648b703a612cdfac4b811eee0e5836616b81e5b65104e80e3304"
+    },
+    {
+      "code": "159869",
+      "name": "游戏ETF华夏",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "normalized_file": "data/159869.csv.gz",
+      "normalized_sha256": "f520a6e870bc689697aa7b018356cfff08b59c76b2049dc88f817b2063887536"
+    },
+    {
+      "code": "159870",
+      "name": "化工ETF鹏华",
+      "groups": [
+        "周期资源"
+      ],
+      "normalized_file": "data/159870.csv.gz",
+      "normalized_sha256": "77877ab7c8dc6df431cb1fec275b700d0e3b16024446104af034a03d59071ca7"
+    },
+    {
+      "code": "159883",
+      "name": "医疗器械ETF永赢",
+      "groups": [
+        "MACD优秀",
+        "医药医疗"
+      ],
+      "normalized_file": "data/159883.csv.gz",
+      "normalized_sha256": "87763244b93574050e54ca59339c7342d553de4326a013563deea36852ddf8e4"
+    },
+    {
+      "code": "159892",
+      "name": "恒生医药ETF华夏",
+      "groups": [
+        "医药医疗"
+      ],
+      "normalized_file": "data/159892.csv.gz",
+      "normalized_sha256": "fc624f0dda0ae25b28007a244d7cf8f1721a97793417e926721ba4bd1eba7002"
+    },
+    {
+      "code": "159928",
+      "name": "消费ETF汇添富",
+      "groups": [
+        "大消费"
+      ],
+      "normalized_file": "data/159928.csv.gz",
+      "normalized_sha256": "8c5458cdfab42d8b292e3bd8b57808493a40aaba9b0219ab13bf73644dae7603"
+    },
+    {
+      "code": "159992",
+      "name": "创新药ETF银华",
+      "groups": [
+        "医药医疗"
+      ],
+      "normalized_file": "data/159992.csv.gz",
+      "normalized_sha256": "a0bdcd4ec51075b92e2638e63d52b9a268aa19d9eb65c0d963e571ec712edef8"
+    },
+    {
+      "code": "512010",
+      "name": "医药ETF易方达",
+      "groups": [
+        "医药医疗"
+      ],
+      "normalized_file": "data/512010.csv.gz",
+      "normalized_sha256": "d654fbf46f185370b1880ef205636eab16b8898293ede29da0dd49ba935f4f35"
+    },
+    {
+      "code": "512070",
+      "name": "证券保险ETF易方达",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "normalized_file": "data/512070.csv.gz",
+      "normalized_sha256": "7aee1d1f7dcd38c241c9bc7edde42c995ae572ba52e9a47d7de72edb433d4fb2"
+    },
+    {
+      "code": "512170",
+      "name": "医疗ETF华宝",
+      "groups": [
+        "医药医疗"
+      ],
+      "normalized_file": "data/512170.csv.gz",
+      "normalized_sha256": "8e0da8527f466dbb402e69b5247f1ec74c6b0028e7e70b7f02471bd8b8b8ce15"
+    },
+    {
+      "code": "512200",
+      "name": "房地产ETF南方",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "normalized_file": "data/512200.csv.gz",
+      "normalized_sha256": "bcc720be43f53009722058131b5e92c669ecfa590edf501fefc6286506aae000"
+    },
+    {
+      "code": "512400",
+      "name": "有色金属ETF南方",
+      "groups": [
+        "周期资源"
+      ],
+      "normalized_file": "data/512400.csv.gz",
+      "normalized_sha256": "9a1e5609120f11c7b6a0640b447c6c75411420252d77307a4ddceff6b3233295"
+    },
+    {
+      "code": "512480",
+      "name": "半导体ETF国联安",
+      "groups": [
+        "MACD优秀"
+      ],
+      "normalized_file": "data/512480.csv.gz",
+      "normalized_sha256": "95f20a1bd36cd8070d8789f8a956ec13613e681a362fe74caee7d82858be9e05"
+    },
+    {
+      "code": "512660",
+      "name": "军工ETF国泰",
+      "groups": [
+        "高端制造"
+      ],
+      "normalized_file": "data/512660.csv.gz",
+      "normalized_sha256": "2fbadd94a83807c3f2842532632f1e33432cfb7b0aca1785488dc356114f7721"
+    },
+    {
+      "code": "512800",
+      "name": "银行ETF华宝",
+      "groups": [
+        "金融地产基建"
+      ],
+      "normalized_file": "data/512800.csv.gz",
+      "normalized_sha256": "19fbab75c0d742255cbaf3e36524723083d21f91053cb8a3748e7060b220b02e"
+    },
+    {
+      "code": "512880",
+      "name": "证券ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "normalized_file": "data/512880.csv.gz",
+      "normalized_sha256": "426700e5eae7af7b1a62a1e24a56c0e0caf9c210799ed78ae44fe778ebfbf885"
+    },
+    {
+      "code": "512890",
+      "name": "红利低波ETF华泰柏瑞",
+      "groups": [
+        "策略 ETF"
+      ],
+      "normalized_file": "data/512890.csv.gz",
+      "normalized_sha256": "00db7ca74d22a59fd6ed52c0afb930ac3febfd2a24f6c906d8ac80fc00f63c56"
+    },
+    {
+      "code": "512950",
+      "name": "央企改革ETF华夏",
+      "groups": [
+        "金融地产基建"
+      ],
+      "normalized_file": "data/512950.csv.gz",
+      "normalized_sha256": "d973462a26fe01df1207a1841c02e617b9c4815bf810fd6daccb336f764e95fc"
+    },
+    {
+      "code": "512980",
+      "name": "传媒ETF广发",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/512980.csv.gz",
+      "normalized_sha256": "1677dc2c843c5b4f44e6982c7446696a6b77ae84f945f77708be0e967bbcfec8"
+    },
+    {
+      "code": "513050",
+      "name": "中概互联网ETF易方达",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/513050.csv.gz",
+      "normalized_sha256": "00322dafcd25760c3d82a7a47999db9de7ff66ae057851bae73e2ad790b627ed"
+    },
+    {
+      "code": "513090",
+      "name": "香港证券ETF易方达",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "normalized_file": "data/513090.csv.gz",
+      "normalized_sha256": "c6a471e5f5809138fa81658ab7846397a52f44a445454de3363c48e68bc68165"
+    },
+    {
+      "code": "513120",
+      "name": "港股创新药ETF广发",
+      "groups": [
+        "医药医疗"
+      ],
+      "normalized_file": "data/513120.csv.gz",
+      "normalized_sha256": "5de3d8c3f3aac0257e5177e063b793f44c62bd5ab5d34984d8b1eb4e780b7eb3"
+    },
+    {
+      "code": "513130",
+      "name": "恒生科技ETF华泰柏瑞",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "normalized_file": "data/513130.csv.gz",
+      "normalized_sha256": "4a363d7d7e11c2ac34c622a9332015875fd806c5c326b1a10d4494be7f99cbff"
+    },
+    {
+      "code": "513190",
+      "name": "港股通金融ETF华夏",
+      "groups": [
+        "金融地产基建"
+      ],
+      "normalized_file": "data/513190.csv.gz",
+      "normalized_sha256": "a56974112f050c9221a6930f2c9fb46367b56b312943f93ba8ff711d901cc7de"
+    },
+    {
+      "code": "513290",
+      "name": "纳指生物科技ETF汇添富",
+      "groups": [
+        "医药医疗"
+      ],
+      "normalized_file": "data/513290.csv.gz",
+      "normalized_sha256": "7ee2c10c2a911c9ade0254a6459c89560f85c48d7c28bc9759a7c4ab1d9c4153"
+    },
+    {
+      "code": "513310",
+      "name": "中韩半导体ETF华泰柏瑞",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/513310.csv.gz",
+      "normalized_sha256": "49b24f764811bb01b238c1f38a6f8e01d25cf3beb2b64ddd8bd55e22fcbc432e"
+    },
+    {
+      "code": "513630",
+      "name": "港股低波红利ETF摩根",
+      "groups": [
+        "策略 ETF"
+      ],
+      "normalized_file": "data/513630.csv.gz",
+      "normalized_sha256": "8cbe8f5f1d45122b9587cac3a4b5f0fa7bf9be576a8d4517e1c09707623995e9"
+    },
+    {
+      "code": "513750",
+      "name": "港股通非银ETF广发",
+      "groups": [
+        "金融地产基建"
+      ],
+      "normalized_file": "data/513750.csv.gz",
+      "normalized_sha256": "81e809c35bccb7249b12f7db71fae9509cb9f4f3a348a11bd8d30f57bda15aff"
+    },
+    {
+      "code": "515170",
+      "name": "食品饮料ETF华夏",
+      "groups": [
+        "大消费"
+      ],
+      "normalized_file": "data/515170.csv.gz",
+      "normalized_sha256": "6463d343b37af4fe9479a8dd5153d7cf25d92dd60922611b8981cfaa55fa5c13"
+    },
+    {
+      "code": "515210",
+      "name": "钢铁ETF国泰",
+      "groups": [
+        "周期资源"
+      ],
+      "normalized_file": "data/515210.csv.gz",
+      "normalized_sha256": "ba4ceb39ca3c296710bbc76adb5b8530408c03051da91ad7f919e6d1368af029"
+    },
+    {
+      "code": "515790",
+      "name": "光伏ETF华泰柏瑞",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ],
+      "normalized_file": "data/515790.csv.gz",
+      "normalized_sha256": "cf87695b8b6c2e627b951b4de54279b62289e63df30fc559baf58d1f89fe9a23"
+    },
+    {
+      "code": "515880",
+      "name": "通信ETF国泰",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/515880.csv.gz",
+      "normalized_sha256": "b3de31b89d5a281e74cabcaa8d12b1590f824ed11ebe7bd9cc36cf3a6e507879"
+    },
+    {
+      "code": "516150",
+      "name": "稀土ETF嘉实",
+      "groups": [
+        "周期资源"
+      ],
+      "normalized_file": "data/516150.csv.gz",
+      "normalized_sha256": "d5d9cc18299a2583732e6c8e82dfb5ce9d3a1d36c495b8ef1215c67497e1975a"
+    },
+    {
+      "code": "516160",
+      "name": "新能源ETF南方",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ],
+      "normalized_file": "data/516160.csv.gz",
+      "normalized_sha256": "9f734d9229f762e2ed2ac20fe1617c65ed923404875fd5fadddaf3fce50f0dc7"
+    },
+    {
+      "code": "516510",
+      "name": "云计算ETF易方达",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/516510.csv.gz",
+      "normalized_sha256": "f378c7f3233e1b3b567df0717bfcaae8b30c98a8768d122897fb2e32db9d1618"
+    },
+    {
+      "code": "516750",
+      "name": "建材ETF富国",
+      "groups": [
+        "金融地产基建"
+      ],
+      "normalized_file": "data/516750.csv.gz",
+      "normalized_sha256": "1676e0019a99d1dc32f633441cbef7fc6ee3a828cfcac428abca5ca20e2f447b"
+    },
+    {
+      "code": "517520",
+      "name": "黄金股ETF永赢",
+      "groups": [
+        "周期资源"
+      ],
+      "normalized_file": "data/517520.csv.gz",
+      "normalized_sha256": "7ef0b855b299c6f7502ea953090b535cd0c35c7ce2b92291769644cabbce39b3"
+    },
+    {
+      "code": "518880",
+      "name": "黄金ETF华安",
+      "groups": [
+        "商品 ETF"
+      ],
+      "normalized_file": "data/518880.csv.gz",
+      "normalized_sha256": "0bad3fca0c9eda0066b0e34992bfbb112aecb49f149ad3d54a134fef27b8b951"
+    },
+    {
+      "code": "560080",
+      "name": "中药ETF汇添富",
+      "groups": [
+        "医药医疗"
+      ],
+      "normalized_file": "data/560080.csv.gz",
+      "normalized_sha256": "78aef430f6f1512c98336f33310c848027d532345414c2884310a225bf1a111c"
+    },
+    {
+      "code": "560860",
+      "name": "工业有色ETF万家",
+      "groups": [
+        "周期资源"
+      ],
+      "normalized_file": "data/560860.csv.gz",
+      "normalized_sha256": "c30fdf9e815e7c1e5fd187e58f0fa63b1c167f280e0e2177d09b10ac824705cb"
+    },
+    {
+      "code": "562500",
+      "name": "机器人ETF华夏",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ],
+      "normalized_file": "data/562500.csv.gz",
+      "normalized_sha256": "889c04ba82c3221a36e1c1884ff393c9cb35f2ca342fce291ed61f1ca8129b9b"
+    },
+    {
+      "code": "588170",
+      "name": "科创半导体ETF华夏",
+      "groups": [
+        "TMT科技"
+      ],
+      "normalized_file": "data/588170.csv.gz",
+      "normalized_sha256": "e1f258d9a1705d9012786c49cbc9f2de1364657c2e0a54279b457d4f2614a6d0"
+    },
+    {
+      "code": "588200",
+      "name": "科创芯片ETF嘉实",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "normalized_file": "data/588200.csv.gz",
+      "normalized_sha256": "d290661d20293767a90ef14f0f54beb25289b0e91d1f07886d8d908e2b9d1736"
+    }
+  ],
+  "configs": {
+    "e6ecc034065e": {
+      "entry": "E2",
+      "exit": "X2",
+      "ma": 10,
+      "n": 9,
+      "lo": 20,
+      "macd": [
+        12,
+        26,
+        9
+      ],
+      "hi": null,
+      "cap": null,
+      "wait": 5
+    },
+    "825cd1230879": {
+      "entry": "E1",
+      "exit": "X3",
+      "ma": 10,
+      "n": 9,
+      "lo": 30,
+      "macd": [
+        16,
+        35,
+        9
+      ],
+      "hi": 70,
+      "cap": null,
+      "wait": null
+    },
+    "HOLD": {
+      "ma": 10,
+      "n": null,
+      "lo": null,
+      "macd": null,
+      "hi": null,
+      "cap": null,
+      "wait": null,
+      "entry": "HOLD",
+      "exit": "HOLD"
+    },
+    "MA10": {
+      "ma": 10,
+      "n": null,
+      "lo": null,
+      "macd": null,
+      "hi": null,
+      "cap": null,
+      "wait": null,
+      "entry": "MA",
+      "exit": "X1"
+    },
+    "MACD": {
+      "ma": 10,
+      "n": null,
+      "lo": null,
+      "macd": [
+        12,
+        26,
+        9
+      ],
+      "hi": null,
+      "cap": null,
+      "wait": null,
+      "entry": "MACD",
+      "exit": "X2"
+    },
+    "USER": {
+      "ma": 10,
+      "n": 13,
+      "lo": 30,
+      "macd": [
+        12,
+        26,
+        9
+      ],
+      "hi": 70,
+      "cap": null,
+      "wait": null,
+      "entry": "E1",
+      "exit": "X3"
+    }
+  },
+  "display_roles": {
+    "e6ecc034065e": "候选A：折中",
+    "825cd1230879": "候选B：年化优先",
+    "USER": "原混合规则（不含45过滤）",
+    "MACD": "纯MACD12/26/9",
+    "MA10": "仅MA10",
+    "HOLD": "买入持有"
+  },
+  "pins": {
+    "protocol.json": "5f3572dc5c9e54bace1769dba58115806f15065411506dde92d1e442b31be566",
+    "selection_lock.json": "721b0c733b0231aab4201bb54c6fce04fe61557c77b3b96cad5e1d9fadd48cef",
+    "data_audit.json": "0532602aed3fd9809c7f66d6527891d9f387c7382d29c03d86f9266b1e559125",
+    "results/test_per_etf.csv.gz": "a3ac543749e277e4dea02ab2066fd1dadda32bd057bac9641f86ecb0c8030e33",
+    "results/test_trades.csv.gz": "d6d9c18b520fe32bea24e5f18b5f20ae596a42461bf35ce5a0da4057c554ea21",
+    "results/test_nav.csv.gz": "8bd5f9117a368be78804b8c330f31446cc26cc70f7a6938df71c6910d2c33851",
+    "bundle-manifest.json": "989fd68f1fb885ca8feae3e04aeb2a8f8c10113e26071f20f1d3e9767ef822d3"
+  },
+  "strictness": "comparison tolerance absolute/relative1e-9; exact signals and trade counts; undefined values remain undefined; raw result comparison only after independent calculations"
+}
