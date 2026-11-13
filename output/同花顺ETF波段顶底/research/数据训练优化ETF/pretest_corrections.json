@@ -1,0 +1,11 @@
+{
+  "recorded_before_final_test_at_utc": "2026-11-13T13:50:59.428293+00:00",
+  "original_protocol_sha256": "5f3572dc5c9e54bace1769dba58115806f15065411506dde92d1e442b31be566",
+  "selection_lock_sha256": "721b0c733b0231aab4201bb54c6fce04fe61557c77b3b96cad5e1d9fadd48cef",
+  "F1": "Provider u converted to capital K=sum(delta_u*s_at_event) at ingestion. Existing engine/reference already expect normalized capital cash K and do not change. All86261 rows of61 primary ETF numeric fields unchanged. Corrected wine/coal pass HFQ but remain supplementary only, no reselection.",
+  "F2": "Subperiods report median total return, not annualized return; retain364-day dates and original annual support gates, full-test CAGR rule unchanged.",
+  "F3": "Original15% raw trade concentration threshold structurally fails all good-only training configurations because unequal historical coverage. Disclose design limitation; no loosening/reselection; good descriptive candidates not recommendations.",
+  "F4": "prepare_data.py now snapshots raw/hfq and protects original frozen audit; separate dependency manifest freezes external core, preparation and independent verification; selection_lock unchanged.",
+  "F5": "Correct count:19 cached HFQ files in63 nonmoney pool,17 within61 primary ETF; vendor HFQ not assumed independent from factor source; dividend second source unverified. Source share factor rounding up toabout2.5e-5.",
+  "no_rule_or_cost_or_parameter_changes": true
+}

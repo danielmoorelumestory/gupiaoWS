@@ -4,6 +4,8 @@ import unittest
 from engine import prepare,simulate
 from grid import controls,enumerate_grid,MACDS,PERIODS
 from search import rank_scores
+from prepare_data import normalize_cash_factors
+from decimal import Decimal as D
 
 
 def fixture(n=350):
@@ -23,6 +25,22 @@ def run(d,c=None,cost=20,liquidate=True):
 
 
 class EngineTest(unittest.TestCase):
+    def test_provider_cash_after_split_is_capital_weighted(self):
+        factors=[("1900-01-01",D(1),D(0)),("2021-01-01",D(2),D(0)),("2021-02-01",D(2),D("0.35"))]
+        capital=normalize_cash_factors(factors)
+        self.assertEqual(capital[-1][2],D("0.70"))
+        d=fixture();d["bands"][13][130:132]=[20.,35.]
+        for i in range(135,len(d["dates"])):
+            d["s"][i]=2.;d["open"][i]=d["close"][i]=5.
+        for i in range(140,len(d["dates"])):d["u"][i]=.70
+        result=run(d,cost=0)
+        self.assertAlmostEqual(result["metric"]["dividend_reserve"],.07)
+        self.assertAlmostEqual(result["metric"]["final_nav"],1.07)
+
+    def test_provider_cash_before_and_after_split(self):
+        factors=[("a",D(1),D("0.1")),("b",D(2),D("0.1")),("c",D(2),D("0.2"))]
+        self.assertEqual(normalize_cash_factors(factors)[-1][2],D("0.3"))
+
     def test_grid_is_canonical306(self):
         grid=enumerate_grid()
         self.assertEqual(len(grid),306)

@@ -1,0 +1,17 @@
+{
+  "base": "repository root",
+  "sha256": {
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/engine.py": "d9c971cb75a636241125b81aae3c4709f035e8524635047d77ed37023a1d62c1",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/grid.py": "a7b1680e114021330217752e7f3e9bba690101fb37e78817a36327efc14225c0",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/search.py": "eb93facbd17e6dab12e7633533a3a18bd885df9daf1626788d1b82aca054cf88",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/prepare_data.py": "8e44ca56cef530a14b25e37514af6aee6116cadaf013cdb9d47b6fd24ccce57d",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/reference.py": "adb28740e2d1c5661e68a02a7bc36991883075e5bd79bb6a48275be51343a874",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/verify.py": "25e850f3521aa518642771a8caf930badda96b1ae4c083d0ea82996e5fd2b8b3",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/test_engine.py": "0bfadee4f26b0152b8c6dcdb67f38397b92bebcc4a119a265fc0474c06e6691d",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/protocol.json": "5f3572dc5c9e54bace1769dba58115806f15065411506dde92d1e442b31be566",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/implementation_choices.json": "60403a952400ba0ef2e88e00f8e89557b8fa64f7360be435b6f04f4054acc728",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/selection_lock.json": "721b0c733b0231aab4201bb54c6fce04fe61557c77b3b96cad5e1d9fadd48cef",
+    "output/同花顺ETF波段顶底/research/数据训练优化ETF/pretest_corrections.json": "4f6dc7d8271ca6dc0467862b57085fd8cf55aa59dc4fd54cfbaeb6c7da58c6aa",
+    "output/布鲁斯的金融宝藏/replica/bruce_replica/etf_band.py": "82a464440c7a81ce10f2cc4aece6a8a5950c799ff322598a90d903019ac0c0fd"
+  }
+}

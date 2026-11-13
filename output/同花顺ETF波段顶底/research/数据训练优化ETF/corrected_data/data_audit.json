@@ -1,0 +1,3682 @@
+{
+  "prepared_at_utc": "2026-11-13T13:50:12.564066+00:00",
+  "universe_sha256": "e4c202574f522e12ef24816de487acd3faa66832219ecefe141e58d5e1230d88",
+  "cutoff": "2026-11-10",
+  "policy": "raw + Sina exact-date factors; capital cash K=sum(delta_u*s_at_event), raw_close*s+K; no price-fitting or dividend deletion",
+  "eligible_rule": "no action-adjusted open gap>8%; if cached hfq exists, >0.5% price mismatches above max(.003,.1%) quarantines",
+  "symbols": [
+    {
+      "code": "159131",
+      "name": "港股通信息技术ETF华宝",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 240,
+      "first": "2025-11-13",
+      "last": "2026-11-10",
+      "normalized_file": "data/159131.csv.gz",
+      "normalized_sha256": "ab6e7f958ff9d7447fc0f4782a2d642a9091634972d650367599eb358588f808",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159131_raw.csv",
+      "cached_raw_sha256": "42d530ba465ce5a24ff145a11ba8a03806094b1ef84c3e4fcfe63bb42c7f5f02",
+      "raw_snapshot_file": "data/raw/159131-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "f3ddb7cca87a2167a24fd360be0d3b46e96a05bd432abcc368c51b946cdb45eb",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159131/hfq.js",
+      "factor_file": "data/raw/159131-sina-hfq.js.gz",
+      "factor_sha256": "d4ca1c503da88b8fa936ae0b7743d002e8c6876b6f0298a658194294d197ea0d",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159206",
+      "name": "卫星ETF永赢",
+      "groups": [
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 403,
+      "first": "2025-03-14",
+      "last": "2026-11-10",
+      "normalized_file": "data/159206.csv.gz",
+      "normalized_sha256": "bd081cefca32a9107e463d72baa583b14434029e8438c752f78d6b2248c7d852",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159206_raw.csv",
+      "cached_raw_sha256": "e6eb55c76bc4082e3c6547af3469fb8e8ff3f81ba366559439488922838652b8",
+      "raw_snapshot_file": "data/raw/159206-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "17ee50bb31ae877a267bad842029a97ff1c31965301b44f1bbf8b3bb4497834e",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159206/hfq.js",
+      "factor_file": "data/raw/159206-sina-hfq.js.gz",
+      "factor_sha256": "55313e5d32b83eef7a67d276ab4808452a751df79a8db0b8f8cf5b2a46ecfa75",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159326",
+      "name": "电网设备ETF华夏",
+      "groups": [
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 523,
+      "first": "2024-09-09",
+      "last": "2026-11-10",
+      "normalized_file": "data/159326.csv.gz",
+      "normalized_sha256": "c4d1fe4494007889f967ee7632441882a8cd2a53109c3c774b07788f130412b8",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159326_raw.csv",
+      "cached_raw_sha256": "82c82ac6800a3de21ba547bfb3211cbdd69a67aee67e77a75168d57a78e4a38b",
+      "raw_snapshot_file": "data/raw/159326-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "275dd744530edce85fa2eef9f82a5a991234fd245459cdca3275b24348f5b808",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159326/hfq.js",
+      "factor_file": "data/raw/159326-sina-hfq.js.gz",
+      "factor_sha256": "d1551a3843df94fca404e987d03b40aab8da67a956d61fd3b50b46c8d74d8580",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159509",
+      "name": "纳指科技ETF景顺",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 788,
+      "first": "2023-08-08",
+      "last": "2026-11-10",
+      "normalized_file": "data/159509.csv.gz",
+      "normalized_sha256": "35189d7d2e7c582977700b0d52717de479d9b61deba1cc4fa951043ec422fa31",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159509_raw.csv",
+      "cached_raw_sha256": "5c4c3c708eff0517b67d2cfa8d60dc675c5e2cd8a18362934d14706773d1375e",
+      "raw_snapshot_file": "data/raw/159509-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "2072b007bff790892e9f6ae55978520bc336e720e94d7886c57a32bfee54ca5b",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159509/hfq.js",
+      "factor_file": "data/raw/159509-sina-hfq.js.gz",
+      "factor_sha256": "4ace9b458fb2f55d68e95c340e165a50a41123a0f754cb09461f648f635461ba",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159518",
+      "name": "标普油气ETF嘉实",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 721,
+      "first": "2023-11-15",
+      "last": "2026-11-10",
+      "normalized_file": "data/159518.csv.gz",
+      "normalized_sha256": "5131985c4536090d7c68b2ebaf423fa504f8670e3cbf0eabf5e9be96f0cc80a6",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159518_raw.csv",
+      "cached_raw_sha256": "3b8cc02594e34026d9f25d10ecc35b9e2ac5ada44694cfa693e9ce9ef9bf2a7a",
+      "raw_snapshot_file": "data/raw/159518-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "62b331bf478a285f4d0fdd716b1c2e46d7e59a53e90c88a991ed2e0e61bd4c80",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159518/hfq.js",
+      "factor_file": "data/raw/159518-sina-hfq.js.gz",
+      "factor_sha256": "647d8011f5fdd6fbef1b6e3570f9c1d1c186f08e4560d4abde71b068efad48d8",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159529",
+      "name": "标普消费ETF景顺",
+      "groups": [
+        "大消费"
+      ],
+      "status": "eligible",
+      "rows": 663,
+      "first": "2024-02-02",
+      "last": "2026-11-10",
+      "normalized_file": "data/159529.csv.gz",
+      "normalized_sha256": "c89041564b90981eef4c028f4daa373eb072543744ee31c298602a36a9d2f5b2",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159529_raw.csv",
+      "cached_raw_sha256": "06d3b62e1c9bc4e0bb5162272843eb3fdce3ff60c9d765804c24c94ae0de851d",
+      "raw_snapshot_file": "data/raw/159529-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "38b95a2d1b73683a7a8a1046baf926afafe3d77ac8e0da6fee13e440d841ceca",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159529/hfq.js",
+      "factor_file": "data/raw/159529-sina-hfq.js.gz",
+      "factor_sha256": "cd6dc082615d81b2a67e1efd2af913255291fa0ffb261a06295e02a7e0f22646",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159566",
+      "name": "储能电池ETF易方达",
+      "groups": [
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 663,
+      "first": "2024-02-08",
+      "last": "2026-11-10",
+      "normalized_file": "data/159566.csv.gz",
+      "normalized_sha256": "1eeaf34336f5ad5c6390ee4e592562927c647a7b51d8f02809f4b8dfb509f4bd",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159566_raw.csv",
+      "cached_raw_sha256": "241264f5ee12f429ad3a308f72d12ad7fc602cc7c8a782cda062063d90b321de",
+      "raw_snapshot_file": "data/raw/159566-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "5c26789934e11491469aed5cd5631655eec28167b4962d036fb3b87705708d11",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159566/hfq.js",
+      "factor_file": "data/raw/159566-sina-hfq.js.gz",
+      "factor_sha256": "836eecad8141298e25df5dca47a9fe3fd36f82f1b7f53037c97ea9db3b2ad54a",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159611",
+      "name": "电力ETF广发",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 1171,
+      "first": "2022-01-07",
+      "last": "2026-11-10",
+      "normalized_file": "data/159611.csv.gz",
+      "normalized_sha256": "af23efe9a7f4b6d2345c40e0e7b3d8ee627e082baf16a6edfb7e7f528e7fdb97",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159611_raw.csv",
+      "cached_raw_sha256": "69da6ab1d588179fa6f9e2fdea9441cdfe0b87f61718ee09fa375dd6a9dd29af",
+      "raw_snapshot_file": "data/raw/159611-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "0a81c0c69c195d715a13e0197e660fb9a85990b82a8a21297151f29f2ca24391",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159611/hfq.js",
+      "factor_file": "data/raw/159611-sina-hfq.js.gz",
+      "factor_sha256": "e9af5e4fe71b0d28037a17779fa1c9171e75246abbbeaf7b8425bf1fa6febab0",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159636",
+      "name": "港股通科技30ETF工银",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1044,
+      "first": "2022-07-20",
+      "last": "2026-11-10",
+      "normalized_file": "data/159636.csv.gz",
+      "normalized_sha256": "b1864b18f798edbf2d22a48b972412a5eb286963a7a2e73f7eaa10edb759558b",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159636_raw.csv",
+      "cached_raw_sha256": "69fb760fe005b90d7a64335c4c89ab3af118f9e053924f09af4f86fa6d3439ef",
+      "raw_snapshot_file": "data/raw/159636-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "e8c6c42b0e512ebc91f1378c1fd2e7b6efc955eecd03e43ad466d02825a651ab",
+      "cached_events_sha256": "6a16fe8ecf3751c7b35745e23f4b16afb2e0f6ba4ad65af347a6cb01b326c5d6",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159636/hfq.js",
+      "factor_file": "data/raw/159636-sina-hfq.js.gz",
+      "factor_sha256": "e46849fbed217a6dbfe20f59608ffc4aab85a10e4b9b6b99a7c3a23252141a01",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2025-12-08",
+          "2.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2025-12-08",
+          "2.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2025-12-08",
+          "factor_date": "2025-12-08",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-16",
+          "old_close": "1.385",
+          "new_open": "0.692"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159667",
+      "name": "工业母机ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 980,
+      "first": "2022-10-26",
+      "last": "2026-11-10",
+      "normalized_file": "data/159667.csv.gz",
+      "normalized_sha256": "5aa0179f02042a5bad74374847b64cf90dd57cc4873ba7333ef3aa74ed2440fa",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159667_raw.csv",
+      "cached_raw_sha256": "d7a9142f9d5208edafa48cc447c8af5eb88c4fadffbacf70126d65df305bbdf5",
+      "raw_snapshot_file": "data/raw/159667-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "24ca152dedd8afda11b9978daccf77f7c6b3a391590f15c6d2c151d45307563b",
+      "cached_events_sha256": "01b565a4ef6d99fdd48d680cd9c376785eb2784f1941d89b6479a89a649091d7",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159667/hfq.js",
+      "factor_file": "data/raw/159667-sina-hfq.js.gz",
+      "factor_sha256": "7072042d9a6f6efba1720dc834709118dc26b9cdc49b208bcfc5e63207c4f39e",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2026-06-10",
+          "3.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2026-06-10",
+          "3.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2026-06-10",
+          "factor_date": "2026-06-10",
+          "share_ratio": "3",
+          "cash_per_old_share": "0E-16",
+          "old_close": "2.438",
+          "new_open": "0.801"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159698",
+      "name": "粮食ETF鹏华",
+      "groups": [
+        "农业周期"
+      ],
+      "status": "eligible",
+      "rows": 780,
+      "first": "2023-08-18",
+      "last": "2026-11-10",
+      "normalized_file": "data/159698.csv.gz",
+      "normalized_sha256": "455a03cfd17262c7d8f8cea2e21e155dadb6e6894736670e0b48493f2a51c077",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159698_raw.csv",
+      "cached_raw_sha256": "886024b78f9815eb3381095743e68ccf63a8488a02d558b09844419a78b42636",
+      "raw_snapshot_file": "data/raw/159698-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "03df674f6c9be642d0768cb8be585dad249ea27f31a82438c72194fc4656a7bb",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159698/hfq.js",
+      "factor_file": "data/raw/159698-sina-hfq.js.gz",
+      "factor_sha256": "d3a757633b48a36945991d0696bd7c30823b5805c7f1d1cf0c79ab9ad960e41a",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159732",
+      "name": "消费电子ETF华夏",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1262,
+      "first": "2021-08-23",
+      "last": "2026-11-10",
+      "normalized_file": "data/159732.csv.gz",
+      "normalized_sha256": "16e25647aa743dea3f4691475c63104085f03215eb9a7f7ee1c92c9888ad26ce",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159732_raw.csv",
+      "cached_raw_sha256": "4f45248d1245f26a66711157c77201f3d6b76eccf94ab64e66130b7244d930ab",
+      "raw_snapshot_file": "data/raw/159732-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "2816afa8d8790a30807b2221fcc48e9851cf07a50fae59b3c6e4752f8a97abcd",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159732/hfq.js",
+      "factor_file": "data/raw/159732-sina-hfq.js.gz",
+      "factor_sha256": "98f06cac7dcb612c69118defc0049c2564574bd75b80615bbc12d626e7be2338",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159755",
+      "name": "电池ETF广发",
+      "groups": [
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 1304,
+      "first": "2021-06-24",
+      "last": "2026-11-10",
+      "normalized_file": "data/159755.csv.gz",
+      "normalized_sha256": "f1aef65c53d9e36b135e926c0a60850d58d1bd1cc4d73d4f1d19175673a65b42",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159755_raw.csv",
+      "cached_raw_sha256": "3e6331137b9faccbd4bf4e564b3ffa122cf69cdb679c2ba998cf51bbfd1270fa",
+      "raw_snapshot_file": "data/raw/159755-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "947e1162bcf0b04032f5a03858891fd4dd5e807215dc1a74f52c3d3be9ff5b74",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159755/hfq.js",
+      "factor_file": "data/raw/159755-sina-hfq.js.gz",
+      "factor_sha256": "57f1eb40178b62eccc58da8b64d8e1acefaebc074636ccdc1630cd294de45696",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159766",
+      "name": "旅游ETF富国",
+      "groups": [
+        "大消费"
+      ],
+      "status": "eligible",
+      "rows": 1283,
+      "first": "2021-07-23",
+      "last": "2026-11-10",
+      "normalized_file": "data/159766.csv.gz",
+      "normalized_sha256": "eb744de2fc95246c0bdbdc3dae4c7e83c28f25ea36a7db66022f0e675cde84a7",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159766_raw.csv",
+      "cached_raw_sha256": "ac952ad08b1704ad8d824b8bc19fb8c20b9eed163524f2907b8e50bc6e068ba4",
+      "raw_snapshot_file": "data/raw/159766-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "e1a986a0eb87384b1f6f97b4bb9ad1004a41e17b66a76332195055e10eb9ff16",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159766/hfq.js",
+      "factor_file": "data/raw/159766-sina-hfq.js.gz",
+      "factor_sha256": "72d83dd5dcd6cc6d473e637782087d22d195938d374a5fc78ae48fbbd7542268",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159792",
+      "name": "港股通互联网ETF富国",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1238,
+      "first": "2021-09-28",
+      "last": "2026-11-10",
+      "normalized_file": "data/159792.csv.gz",
+      "normalized_sha256": "6d43376a7c763517a7ee4f211125c7ccc48b1d83dbb4f05105913cf72a26572f",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159792_raw.csv",
+      "cached_raw_sha256": "e96b8dedf9a6c93d32b8f4276c51754a459853f7d2b1116a89294842075058cf",
+      "raw_snapshot_file": "data/raw/159792-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "8993a4e635f70cd2f437b90b16f01af86ffae8cd2462eccc4c836eefd9c9c644",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159792/hfq.js",
+      "factor_file": "data/raw/159792-sina-hfq.js.gz",
+      "factor_sha256": "db5f49c1f95e0e1ec65686280b786f71952ef64ff3b095a86aa70dee04c446c8",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159819",
+      "name": "人工智能ETF易方达",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1483,
+      "first": "2020-09-23",
+      "last": "2026-11-10",
+      "normalized_file": "data/159819.csv.gz",
+      "normalized_sha256": "f49f06ac353c44471e3e2349a434e58d7f4169d64dacf2b1d759efe433c20ebf",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159819_raw.csv",
+      "cached_raw_sha256": "e6bf1308bcae6834329e3d90e313bed1edc14e9baea8bb89fd16253a9bd603e9",
+      "raw_snapshot_file": "data/raw/159819-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "230443121ec0c7f191d0b7203eb4ba2d1803b0cef43dd25697f37e04a2915559",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159819/hfq.js",
+      "factor_file": "data/raw/159819-sina-hfq.js.gz",
+      "factor_sha256": "508dfd833a6cc062260333c3a6a131c145aa20154be539e55710223f437cfab9",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1483,
+      "hfq_sha256": "e6bf1308bcae6834329e3d90e313bed1edc14e9baea8bb89fd16253a9bd603e9",
+      "hfq_snapshot_file": "data/raw/159819-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "230443121ec0c7f191d0b7203eb4ba2d1803b0cef43dd25697f37e04a2915559",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159851",
+      "name": "金融科技ETF华宝",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 1368,
+      "first": "2021-03-19",
+      "last": "2026-11-10",
+      "normalized_file": "data/159851.csv.gz",
+      "normalized_sha256": "e1252f0863e7c3859da0f0fe4c910325807637f5107bb821023583411d59e241",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159851_raw.csv",
+      "cached_raw_sha256": "c9a152baf47c2f36efc018ce8ff3b863b2c8801874626a2e24588f8153653e73",
+      "raw_snapshot_file": "data/raw/159851-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "6dd6d0aa1e40468c2ab88f3cbc794ba792d282f01687154b069c2506587ba856",
+      "cached_events_sha256": "a6ad60e951ead78734d5e28acacf7fce184fbc2ad331cbbc4c5d8e3895e91107",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159851/hfq.js",
+      "factor_file": "data/raw/159851-sina-hfq.js.gz",
+      "factor_sha256": "778bd1159cf4e40ee083bd544ef62902b798477a5bc448589df2f3b972469877",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2025-07-14",
+          "2.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2025-07-14",
+          "2.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2025-07-14",
+          "factor_date": "2025-07-14",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-16",
+          "old_close": "1.739",
+          "new_open": "0.866"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159852",
+      "name": "软件ETF嘉实",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1391,
+      "first": "2021-02-09",
+      "last": "2026-11-10",
+      "normalized_file": "data/159852.csv.gz",
+      "normalized_sha256": "f3d56f90b46e54921e923d432a9c8478ee51522443dfca74e47d170acda116de",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159852_raw.csv",
+      "cached_raw_sha256": "9cb76bebf5cf420aa6687a48ab9c11bf3456074943f61f6b014d0e701c15988e",
+      "raw_snapshot_file": "data/raw/159852-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "1775045fff8afc6886f02bbe8a803081bc83b98db98b6475847451e70368a080",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159852/hfq.js",
+      "factor_file": "data/raw/159852-sina-hfq.js.gz",
+      "factor_sha256": "aecc36eb1579073570044b00a810190694dcd5edd5b7480898deb7f85f425adf",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159865",
+      "name": "养殖ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "农业周期"
+      ],
+      "status": "eligible",
+      "rows": 1377,
+      "first": "2021-03-08",
+      "last": "2026-11-10",
+      "normalized_file": "data/159865.csv.gz",
+      "normalized_sha256": "2699b9fd0b3d3cbcf49ed56c8cc575301de1467f9cbece0faa67a290080978a3",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159865_raw.csv",
+      "cached_raw_sha256": "95e5d399bc68f250d9e9c64b7f3705f118daf9510b07bb1761d2c7b62310f418",
+      "raw_snapshot_file": "data/raw/159865-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "8b50284cfcb08f03fe40b46d59160e569b9256c5d5e1e2ee3fe709c6a3ca0b8a",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159865/hfq.js",
+      "factor_file": "data/raw/159865-sina-hfq.js.gz",
+      "factor_sha256": "b305a4405017848ed804c786317ee079296a79683944c17d1044d82fcd878df2",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159869",
+      "name": "游戏ETF华夏",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1378,
+      "first": "2021-03-05",
+      "last": "2026-11-10",
+      "normalized_file": "data/159869.csv.gz",
+      "normalized_sha256": "0359b22695eae7054fda0dc168738980ca513866a51b67c2760c3228e5563470",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159869_raw.csv",
+      "cached_raw_sha256": "c85724ccd8aac5b94321f457009fbc1fef05d93b7d5ec48a7ce14ed82e3dbba9",
+      "raw_snapshot_file": "data/raw/159869-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "55e1ec18fa81e4a7d44c762ff8d8c7003c6cec3f1c5e60fd3553a140f1ea1acf",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159869/hfq.js",
+      "factor_file": "data/raw/159869-sina-hfq.js.gz",
+      "factor_sha256": "59a18e33d8a7c69bb096dceeecb2104ea6e87d7a4b8e6b9f98752db407451b6b",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159870",
+      "name": "化工ETF鹏华",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 1380,
+      "first": "2021-03-03",
+      "last": "2026-11-10",
+      "normalized_file": "data/159870.csv.gz",
+      "normalized_sha256": "5c6a541a42aacf1a624bdf410195d0cfbc08047297e29bb84e23d1424847c8b1",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159870_raw.csv",
+      "cached_raw_sha256": "15b43d901886d8bd7967c779086083d641af7daa60c436c7b462956465832d7e",
+      "raw_snapshot_file": "data/raw/159870-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "1ac3f1dfe1296dcef8f32ab99209b64f81d3773b04bda9a2aebcc100ce5b930a",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159870/hfq.js",
+      "factor_file": "data/raw/159870-sina-hfq.js.gz",
+      "factor_sha256": "1ad0f0e3aa8fead4aa23d4992d19ff4d4b709ce2138a832109ca9595059d496a",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159883",
+      "name": "医疗器械ETF永赢",
+      "groups": [
+        "MACD优秀",
+        "医药医疗"
+      ],
+      "status": "eligible",
+      "rows": 1339,
+      "first": "2021-04-30",
+      "last": "2026-11-10",
+      "normalized_file": "data/159883.csv.gz",
+      "normalized_sha256": "d9dfbf12cdafcaa76503f843db36beec073a51c120bc8e0524c01d21e7c6dc3d",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159883_raw.csv",
+      "cached_raw_sha256": "4f263a0de02567c0124848b5bae77c16269895d2444870ab6330ae6a7bedc980",
+      "raw_snapshot_file": "data/raw/159883-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "84ac6cb5dbc61d8ef7bde8ba0704739def623615e87fb4809cea32ced3f0030c",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159883/hfq.js",
+      "factor_file": "data/raw/159883-sina-hfq.js.gz",
+      "factor_sha256": "94ffa159254f8fe6b694fc86e067a2dcd8b340277ebfb48f0a3dde15310e28db",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159892",
+      "name": "恒生医药ETF华夏",
+      "groups": [
+        "医药医疗"
+      ],
+      "status": "eligible",
+      "rows": 1228,
+      "first": "2021-10-19",
+      "last": "2026-11-10",
+      "normalized_file": "data/159892.csv.gz",
+      "normalized_sha256": "39df5670b67f17573bf290cddda14923468c6bee79348e351a132c2060ae9b29",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159892_raw.csv",
+      "cached_raw_sha256": "8ca9e93856f97c8159946c6e88cfb6fbe58ae85e8c1e812b62e58f0b6f1335b8",
+      "raw_snapshot_file": "data/raw/159892-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "d9c5f30b899f6f8fb9297b49fdd2a128917545212c987b89b8c17d044cd2d6af",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159892/hfq.js",
+      "factor_file": "data/raw/159892-sina-hfq.js.gz",
+      "factor_sha256": "f12de1730f85c9e1c27ef8e65851ef03bec11d5db2956b491777df22c6f581cc",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159928",
+      "name": "消费ETF汇添富",
+      "groups": [
+        "大消费"
+      ],
+      "status": "eligible",
+      "rows": 3194,
+      "first": "2013-09-16",
+      "last": "2026-11-10",
+      "normalized_file": "data/159928.csv.gz",
+      "normalized_sha256": "4e0d7baad53634ee85785ca4a36e77fee952a6326f6787821d21268bbd423fb3",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159928_raw.csv",
+      "cached_raw_sha256": "8fa0d970bdbc64759937c9cd7e3eaf6d4ea22217074cee42e70e38381ef9dbed",
+      "raw_snapshot_file": "data/raw/159928-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "4d714e656da14c98bf4d4dc4263ff101eb048bf97d9f86297422c53d20c0dcd7",
+      "cached_events_sha256": "091279cc3afed8f47629b138d84e3d9bff447901b115cf3cba33d0c4e6977408",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159928/hfq.js",
+      "factor_file": "data/raw/159928-sina-hfq.js.gz",
+      "factor_sha256": "0ca3048e8d1a387f4b0c2d373ca0102117c0500d990adefbb9ed39d07b221fd4",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-06-25",
+          "3.9999189960000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-06-25",
+          "3.9999189960000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-06-25",
+          "factor_date": "2021-06-25",
+          "share_ratio": "3.999918996",
+          "cash_per_old_share": "0E-16",
+          "old_close": "4.94",
+          "new_open": "1.233"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 3194,
+      "hfq_sha256": "8a77ae33084a4ed4e28d8ae5b6902a19207f9ad7d520142009ba6a03d4bde440",
+      "hfq_snapshot_file": "data/raw/159928-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "b329559151e2edd53920237829d4020be92a42f3689aa098a4a72fa5ed411230",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "159992",
+      "name": "创新药ETF银华",
+      "groups": [
+        "医药医疗"
+      ],
+      "status": "eligible",
+      "rows": 1596,
+      "first": "2020-04-10",
+      "last": "2026-11-10",
+      "normalized_file": "data/159992.csv.gz",
+      "normalized_sha256": "10f517d411b0f89c93663c47563284ab3cb33a89862e12a012ae2d603f6f6cab",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_159992_raw.csv",
+      "cached_raw_sha256": "2616518626218d99031a8befd8aa57a027b2c86ec0b0be113fb864f4bf9e77ef",
+      "raw_snapshot_file": "data/raw/159992-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "39a234dc3805c8f980b25634d6249ed201e4c8e5f4bb1209e1487c5eb403ad65",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sz159992/hfq.js",
+      "factor_file": "data/raw/159992-sina-hfq.js.gz",
+      "factor_sha256": "123b25c2d60534aaaa30e9c25fd7293bc3039d3919c46c6a01d7337deb21a407",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512010",
+      "name": "医药ETF易方达",
+      "groups": [
+        "医药医疗"
+      ],
+      "status": "eligible",
+      "rows": 3169,
+      "first": "2013-10-28",
+      "last": "2026-11-10",
+      "normalized_file": "data/512010.csv.gz",
+      "normalized_sha256": "e0929839e3544506cd990d6f9021f4550b05c936aa4ad96588b6dd6de7480742",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512010_raw.csv",
+      "cached_raw_sha256": "0efcceb46081bcddb3ae6de6719b5fcd7b2c5643404a05ef8bb159119867c6cc",
+      "raw_snapshot_file": "data/raw/512010-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "5520ba91993e77802f002442f2de359bbfe87f2b7a8ae9e93cafc8d3475ea5ee",
+      "cached_events_sha256": "ebdfe8e444add54192d431d3e93083598069d673d82af6142bb4851ab33e15b3",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512010/hfq.js",
+      "factor_file": "data/raw/512010-sina-hfq.js.gz",
+      "factor_sha256": "3558d9ca035e84c917d7909f8521974fdaa59a8969e68952821c839207906438",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-06-28",
+          "4.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-06-28",
+          "4.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-06-28",
+          "factor_date": "2021-06-28",
+          "share_ratio": "4",
+          "cash_per_old_share": "0E-16",
+          "old_close": "3.206",
+          "new_open": "0.821"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 3169,
+      "hfq_sha256": "eb29ceace35700964b122a77645c026dabd106bd3401f589b24e64559363b5ef",
+      "hfq_snapshot_file": "data/raw/512010-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "454a5d216274d06777b09738b279e72cd88a94b927b7c8bd124de7206c1ee5ff",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512070",
+      "name": "证券保险ETF易方达",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 2735,
+      "first": "2015-08-04",
+      "last": "2026-11-10",
+      "normalized_file": "data/512070.csv.gz",
+      "normalized_sha256": "6e39b6c4f2751410de40cc6b4982ffcdd7ce038e0d1ab8347d0be788f0be38c5",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512070_raw.csv",
+      "cached_raw_sha256": "7ecd1030e69f75c85ee079d98ddca7cbba7c8952290ce1603f2d4d44b2163f54",
+      "raw_snapshot_file": "data/raw/512070-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "605f48e47e2f91d26671818f0c462ab8f8fdd78befeea67347960a313288ea81",
+      "cached_events_sha256": "9afa604e9d2f8a6fa7a20f0639d1eb20868cc26b3ea14be1659206c85ea2b54d",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512070/hfq.js",
+      "factor_file": "data/raw/512070-sina-hfq.js.gz",
+      "factor_sha256": "d8e0803d3a6f41b1319b226d80e8e9c0cae8e754be2385988b99cedf7b89c934",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-09-13",
+          "3.0001279920000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-09-13",
+          "3.0001279920000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-09-13",
+          "factor_date": "2021-09-13",
+          "share_ratio": "3.000127992",
+          "cash_per_old_share": "0E-16",
+          "old_close": "2.318",
+          "new_open": "0.782"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512170",
+      "name": "医疗ETF华宝",
+      "groups": [
+        "医药医疗"
+      ],
+      "status": "eligible",
+      "rows": 1795,
+      "first": "2019-06-17",
+      "last": "2026-11-10",
+      "normalized_file": "data/512170.csv.gz",
+      "normalized_sha256": "86220ff1b5abdf3f40b70caeb3a1305ecaa137760072e787d582be09a156cb9f",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512170_raw.csv",
+      "cached_raw_sha256": "ed237d1523c9f381ddc60fc6237806b89b0c5f8ee539a6de792935179bc0311e",
+      "raw_snapshot_file": "data/raw/512170-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "502420f9867542976434fe133b11a48903482185e4af716c9b9bc99428d19118",
+      "cached_events_sha256": "af98000b8d57c3b99a49ad1b5bc22f092c7436e9d426f41551f411cdd682350b",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512170/hfq.js",
+      "factor_file": "data/raw/512170-sina-hfq.js.gz",
+      "factor_sha256": "b61e321966da6d378b099eb8ee6e0210c26ad9b6833d5876d8a7937f0ed184ea",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-02-25",
+          "3.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-02-25",
+          "3.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-02-25",
+          "factor_date": "2021-02-25",
+          "share_ratio": "3",
+          "cash_per_old_share": "0E-16",
+          "old_close": "2.564",
+          "new_open": "0.822"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1795,
+      "hfq_sha256": "6f2c6c8891c2016797908a33d92c692f28b9d335a3aa018b345155aa1cc20cb7",
+      "hfq_snapshot_file": "data/raw/512170-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "05257b8e90753e2322925ef6c6e4f09c8652fca099e5da4c78ebc27ca2442ada",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512200",
+      "name": "房地产ETF南方",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 2212,
+      "first": "2017-09-25",
+      "last": "2026-11-10",
+      "normalized_file": "data/512200.csv.gz",
+      "normalized_sha256": "e1cfcda97864fc0697993195d7c23466528ce7141c3fe2da793b586b60226050",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512200_raw.csv",
+      "cached_raw_sha256": "7da07c05a54645523efd6df0f0719aad9077e10d633cda444bda972f7b0ec51b",
+      "raw_snapshot_file": "data/raw/512200-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "653d3ba4fa9ddbd3bd5738f208e159f8f4d76dc0328817adca739213f0acecf5",
+      "cached_events_sha256": "87c92c3248e06bdbc226b9c6f5dd04958e474cac3460bd9fbdb4df845c566b28",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512200/hfq.js",
+      "factor_file": "data/raw/512200-sina-hfq.js.gz",
+      "factor_sha256": "04122011c17899511de6443bba56bf8269ce606c9b1b1fc821082a9c8f696335",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2024-08-12",
+          "0.3580626000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2024-08-12",
+          "0.3580626000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2024-08-12",
+          "factor_date": "2024-08-12",
+          "share_ratio": "0.3580626",
+          "cash_per_old_share": "0E-16",
+          "old_close": "0.441",
+          "new_open": "1.225"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 2212,
+      "hfq_sha256": "d339621855bb3cd6251436c4ec9879979b61be1b339cdcd29682f5e3412d5248",
+      "hfq_snapshot_file": "data/raw/512200-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "52e228a723b55873dc8245c0835a66b4ea4b41d512154da4ecab49f5f3baa380",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512400",
+      "name": "有色金属ETF南方",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 2228,
+      "first": "2017-09-01",
+      "last": "2026-11-10",
+      "normalized_file": "data/512400.csv.gz",
+      "normalized_sha256": "663f28f76b9e70765dded5278417806edaf1951df00838e7f93af38327644d16",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512400_raw.csv",
+      "cached_raw_sha256": "82c0a73e5d57c4ec522b60ff34c1414a66c52637a6aa5352b5c430d6092ee0da",
+      "raw_snapshot_file": "data/raw/512400-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "9c07061c0800e50e75460e6458fbf06507e25f3c89dff954bf6f3a4aa086e373",
+      "cached_events_sha256": "dd48f4a9e5fa130e8d6a083e0c1c32542622b9176512d7934dcc97f47c8435a1",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512400/hfq.js",
+      "factor_file": "data/raw/512400-sina-hfq.js.gz",
+      "factor_sha256": "6fb001ea317f10f48923baad92e6cc62355a9b7ec42aaaffdb8bdc105432b5e0",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2024-09-18",
+          "1.0000000000000000",
+          "0.0100000000000000"
+        ],
+        [
+          "2025-09-15",
+          "1.0000000000000000",
+          "0.0250000000000000"
+        ],
+        [
+          "2026-09-09",
+          "1.0000000000000000",
+          "0.1050000000000000"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2024-09-18",
+          "1.0000000000000000",
+          "0.01000000000000000000000000000"
+        ],
+        [
+          "2025-09-15",
+          "1.0000000000000000",
+          "0.02500000000000000000000000000"
+        ],
+        [
+          "2026-09-09",
+          "1.0000000000000000",
+          "0.1050000000000000000000000000"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2024-09-18",
+          "factor_date": "2024-09-18",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0100000000000",
+          "old_close": "0.863",
+          "new_open": "0.856"
+        },
+        {
+          "effective_quote": "2025-09-15",
+          "factor_date": "2025-09-15",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0150000000000",
+          "old_close": "1.562",
+          "new_open": "1.549"
+        },
+        {
+          "effective_quote": "2026-09-09",
+          "factor_date": "2026-09-09",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0800000000000",
+          "old_close": "1.901",
+          "new_open": "1.829"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 2228,
+      "hfq_sha256": "412068b35ff984ddb7e8a922682251232960c73ba15309810cfc6151ce1206d3",
+      "hfq_snapshot_file": "data/raw/512400-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "8362764e109d41f59315442d447845364cebcc62272440192af279a941f64980",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512480",
+      "name": "半导体ETF国联安",
+      "groups": [
+        "MACD优秀"
+      ],
+      "status": "eligible",
+      "rows": 1798,
+      "first": "2019-06-12",
+      "last": "2026-11-10",
+      "normalized_file": "data/512480.csv.gz",
+      "normalized_sha256": "3ffa2608ed795b7e61ae15063b4c27f8ccb753156a0ea56a72b75738036b54cc",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512480_raw.csv",
+      "cached_raw_sha256": "75894ac88d6122a6e18e7a42d1d34e1a66b28f9bc9df136e26fbaeca29b8768e",
+      "raw_snapshot_file": "data/raw/512480-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "e255712de84487710cf9bce0feca8217b7e4ee12eabf24f8e66e9b973262c6ad",
+      "cached_events_sha256": "ce4602b928a21b34b27bf6e679fb5ff50da552ebb64f62520fec1ed06dec0e41",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512480/hfq.js",
+      "factor_file": "data/raw/512480-sina-hfq.js.gz",
+      "factor_sha256": "983d7659c3963edac3676fa1bbe99319907b37b1aa90daacff6f1bdc28fe0ab7",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-03-29",
+          "2.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2026-07-03",
+          "4.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-03-29",
+          "2.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2026-07-03",
+          "4.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-03-29",
+          "factor_date": "2021-03-29",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-16",
+          "old_close": "1.734",
+          "new_open": "0.888"
+        },
+        {
+          "effective_quote": "2026-07-03",
+          "factor_date": "2026-07-03",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-16",
+          "old_close": "2.7",
+          "new_open": "1.322"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1798,
+      "hfq_sha256": "4916638dbb0db79b713705c9c8ddb3ccea625d723462bcdd512e3bb7cbe967af",
+      "hfq_snapshot_file": "data/raw/512480-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "1d079598282dbd8c8f52096d568deb81dcb0f2226bd7e3230d69791a1e9d4c9e",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512660",
+      "name": "军工ETF国泰",
+      "groups": [
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 2489,
+      "first": "2016-08-08",
+      "last": "2026-11-10",
+      "normalized_file": "data/512660.csv.gz",
+      "normalized_sha256": "79136a5474b5847da7070dfca08dc13ce6e0e42afa7ebbb40967b3455e2f9489",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512660_raw.csv",
+      "cached_raw_sha256": "d66864d3576dbd707360a0f7a4044625d79c61b55d6a8a23ae6f6f93b6427c3d",
+      "raw_snapshot_file": "data/raw/512660-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "806246fa317c04e82990e01f99659e4180082b86e245c4bcf8cc6f412ad844cf",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512660/hfq.js",
+      "factor_file": "data/raw/512660-sina-hfq.js.gz",
+      "factor_sha256": "ad94fd5a991497f2c1832b251c074e62f25b965841fc3155b33ea0f5de97a884",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 2489,
+      "hfq_sha256": "d66864d3576dbd707360a0f7a4044625d79c61b55d6a8a23ae6f6f93b6427c3d",
+      "hfq_snapshot_file": "data/raw/512660-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "806246fa317c04e82990e01f99659e4180082b86e245c4bcf8cc6f412ad844cf",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512690",
+      "name": "酒ETF鹏华",
+      "groups": [
+        "大消费"
+      ],
+      "status": "eligible",
+      "rows": 1824,
+      "first": "2019-05-06",
+      "last": "2026-11-10",
+      "normalized_file": "data/512690.csv.gz",
+      "normalized_sha256": "c99715accd7bb81647aabe3316231247404efde84202d5495bace2ab3b8e594e",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512690_raw.csv",
+      "cached_raw_sha256": "7286604538d9ba6ca7bb54f01007a7ee85cc775fb1ed0d1ef195107ed4555be1",
+      "raw_snapshot_file": "data/raw/512690-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "9fdccb197c00d35d9f75790f2bc9965b925e2f848ca2b6008f904535c75133cf",
+      "cached_events_sha256": "8e9986263cfb8b1de5a25c630adc5588e419e87f17d91cc2bcc9f664ccf6a495",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512690/hfq.js",
+      "factor_file": "data/raw/512690-sina-hfq.js.gz",
+      "factor_sha256": "8d86c2a763634c02e1949fd92e8312bd46ba77a5534fca581655deab0c6e507d",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-05-17",
+          "2.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-12-31",
+          "2.0000000000000000",
+          "0.3500000000000000"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-05-17",
+          "2.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-12-31",
+          "2.0000000000000000",
+          "0.7000000000000000000000000000"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-05-17",
+          "factor_date": "2021-05-17",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-16",
+          "old_close": "2.644",
+          "new_open": "1.346"
+        },
+        {
+          "effective_quote": "2021-12-31",
+          "factor_date": "2021-12-31",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.350000000000",
+          "old_close": "1.323",
+          "new_open": "0.976"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1824,
+      "hfq_sha256": "fb9fe87aeaf2221ac13ae63d137707f1b795e739b6524f55f9b69ca4c80e35f9",
+      "hfq_snapshot_file": "data/raw/512690-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "d368a030f184da6c9eb8cecf8ae047d4dc4ff574ddd70335080cf98ac687a209",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512800",
+      "name": "银行ETF华宝",
+      "groups": [
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 2249,
+      "first": "2017-08-03",
+      "last": "2026-11-10",
+      "normalized_file": "data/512800.csv.gz",
+      "normalized_sha256": "00eb59f71827958f8d2649df74c719732c82054c38406d676360acf95c0b972a",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512800_raw.csv",
+      "cached_raw_sha256": "6998231f9a207e0122d88101922dc7949912397fac74aa6d2366a1c5feab03cf",
+      "raw_snapshot_file": "data/raw/512800-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "36346ac351c70982a5396aa0a710474d70f30dd315f1afe6d43a8e0ef3e4bff6",
+      "cached_events_sha256": "f76c7ef9c354d066037ab25e5d7ffe23cf75f2f39461e5fe4c068dfcef976032",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512800/hfq.js",
+      "factor_file": "data/raw/512800-sina-hfq.js.gz",
+      "factor_sha256": "c58c93867ee097f3e50a89b122eb98c60c370786d47b3383ea42e945cb4d86a6",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2025-07-07",
+          "2.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2025-07-07",
+          "2.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2025-07-07",
+          "factor_date": "2025-07-07",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-16",
+          "old_close": "1.777",
+          "new_open": "0.888"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 2249,
+      "hfq_sha256": "42f2ce65cec842864d1683f9ec5587e4c5f6a2009b98cc5e5efcee3b117b6212",
+      "hfq_snapshot_file": "data/raw/512800-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "9f879c452cf1387be8677ed7ca15514b260697500baf08f36b7367a233bc9488",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512880",
+      "name": "证券ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 2489,
+      "first": "2016-08-08",
+      "last": "2026-11-10",
+      "normalized_file": "data/512880.csv.gz",
+      "normalized_sha256": "20d879e97ef08ef0992066876cda7223256f44d87362491357a4fe47623b6aad",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512880_raw.csv",
+      "cached_raw_sha256": "37a880cabe5e20eca3b773487cbf312fb0a404761ae9065a113370309768137a",
+      "raw_snapshot_file": "data/raw/512880-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "e743a5df04db594e7058066b26d0be68be0db4c9768aac1b2d3fedbf2a8a3461",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512880/hfq.js",
+      "factor_file": "data/raw/512880-sina-hfq.js.gz",
+      "factor_sha256": "f94924965873bc391c1cd57bc80384f9b4d38c905c323ad3834592d1afd7cac0",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 2489,
+      "hfq_sha256": "37a880cabe5e20eca3b773487cbf312fb0a404761ae9065a113370309768137a",
+      "hfq_snapshot_file": "data/raw/512880-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "e743a5df04db594e7058066b26d0be68be0db4c9768aac1b2d3fedbf2a8a3461",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512890",
+      "name": "红利低波ETF华泰柏瑞",
+      "groups": [
+        "策略 ETF"
+      ],
+      "status": "eligible",
+      "rows": 1891,
+      "first": "2019-01-18",
+      "last": "2026-11-10",
+      "normalized_file": "data/512890.csv.gz",
+      "normalized_sha256": "0b88c17ffa7853acd1f711c4fc820f064777bfc9e08816f9aad98488112dbf95",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512890_raw.csv",
+      "cached_raw_sha256": "426a598c1f34ff5c435f962188d803836d93c79e4d3015690d4984d6adcc2261",
+      "raw_snapshot_file": "data/raw/512890-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "685e5e6a149401dd0733f0c922906296c80e87e43ea1aad5bf74a5aad154547f",
+      "cached_events_sha256": "11a8d420ec8e1a83afb5ef924c35d2a0800c5395656818ac1db9a289906c0ee3",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512890/hfq.js",
+      "factor_file": "data/raw/512890-sina-hfq.js.gz",
+      "factor_sha256": "6df7c214e90c1db5f009b7fe516670a2d387c5b04f57ea2abda90218e88593a1",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-10-25",
+          "2.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-10-25",
+          "2.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-10-25",
+          "factor_date": "2021-10-25",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-16",
+          "old_close": "1.639",
+          "new_open": "0.87"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1891,
+      "hfq_sha256": "7785fc854a290991359b37c7581245afc7e39bef4b0fcda07fa5176f8e361946",
+      "hfq_snapshot_file": "data/raw/512890-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "6ce3a05d7500dea1e49c3697359c58540275fa5b0d3e89ec7307bff38fe4c96a",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512950",
+      "name": "央企改革ETF华夏",
+      "groups": [
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 1892,
+      "first": "2019-01-18",
+      "last": "2026-11-10",
+      "normalized_file": "data/512950.csv.gz",
+      "normalized_sha256": "a96e911fe433500895525d4841bd7e43e883ac2f74f28400877d6b26f2192e52",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512950_raw.csv",
+      "cached_raw_sha256": "a99033b2824bb1ce56963457e15bfe40f38151a4d111a5fb418840dab92879ac",
+      "raw_snapshot_file": "data/raw/512950-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "57f4c7fb6833376494057897a2c77e9be635be43644cc1a10237592ba5ce36d3",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512950/hfq.js",
+      "factor_file": "data/raw/512950-sina-hfq.js.gz",
+      "factor_sha256": "674ba86c755f19c323f7325e93559c6a09577bcccd5773a5c1d225440b5dab12",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "512980",
+      "name": "传媒ETF广发",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 2134,
+      "first": "2018-01-19",
+      "last": "2026-11-10",
+      "normalized_file": "data/512980.csv.gz",
+      "normalized_sha256": "6c22d9b13dd0b9b47cefbef92c830be7e6567a5c019ab67e431b77e4e15debfd",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_512980_raw.csv",
+      "cached_raw_sha256": "ecd01dc107efb7643277d089a2ecfdcb582928ec0738458e3a8fa2e7b8956ff8",
+      "raw_snapshot_file": "data/raw/512980-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "929d08de8679cdcf349113ba3b1749385ea089e5541af2a66496ecd101ff6b85",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh512980/hfq.js",
+      "factor_file": "data/raw/512980-sina-hfq.js.gz",
+      "factor_sha256": "8b926635328cf5a21c3c73680ee9c4ffec99f0f0a16c5fd60a1d42fbd92ede5c",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 2134,
+      "hfq_sha256": "ecd01dc107efb7643277d089a2ecfdcb582928ec0738458e3a8fa2e7b8956ff8",
+      "hfq_snapshot_file": "data/raw/512980-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "929d08de8679cdcf349113ba3b1749385ea089e5541af2a66496ecd101ff6b85",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513050",
+      "name": "中概互联网ETF易方达",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 2369,
+      "first": "2017-01-18",
+      "last": "2026-11-10",
+      "normalized_file": "data/513050.csv.gz",
+      "normalized_sha256": "cbe98722f28db612c84643de92a0a80f5b0520ce8a90453e295388962b9d0d0e",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513050_raw.csv",
+      "cached_raw_sha256": "5b93e16b22ada010d38944775a7079e63c95144817d57403ddebce8a2fc725e5",
+      "raw_snapshot_file": "data/raw/513050-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "84ed93aa278d2f29cd84073eaad319090158d5cde45012341320832eb289d450",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513050/hfq.js",
+      "factor_file": "data/raw/513050-sina-hfq.js.gz",
+      "factor_sha256": "2650caf588d350923bd0a32c2d8ac9cd6782a6cf4ad7669f789a55d3b6635f4b",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513090",
+      "name": "香港证券ETF易方达",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 1606,
+      "first": "2020-03-26",
+      "last": "2026-11-10",
+      "normalized_file": "data/513090.csv.gz",
+      "normalized_sha256": "844337685f31388037db491fd7534b749debe329d0fe0fb27cc131e1a518c7cc",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513090_raw.csv",
+      "cached_raw_sha256": "d6f8d82858fa5016d7c90fb816dcbf58f5c95a9465f54b563c0c63dfc49ae513",
+      "raw_snapshot_file": "data/raw/513090-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "2d6190eb3fd10f15bd677388d376f27915cacdad7045d6c0add8fb9aad57a7b2",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513090/hfq.js",
+      "factor_file": "data/raw/513090-sina-hfq.js.gz",
+      "factor_sha256": "b90205f3363eb3bb22b8959800f551e5497729d61a740e2ab8a3896be4904920",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513120",
+      "name": "港股创新药ETF广发",
+      "groups": [
+        "医药医疗"
+      ],
+      "status": "eligible",
+      "rows": 1050,
+      "first": "2022-07-12",
+      "last": "2026-11-10",
+      "normalized_file": "data/513120.csv.gz",
+      "normalized_sha256": "df5a8d2553bfc2c95514349f05c79662264a4c9985e00d00e4d8d9dbfb858a26",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513120_raw.csv",
+      "cached_raw_sha256": "bd6dcc21f17d7badbf4276829826a1f5b2ee979e2607430e3f120eeb905fb706",
+      "raw_snapshot_file": "data/raw/513120-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "7fccfab2931eadc7766ff6f32eab5fe8316d2f700218ef54ab4b04735dcc303d",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513120/hfq.js",
+      "factor_file": "data/raw/513120-sina-hfq.js.gz",
+      "factor_sha256": "1a4514ae8f28807a7732b1a75fd494652a2bd51d44d1632d9cdf65ce7a0361df",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513130",
+      "name": "恒生科技ETF华泰柏瑞",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1320,
+      "first": "2021-06-01",
+      "last": "2026-11-10",
+      "normalized_file": "data/513130.csv.gz",
+      "normalized_sha256": "23b60f7851b2f1e0323d54d8b0df2e54e98b87e2f883ffe2ddfcc44e152d4c9b",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513130_raw.csv",
+      "cached_raw_sha256": "be18a83c61f2b6b0f843c9e0598306d5d9578bb75757642df517976c7502c015",
+      "raw_snapshot_file": "data/raw/513130-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "4c1fa405cacb1f9aad7802e20c405ba13cea193b9e55f2d4c3e8959918959441",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513130/hfq.js",
+      "factor_file": "data/raw/513130-sina-hfq.js.gz",
+      "factor_sha256": "5d1aad119b622a28d7d1ea3d6f1fc5215b555bce55ae62809b8d098d7781aeaa",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513190",
+      "name": "港股通金融ETF华夏",
+      "groups": [
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 748,
+      "first": "2023-10-11",
+      "last": "2026-11-10",
+      "normalized_file": "data/513190.csv.gz",
+      "normalized_sha256": "bb620ea81ee6301f5eb77a08be774830e7bf248b92769afc65cb3dd07b7b0220",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513190_raw.csv",
+      "cached_raw_sha256": "61819f75d6ebeba40cd21850458eddca78411626898767034fcb61bb3bb9d153",
+      "raw_snapshot_file": "data/raw/513190-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "d06194a5c93231418c470edec2a4402718deb70ddb3a47110c9b831a7f242d25",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513190/hfq.js",
+      "factor_file": "data/raw/513190-sina-hfq.js.gz",
+      "factor_sha256": "6152715b85936252fae9c8875260e4c4759bdfefde707b6e9eb55d809511e170",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513290",
+      "name": "纳指生物科技ETF汇添富",
+      "groups": [
+        "医药医疗"
+      ],
+      "status": "eligible",
+      "rows": 1016,
+      "first": "2022-08-29",
+      "last": "2026-11-10",
+      "normalized_file": "data/513290.csv.gz",
+      "normalized_sha256": "acc4fc4099c949352a4ff48738be985921e216fd57de1488fc428bbca8062018",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513290_raw.csv",
+      "cached_raw_sha256": "263240f877361250222086fca84ae77d5232e8324ea4bda876ee72c0551fca32",
+      "raw_snapshot_file": "data/raw/513290-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "e5bdbed8448f20f360b81ded4519a0799dfdf48e6380ed8c703c8018af288617",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513290/hfq.js",
+      "factor_file": "data/raw/513290-sina-hfq.js.gz",
+      "factor_sha256": "7fce004350090c361c11f64befee6b066b2e357912177c19667310ecf30ca438",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513310",
+      "name": "中韩半导体ETF华泰柏瑞",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 939,
+      "first": "2022-12-22",
+      "last": "2026-11-10",
+      "normalized_file": "data/513310.csv.gz",
+      "normalized_sha256": "87604e3d28197e98d5fbf7ecc30cffb56b9f4e7bc67bc8645be823c60501c8db",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513310_raw.csv",
+      "cached_raw_sha256": "5901e97112a79a9328e4a47cf8dc9a0aaaa6be6688ab58080d2ee790171144b8",
+      "raw_snapshot_file": "data/raw/513310-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "69afe9e38267e9a5a78590f9b53ea3e186c5a3bdf52a491dfef047cc448212f6",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513310/hfq.js",
+      "factor_file": "data/raw/513310-sina-hfq.js.gz",
+      "factor_sha256": "6054f733ecabb91d9220ba9471ff5c0e2d3190351c94eadb0b62dc84b5669d8a",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513630",
+      "name": "港股低波红利ETF摩根",
+      "groups": [
+        "策略 ETF"
+      ],
+      "status": "eligible",
+      "rows": 706,
+      "first": "2023-12-08",
+      "last": "2026-11-10",
+      "normalized_file": "data/513630.csv.gz",
+      "normalized_sha256": "66b5476264e5bae2947abb64a80119c4b963b4eaadca4465798c9381410851a5",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513630_raw.csv",
+      "cached_raw_sha256": "244010d28a5d0a7520b1a6d7e913fff59fdfde8bc2a3a8525d5fb897284adb06",
+      "raw_snapshot_file": "data/raw/513630-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "2a92f280e58267812c9355b4d85dc65922c7dc509c3f160f1d98957510cfc758",
+      "cached_events_sha256": "800c1c4d907065446dda35fae586d956e1f7e6a841190a2034ba6f057cce69a7",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513630/hfq.js",
+      "factor_file": "data/raw/513630-sina-hfq.js.gz",
+      "factor_sha256": "3b15f7ce20f6401572c6f531bdf88c8960b4ef8793777cac3d887439969b2ee6",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2025-12-30",
+          "1.0000000000000000",
+          "0.0020000000000000"
+        ],
+        [
+          "2026-01-27",
+          "1.0000000000000000",
+          "0.0040000000000000"
+        ],
+        [
+          "2026-02-24",
+          "1.0000000000000000",
+          "0.0060000000000000"
+        ],
+        [
+          "2026-03-26",
+          "1.0000000000000000",
+          "0.0080000000000000"
+        ],
+        [
+          "2026-04-27",
+          "1.0000000000000000",
+          "0.0100000000000000"
+        ],
+        [
+          "2026-05-21",
+          "1.0000000000000000",
+          "0.0120000000000000"
+        ],
+        [
+          "2026-06-23",
+          "1.0000000000000000",
+          "0.0140000000000000"
+        ],
+        [
+          "2026-07-24",
+          "1.0000000000000000",
+          "0.0160000000000000"
+        ],
+        [
+          "2026-08-21",
+          "1.0000000000000000",
+          "0.0180000000000000"
+        ],
+        [
+          "2026-09-18",
+          "1.0000000000000000",
+          "0.0200000000000000"
+        ],
+        [
+          "2026-10-21",
+          "1.0000000000000000",
+          "0.0220000000000000"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2025-12-30",
+          "1.0000000000000000",
+          "0.002000000000000000000000000000"
+        ],
+        [
+          "2026-01-27",
+          "1.0000000000000000",
+          "0.004000000000000000000000000000"
+        ],
+        [
+          "2026-02-24",
+          "1.0000000000000000",
+          "0.006000000000000000000000000000"
+        ],
+        [
+          "2026-03-26",
+          "1.0000000000000000",
+          "0.008000000000000000000000000000"
+        ],
+        [
+          "2026-04-27",
+          "1.0000000000000000",
+          "0.01000000000000000000000000000"
+        ],
+        [
+          "2026-05-21",
+          "1.0000000000000000",
+          "0.01200000000000000000000000000"
+        ],
+        [
+          "2026-06-23",
+          "1.0000000000000000",
+          "0.01400000000000000000000000000"
+        ],
+        [
+          "2026-07-24",
+          "1.0000000000000000",
+          "0.01600000000000000000000000000"
+        ],
+        [
+          "2026-08-21",
+          "1.0000000000000000",
+          "0.01800000000000000000000000000"
+        ],
+        [
+          "2026-09-18",
+          "1.0000000000000000",
+          "0.02000000000000000000000000000"
+        ],
+        [
+          "2026-10-21",
+          "1.0000000000000000",
+          "0.02200000000000000000000000000"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2025-12-30",
+          "factor_date": "2025-12-30",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.00200000000000",
+          "old_close": "1.612",
+          "new_open": "1.609"
+        },
+        {
+          "effective_quote": "2026-01-27",
+          "factor_date": "2026-01-27",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.00200000000000",
+          "old_close": "1.666",
+          "new_open": "1.667"
+        },
+        {
+          "effective_quote": "2026-02-24",
+          "factor_date": "2026-02-24",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.00200000000000",
+          "old_close": "1.702",
+          "new_open": "1.705"
+        },
+        {
+          "effective_quote": "2026-03-26",
+          "factor_date": "2026-03-26",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.00200000000000",
+          "old_close": "1.66",
+          "new_open": "1.662"
+        },
+        {
+          "effective_quote": "2026-04-27",
+          "factor_date": "2026-04-27",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.00200000000000",
+          "old_close": "1.689",
+          "new_open": "1.688"
+        },
+        {
+          "effective_quote": "2026-05-21",
+          "factor_date": "2026-05-21",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0020000000000",
+          "old_close": "1.675",
+          "new_open": "1.674"
+        },
+        {
+          "effective_quote": "2026-06-23",
+          "factor_date": "2026-06-23",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0020000000000",
+          "old_close": "1.506",
+          "new_open": "1.505"
+        },
+        {
+          "effective_quote": "2026-07-24",
+          "factor_date": "2026-07-24",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0020000000000",
+          "old_close": "1.599",
+          "new_open": "1.6"
+        },
+        {
+          "effective_quote": "2026-08-21",
+          "factor_date": "2026-08-21",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0020000000000",
+          "old_close": "1.603",
+          "new_open": "1.602"
+        },
+        {
+          "effective_quote": "2026-09-18",
+          "factor_date": "2026-09-18",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0020000000000",
+          "old_close": "1.546",
+          "new_open": "1.552"
+        },
+        {
+          "effective_quote": "2026-10-21",
+          "factor_date": "2026-10-21",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0020000000000",
+          "old_close": "1.555",
+          "new_open": "1.558"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "513750",
+      "name": "港股通非银ETF广发",
+      "groups": [
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 715,
+      "first": "2023-11-27",
+      "last": "2026-11-10",
+      "normalized_file": "data/513750.csv.gz",
+      "normalized_sha256": "c04fb22059182b4a97c5217c735bd5cfb1d71972f606bceca87863b4d587e6d7",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_513750_raw.csv",
+      "cached_raw_sha256": "30d60ffde1256e15625f4201d7a59b05b075fdc7786e9b4b96737c673c4413c4",
+      "raw_snapshot_file": "data/raw/513750-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "ca5e2432bba384e56e574cbe8da18e265b1df5bd849ab7aae4198f0251e057df",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh513750/hfq.js",
+      "factor_file": "data/raw/513750-sina-hfq.js.gz",
+      "factor_sha256": "89fe23703748dfc98851cc5b81cb073b46e703ad62ecec73e2f42a9761395470",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "515170",
+      "name": "食品饮料ETF华夏",
+      "groups": [
+        "大消费"
+      ],
+      "status": "eligible",
+      "rows": 1410,
+      "first": "2021-01-13",
+      "last": "2026-11-10",
+      "normalized_file": "data/515170.csv.gz",
+      "normalized_sha256": "5b69625ecda334d33cf01c4fe49dff7509bb9014f448769b48794a1005fd2f47",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_515170_raw.csv",
+      "cached_raw_sha256": "6f65e55e6e2715cac9e9fe494048be4d2fca24b2e510881968ce364c82f802f8",
+      "raw_snapshot_file": "data/raw/515170-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "014ba179ff60242f3f46dd78baf797b8133e476700ddae5b79cc5a9297284145",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh515170/hfq.js",
+      "factor_file": "data/raw/515170-sina-hfq.js.gz",
+      "factor_sha256": "30b2e8f0491d8d7a64c4b25f13d26b042476a3928c31eba3f53c9061cba69231",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "515210",
+      "name": "钢铁ETF国泰",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 1624,
+      "first": "2020-03-02",
+      "last": "2026-11-10",
+      "normalized_file": "data/515210.csv.gz",
+      "normalized_sha256": "fef93b56b7deb2a6e2ce96d54022044682ad20e288263873deb4e8c505cb9aa0",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_515210_raw.csv",
+      "cached_raw_sha256": "aa545571e9e8929f99a279a005cf7c1f1f9fbaa931d9211127f567825ea07c7a",
+      "raw_snapshot_file": "data/raw/515210-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "5f92d9a30a095a373d4717d30b3a6ed2817ad78a9933f2a59c115077c566d7a1",
+      "cached_events_sha256": "3443d7114236bc44a2f760ffee437adaf344f6e9fcb50bd731cac40c695fe8fc",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh515210/hfq.js",
+      "factor_file": "data/raw/515210-sina-hfq.js.gz",
+      "factor_sha256": "79d8174828c6ae5afe79bb5273457647a914bc8adb5ee904da35173badae6764",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-12-27",
+          "1.0000000000000000",
+          "0.0600000000000000"
+        ],
+        [
+          "2022-12-27",
+          "1.0000000000000000",
+          "0.0800000000000000"
+        ],
+        [
+          "2023-12-28",
+          "1.0000000000000000",
+          "0.1050000000000000"
+        ],
+        [
+          "2024-12-24",
+          "1.0000000000000000",
+          "0.1650000000000000"
+        ],
+        [
+          "2025-12-24",
+          "1.0000000000000000",
+          "0.2250000000000000"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-12-27",
+          "1.0000000000000000",
+          "0.06000000000000000000000000000"
+        ],
+        [
+          "2022-12-27",
+          "1.0000000000000000",
+          "0.08000000000000000000000000000"
+        ],
+        [
+          "2023-12-28",
+          "1.0000000000000000",
+          "0.1050000000000000000000000000"
+        ],
+        [
+          "2024-12-24",
+          "1.0000000000000000",
+          "0.1650000000000000000000000000"
+        ],
+        [
+          "2025-12-24",
+          "1.0000000000000000",
+          "0.2250000000000000000000000000"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-12-27",
+          "factor_date": "2021-12-27",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0600000000000",
+          "old_close": "1.688",
+          "new_open": "1.622"
+        },
+        {
+          "effective_quote": "2022-12-27",
+          "factor_date": "2022-12-27",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0200000000000",
+          "old_close": "1.31",
+          "new_open": "1.293"
+        },
+        {
+          "effective_quote": "2023-12-28",
+          "factor_date": "2023-12-28",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0250000000000",
+          "old_close": "1.198",
+          "new_open": "1.179"
+        },
+        {
+          "effective_quote": "2024-12-24",
+          "factor_date": "2024-12-24",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.060000000000",
+          "old_close": "1.256",
+          "new_open": "1.197"
+        },
+        {
+          "effective_quote": "2025-12-24",
+          "factor_date": "2025-12-24",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.060000000000",
+          "old_close": "1.474",
+          "new_open": "1.42"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1624,
+      "hfq_sha256": "7299a09ff962bc0528af8e67554bf96f53379e4ed48e8fb87860ec4e7ad14f34",
+      "hfq_snapshot_file": "data/raw/515210-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "135a029f6e6388fc265d224188d7ed40d414a73cbec4944ca412765bb1333a03",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "515220",
+      "name": "煤炭ETF国泰",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 1624,
+      "first": "2020-03-02",
+      "last": "2026-11-10",
+      "normalized_file": "data/515220.csv.gz",
+      "normalized_sha256": "36021ac1ddf04bdb4b6889c0b485cd9feb19a963b2747fc65ec3e1cafa8ed35d",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_515220_raw.csv",
+      "cached_raw_sha256": "300d10f4e5d00f97ffdd40b494ded71ed75839701877e4e07bb6226115da1b3b",
+      "raw_snapshot_file": "data/raw/515220-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "3eef10fd08c762cb934ae980387f1f50ef1fe470f8a3f2d35eb42956da84b097",
+      "cached_events_sha256": "6e7a3b796154b1d4a768c5869b3afbed7374446abe048e798e479c86b6248ba6",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh515220/hfq.js",
+      "factor_file": "data/raw/515220-sina-hfq.js.gz",
+      "factor_sha256": "649c19241c1c12a4904358382b895808b7112fff4bebbe34eff008a62ab8c9ff",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2021-12-27",
+          "1.0000000000000000",
+          "0.0800000000000000"
+        ],
+        [
+          "2022-12-27",
+          "1.0000000000000000",
+          "0.1200000000000000"
+        ],
+        [
+          "2023-12-28",
+          "1.0000000000000000",
+          "0.1700000000000000"
+        ],
+        [
+          "2024-04-12",
+          "2.0000000000000000",
+          "0.1700000000000000"
+        ],
+        [
+          "2024-12-24",
+          "2.0000000000000000",
+          "0.2150000000000000"
+        ],
+        [
+          "2025-12-24",
+          "2.0000000000000000",
+          "0.2550000000000000"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2021-12-27",
+          "1.0000000000000000",
+          "0.08000000000000000000000000000"
+        ],
+        [
+          "2022-12-27",
+          "1.0000000000000000",
+          "0.1200000000000000000000000000"
+        ],
+        [
+          "2023-12-28",
+          "1.0000000000000000",
+          "0.1700000000000000000000000000"
+        ],
+        [
+          "2024-04-12",
+          "2.0000000000000000",
+          "0.1700000000000000000000000000"
+        ],
+        [
+          "2024-12-24",
+          "2.0000000000000000",
+          "0.2600000000000000000000000000"
+        ],
+        [
+          "2025-12-24",
+          "2.0000000000000000",
+          "0.3400000000000000000000000000"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2021-12-27",
+          "factor_date": "2021-12-27",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0800000000000",
+          "old_close": "2.063",
+          "new_open": "1.981"
+        },
+        {
+          "effective_quote": "2022-12-27",
+          "factor_date": "2022-12-27",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.0400000000000",
+          "old_close": "2.187",
+          "new_open": "2.161"
+        },
+        {
+          "effective_quote": "2023-12-28",
+          "factor_date": "2023-12-28",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.050000000000",
+          "old_close": "2.387",
+          "new_open": "2.338"
+        },
+        {
+          "effective_quote": "2024-04-12",
+          "factor_date": "2024-04-12",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-12",
+          "old_close": "2.612",
+          "new_open": "1.3"
+        },
+        {
+          "effective_quote": "2024-12-24",
+          "factor_date": "2024-12-24",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.045000000000",
+          "old_close": "1.166",
+          "new_open": "1.122"
+        },
+        {
+          "effective_quote": "2025-12-24",
+          "factor_date": "2025-12-24",
+          "share_ratio": "1",
+          "cash_per_old_share": "0.040000000000",
+          "old_close": "1.083",
+          "new_open": "1.045"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1624,
+      "hfq_sha256": "aa0791458e4a7d47935340134821c48d228c518c746a9ef02bc8669edb2218bd",
+      "hfq_snapshot_file": "data/raw/515220-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "5a21dbff231909cf669be58c320bada5d74142d184b4736ca930b7c58a139456",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "515790",
+      "name": "光伏ETF华泰柏瑞",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 1427,
+      "first": "2020-12-18",
+      "last": "2026-11-10",
+      "normalized_file": "data/515790.csv.gz",
+      "normalized_sha256": "4c09d71f5d000f71dc2e0f441bc877dc7b34006ba69028b5419e69cdb063441f",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_515790_raw.csv",
+      "cached_raw_sha256": "7fb6b09728b320dc00d767cfe3957ea02dafe7bea9b937947d73d913b3bbd289",
+      "raw_snapshot_file": "data/raw/515790-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "c7b116ba90e00533ec6eca05fe498751fd931f5ae991ac9e5392c2c26aa01129",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh515790/hfq.js",
+      "factor_file": "data/raw/515790-sina-hfq.js.gz",
+      "factor_sha256": "83d95ee871d1d6e393f0372206a97a62dee6df8d97c35c6bd7fe0de6f3d13711",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1427,
+      "hfq_sha256": "7fb6b09728b320dc00d767cfe3957ea02dafe7bea9b937947d73d913b3bbd289",
+      "hfq_snapshot_file": "data/raw/515790-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "c7b116ba90e00533ec6eca05fe498751fd931f5ae991ac9e5392c2c26aa01129",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "515880",
+      "name": "通信ETF国泰",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1737,
+      "first": "2019-09-06",
+      "last": "2026-11-10",
+      "normalized_file": "data/515880.csv.gz",
+      "normalized_sha256": "9ec3d1724383d1f38e1c47c21dca228df090f5f1d9e3689009c8e589af87dfea",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_515880_raw.csv",
+      "cached_raw_sha256": "8a78962c4559fed44e9359d3e8edeed21219c07b6310bb068a0245d5a5ec82eb",
+      "raw_snapshot_file": "data/raw/515880-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "2901ce35113a25366bf4021347e497d904900c2574003234c39932fd6b70a902",
+      "cached_events_sha256": "1e7f30c06a6375124a8a0fe8695a1a786a6d49b8a7b04a7c6f061ba43f4a19ec",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh515880/hfq.js",
+      "factor_file": "data/raw/515880-sina-hfq.js.gz",
+      "factor_sha256": "021b324611603d0de540898c0492b666b217fdf7546e46c14225267ea4d96e24",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2026-02-03",
+          "3.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2026-07-06",
+          "6.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2026-02-03",
+          "3.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2026-07-06",
+          "6.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2026-02-03",
+          "factor_date": "2026-02-03",
+          "share_ratio": "3",
+          "cash_per_old_share": "0E-16",
+          "old_close": "3.16",
+          "new_open": "1.074"
+        },
+        {
+          "effective_quote": "2026-07-06",
+          "factor_date": "2026-07-06",
+          "share_ratio": "2",
+          "cash_per_old_share": "0E-16",
+          "old_close": "1.579",
+          "new_open": "0.798"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 1737,
+      "hfq_sha256": "4da6fff3ddb2a21f898cf6941bdeaa8f2c0d1d9e2c4496cbd1668ef7bf888a0c",
+      "hfq_snapshot_file": "data/raw/515880-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "cb8ef13e820c711d6fb21c1cbe4eab0538f280f6522f48b436d0902e90246e40",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "516150",
+      "name": "稀土ETF嘉实",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 1370,
+      "first": "2021-03-17",
+      "last": "2026-11-10",
+      "normalized_file": "data/516150.csv.gz",
+      "normalized_sha256": "6789ae1c4aafc347143bf274f2834f0e4d1aeff0f1e2fa33b0d5619ba5ab3c3c",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_516150_raw.csv",
+      "cached_raw_sha256": "8bb869cc2f56d83e65f77c6c6e42f71e0a846d7ee559b5f1fd5f819aa5e1d25a",
+      "raw_snapshot_file": "data/raw/516150-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "7f75e4a3d6fd80cae7322e8b36da5e9e26fcd9565ea9cdf862d02563ba6b00f3",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh516150/hfq.js",
+      "factor_file": "data/raw/516150-sina-hfq.js.gz",
+      "factor_sha256": "67d9e11671d92eb8199837b4a37767567ff484d7a80debd477b23b720193578e",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "516160",
+      "name": "新能源ETF南方",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 1394,
+      "first": "2021-02-04",
+      "last": "2026-11-10",
+      "normalized_file": "data/516160.csv.gz",
+      "normalized_sha256": "433b1f21fcf7e220950fcc6c9b31495bbaf52ded0ccde3ac67731a249279d395",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_516160_raw.csv",
+      "cached_raw_sha256": "2260f238ad248812432a011b85f382ac4726657b52e05f248f7239492a265c9b",
+      "raw_snapshot_file": "data/raw/516160-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "9c7bfdfafb668b20f581421a439942a3bd45840494010376f637c0c97ea4907d",
+      "cached_events_sha256": "565ac389bad32889ff4cec485ff5baac3055bce200e78f9d3d855c4df3fb986d",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh516160/hfq.js",
+      "factor_file": "data/raw/516160-sina-hfq.js.gz",
+      "factor_sha256": "7109080b32d1fd72a2a144ebf33e399cdbc59e008ef9a20b7397076fdd454f50",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2024-09-18",
+          "0.3091200500000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2024-09-18",
+          "0.3091200500000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2024-09-18",
+          "factor_date": "2024-09-18",
+          "share_ratio": "0.30912005",
+          "cash_per_old_share": "0E-16",
+          "old_close": "0.497",
+          "new_open": "1.6"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "516510",
+      "name": "云计算ETF易方达",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 1356,
+      "first": "2021-04-07",
+      "last": "2026-11-10",
+      "normalized_file": "data/516510.csv.gz",
+      "normalized_sha256": "ecbd82904d2e5af2ad300668f8b9769c88e545cab990ee19a5abe36b71a2262c",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_516510_raw.csv",
+      "cached_raw_sha256": "664d235b9ad907b5b0891faf7b47da8da17d1cd0a009b3e7ac0e91bb18f370f0",
+      "raw_snapshot_file": "data/raw/516510-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "b9dc550f70e7e19bbdf54b8e59093e62a296af5f588677180b78e0930751fee1",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh516510/hfq.js",
+      "factor_file": "data/raw/516510-sina-hfq.js.gz",
+      "factor_sha256": "d7e38b6fd5f0e5ea2c0d91c7eaec4a539dd7a90e4abb7e15c223b632cfc06ed7",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "516750",
+      "name": "建材ETF富国",
+      "groups": [
+        "金融地产基建"
+      ],
+      "status": "eligible",
+      "rows": 1215,
+      "first": "2021-11-05",
+      "last": "2026-11-10",
+      "normalized_file": "data/516750.csv.gz",
+      "normalized_sha256": "7ac2fcb49e9b8c2e15f3b6204340431d8dcc316cf3e9c56481c3d4fc7be2e37f",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_516750_raw.csv",
+      "cached_raw_sha256": "ebf8ddc7110dd9c10e9dbe665d6cd7cd703d8a6482692aa39f516e1ae4a28f55",
+      "raw_snapshot_file": "data/raw/516750-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "30b82054171dff4099fdf5728210b94677ca27463a302329ca0bdf666c9ce6b0",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh516750/hfq.js",
+      "factor_file": "data/raw/516750-sina-hfq.js.gz",
+      "factor_sha256": "74e17275783878f77f5509516c4d202b70939f290da8de31fb286a4ffd42b6e4",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "517520",
+      "name": "黄金股ETF永赢",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 733,
+      "first": "2023-11-01",
+      "last": "2026-11-10",
+      "normalized_file": "data/517520.csv.gz",
+      "normalized_sha256": "6c55c4067746a8166924bd12000341176f33a6619953dbac7d1c6096984a5098",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_517520_raw.csv",
+      "cached_raw_sha256": "def92354d882782068a484cd852723e7b696f927c7f051498c90fd0e240c7121",
+      "raw_snapshot_file": "data/raw/517520-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "99d9ebcedfb4b683a51ab9d6cbbe4ec0d546c300f309fbfd696607a8fe094d14",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh517520/hfq.js",
+      "factor_file": "data/raw/517520-sina-hfq.js.gz",
+      "factor_sha256": "74713e6a05e74d9c1f85374943f9176890e34649f62eca99f22439e6842a0cf6",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "518880",
+      "name": "黄金ETF华安",
+      "groups": [
+        "商品 ETF"
+      ],
+      "status": "eligible",
+      "rows": 3229,
+      "first": "2013-07-29",
+      "last": "2026-11-10",
+      "normalized_file": "data/518880.csv.gz",
+      "normalized_sha256": "ba9707cea01cf9d075168e676fe2bc131259752294dbc38bc18634eccbd94095",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_518880_raw.csv",
+      "cached_raw_sha256": "93d928ae01ec43b3d04a71211d8c458b3bfcb416c940b0b41b7fd007f1d8b0cd",
+      "raw_snapshot_file": "data/raw/518880-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "52cab7f0593ff95250e0abce184f2a19cf173407990b984e11cf5447b6f771fd",
+      "cached_events_sha256": "13a807e5824f653fbee4068140ff6b45c203c56efb0586a7199ab1caf7748a53",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh518880/hfq.js",
+      "factor_file": "data/raw/518880-sina-hfq.js.gz",
+      "factor_sha256": "a1a5ad1e66d7dfd9414f87b78290c2f961b909e8f7ab7da58a067ee4654a5a71",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "560080",
+      "name": "中药ETF汇添富",
+      "groups": [
+        "医药医疗"
+      ],
+      "status": "eligible",
+      "rows": 987,
+      "first": "2022-10-17",
+      "last": "2026-11-10",
+      "normalized_file": "data/560080.csv.gz",
+      "normalized_sha256": "cdad46329889bf48847a884301c3c70fe1b7e78c0d19ee116c42e9cf49b48953",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_560080_raw.csv",
+      "cached_raw_sha256": "ccf8d40fe75cf4d3e6875843b4fdda74c40700f54d5d6e44a4e9dfa4bc94d37f",
+      "raw_snapshot_file": "data/raw/560080-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "cbf06f26168b6545bf155e65bef4380c09d48bf1ac5dfd7f8647631ba5535473",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh560080/hfq.js",
+      "factor_file": "data/raw/560080-sina-hfq.js.gz",
+      "factor_sha256": "0d69e41edf8074e59a0e387a47c8aa6240efb0ec234da4c5a1523ce87da7184d",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "560860",
+      "name": "工业有色ETF万家",
+      "groups": [
+        "周期资源"
+      ],
+      "status": "eligible",
+      "rows": 888,
+      "first": "2023-03-13",
+      "last": "2026-11-10",
+      "normalized_file": "data/560860.csv.gz",
+      "normalized_sha256": "36e30c1707b1e913b5da4b3e53b10eab8d06b8d80f74df6e48383c337e0500d8",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_560860_raw.csv",
+      "cached_raw_sha256": "2560ad6c2b4e8bd251a13825e9127c049e357aa81333107d15121d5086a69e8c",
+      "raw_snapshot_file": "data/raw/560860-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "0160a6c657f7ca782a94b9ecd24bf0702ea896c168d5d67e74a518541eac92b1",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh560860/hfq.js",
+      "factor_file": "data/raw/560860-sina-hfq.js.gz",
+      "factor_sha256": "c63cae7c8475e0a5c5c2b1ea9fb61ac4207945ae444587a0db77443254b0c80b",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "562500",
+      "name": "机器人ETF华夏",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ],
+      "status": "eligible",
+      "rows": 1177,
+      "first": "2021-12-29",
+      "last": "2026-11-10",
+      "normalized_file": "data/562500.csv.gz",
+      "normalized_sha256": "15cfd4603f9ff35ad6c8f9e86c027a5e88ca3dbd10a2e66188aceea85723dd2c",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_562500_raw.csv",
+      "cached_raw_sha256": "e5be1c2681b95d5cba7a875f49688a9d36e5ecb474b81287876129c0e4d98a94",
+      "raw_snapshot_file": "data/raw/562500-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "3fd782657d25ae0d930fb9498a9eba20103889d1c5e9fe773e7244630d5ef4d8",
+      "cached_events_sha256": "168431a09da77761620293c08e676dda5ed80e35f7aa42fd319389778797cc51",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh562500/hfq.js",
+      "factor_file": "data/raw/562500-sina-hfq.js.gz",
+      "factor_sha256": "99dca0cad4201ec1127bca148ee113a12dbe3918cedde471a8668858e964f229",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 0,
+      "hfq_sha256": null,
+      "hfq_snapshot_file": null,
+      "hfq_snapshot_sha256": null,
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "588170",
+      "name": "科创半导体ETF华夏",
+      "groups": [
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 387,
+      "first": "2025-04-08",
+      "last": "2026-11-10",
+      "normalized_file": "data/588170.csv.gz",
+      "normalized_sha256": "3b5e15572a0f52a0b02e779af2ca8508ec53549d70dc15bc60bd537e1f058bd5",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_588170_raw.csv",
+      "cached_raw_sha256": "1c317ffc7d3d992c3a21b97c0087003c10f3bf1182108e9d32f632c38563cf1b",
+      "raw_snapshot_file": "data/raw/588170-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "5f0cb21f168c00eb8e80f61fa8eb27e6694432e9a2e2c274d7ddb938bf6bb29d",
+      "cached_events_sha256": "c138160787306f2412b596e4d86958d73b935ae9ccb54d9d5568cd3f74c3aba7",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh588170/hfq.js",
+      "factor_file": "data/raw/588170-sina-hfq.js.gz",
+      "factor_sha256": "f8e86a0e7505e8fcf237bf84146191129ef14b174676047d7fd6b99c7d4e578d",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2026-07-06",
+          "3.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2026-07-06",
+          "3.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2026-07-06",
+          "factor_date": "2026-07-06",
+          "share_ratio": "3",
+          "cash_per_old_share": "0E-16",
+          "old_close": "3.579",
+          "new_open": "1.212"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 387,
+      "hfq_sha256": "c0af8864f23abfa8de25879c5d5ca841c77665e549a693fd0389f6b2294862b5",
+      "hfq_snapshot_file": "data/raw/588170-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "d2d6e4dc3c450b28bbf64eb73f785e93dd932858d22422e13d699797d74b7cfa",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    },
+    {
+      "code": "588200",
+      "name": "科创芯片ETF嘉实",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ],
+      "status": "eligible",
+      "rows": 980,
+      "first": "2022-10-26",
+      "last": "2026-11-10",
+      "normalized_file": "data/588200.csv.gz",
+      "normalized_sha256": "49f607f71c1c472044b013e60efcca39c52cf3861af361704a0ab1df2690d874",
+      "cached_raw_file": "/Users/train/orca/workspaces/gupiaoWS/batfish/output/布鲁斯的金融宝藏/replica/data/etf_588200_raw.csv",
+      "cached_raw_sha256": "df109e1cb667bd71340dacc4c177cf28fb416a76cefa45735e2591d79c8e45d9",
+      "raw_snapshot_file": "data/raw/588200-raw-cache.csv.gz",
+      "raw_snapshot_sha256": "be01795b3e0e21caae8895bf5b6e0cd3428134358256cfffe0222572f9ff3281",
+      "cached_events_sha256": "bc7cb864a75506e7485e62c9786b2a95930576a0510e54919b315710cc9d794e",
+      "cached_events_policy": "not used to map actions or delete dividends",
+      "factor_source": "https://finance.sina.com.cn/realstock/company/sh588200/hfq.js",
+      "factor_file": "data/raw/588200-sina-hfq.js.gz",
+      "factor_sha256": "58ec0a10d705aa07be12840dddf40e39c4a6252c8deed8f1b3166cf91c71c001",
+      "factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-16"
+        ],
+        [
+          "2026-07-21",
+          "3.0000000000000000",
+          "0E-16"
+        ]
+      ],
+      "capital_factor_records": [
+        [
+          "1900-01-01",
+          "1.0000000000000000",
+          "0E-32"
+        ],
+        [
+          "2026-07-21",
+          "3.0000000000000000",
+          "0E-32"
+        ]
+      ],
+      "cash_semantics": "source u unweighted per-share; normalized cumulative_cash K=sum(delta_u*s_at_event)",
+      "mapped_actions": [
+        {
+          "effective_quote": "2026-07-21",
+          "factor_date": "2026-07-21",
+          "share_ratio": "3",
+          "cash_per_old_share": "0E-16",
+          "old_close": "3.539",
+          "new_open": "1.202"
+        }
+      ],
+      "action_gap_flags": [],
+      "hfq_crosschecked_rows": 980,
+      "hfq_sha256": "8e92651a4e2537cf7effdce6b7d53b53406f63672ea808083489e5a3802ea23b",
+      "hfq_snapshot_file": "data/raw/588200-hfq-cache.csv.gz",
+      "hfq_snapshot_sha256": "8603ca5847f896308f3b122ab23ea1723551c3270ef7ed395458fd71602aca8e",
+      "hfq_mismatches": [],
+      "volume": "not present; observed quote rows assumed executable"
+    }
+  ],
+  "excluded_structural": [
+    {
+      "code": "511880",
+      "name": "银华日利ETF",
+      "groups": [
+        "货币 ETF"
+      ],
+      "reason": "money ETF outside equity-swing training, no cached OHLC; fixed exclusion before returns"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "primary_numeric_rows_unchanged": 86261,
+  "primary_eligible_unchanged": 61,
+  "corrected_eligible": 63,
+  "supplemental": [
+    {
+      "code": "512690",
+      "status": "eligible",
+      "hfq_mismatches": 0
+    },
+    {
+      "code": "515220",
+      "status": "eligible",
+      "hfq_mismatches": 0
+    }
+  ],
+  "policy": "preserve all61 primary inputs and selection; corrected wine/coal supplementary frozen-parameter transfer only; no retraining or parameter changes"
+}
