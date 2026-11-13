@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "recorded_at_utc": "2026-11-13T11:03:31.631895+00:00",
+  "purpose": "fixed event-study comparison; not parameter optimization or portfolio performance",
+  "formula_period": 13,
+  "threshold": 30,
+  "rules": {
+    "A": "V[t-1]>=30 and V[t]<30",
+    "B": "V[t-1]<30 and V[t]>=30",
+    "B_plus": "B and adjusted_close[t]>adjusted_close[t-1]"
+  },
+  "panel": [
+    {
+      "code": "510300",
+      "label": "沪深300",
+      "group": "A股宽基"
+    },
+    {
+      "code": "510500",
+      "label": "中证500",
+      "group": "A股宽基"
+    },
+    {
+      "code": "159915",
+      "label": "创业板",
+      "group": "A股成长"
+    },
+    {
+      "code": "588000",
+      "label": "科创50",
+      "group": "A股成长，已见过同指数样本"
+    },
+    {
+      "code": "510880",
+      "label": "上证红利",
+      "group": "A股红利"
+    },
+    {
+      "code": "518880",
+      "label": "黄金",
+      "group": "商品"
+    },
+    {
+      "code": "513100",
+      "label": "纳斯达克100",
+      "group": "跨境股票"
+    },
+    {
+      "code": "511010",
+      "label": "国债",
+      "group": "债券"
+    },
+    {
+      "code": "512480",
+      "label": "半导体",
+      "group": "A股行业"
+    },
+    {
+      "code": "512660",
+      "label": "军工",
+      "group": "A股行业"
+    }
+  ],
+  "selection_policy": "fixed named panel chosen by underlying-index/asset coverage before signal-return computation; currently listed funds, so survivorship bias remains",
+  "data_cutoff": "2026-11-10",
+  "history_start": "2010-01-01",
+  "split_date": "2021-01-01",
+  "split_labels": {
+    "development": "before 2021-01-01",
+    "historical_holdout": "on/after 2021-01-01; retrospective validation, not genuinely untouched OOS"
+  },
+  "unseen_future_validation": "new data after 2026-11-13, not available yet",
+  "entry": "next trading session open after signal close",
+  "exit": "close of holding session h, counting entry session as 1",
+  "holding_sessions": [
+    5,
+    10,
+    20
+  ],
+  "primary_holding_sessions": 10,
+  "round_trip_cost_bps": [
+    0,
+    10,
+    30
+  ],
+  "primary_round_trip_cost_bps": 10,
+  "cost_scope": "scenario assumptions, not claimed current broker quotes; round-trip combines commission/spread/slippage",
+  "execution_limits": "daily opens/closes are theoretical fills; no intraday liquidity/limit queue/lot size model",
+  "dedup": "per symbol and rule and horizon retain first event; skip new events with entry<=previous retained exit; do not force different rules to share signals",
+  "purge": "development event entry and exit both before split; holdout signal+entry+exit on/after split; drop horizon-truncated events",
+  "benchmark": "same ETF and same date segment unconditional forward return using all eligible next-open-to-h-close opportunities; equal-weight ETF aggregation, no pooled-events-only headline",
+  "mae": "minimum intraday low equity along holding path, not close-only drawdown",
+  "multiple_comparisons": "report all rules, horizons and costs; no best-only selection; primary outcome B_plus versus B at h10/cost10",
+  "inference": "report paired episode comparisons and date-block bootstrap for dependence; exploratory, no confirmed edge claim",
+  "data_audit": "store input hashes, sources, date coverage, adjustment/corporate-action assumptions, invalid rows and cross-source mismatches. No silently remap corporate action dates by best price fit."
+}
