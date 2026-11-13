@@ -1,0 +1,169 @@
+{
+  "version": "1.0.0",
+  "recorded_before_returns_at_utc": "2026-11-13T12:53:49.606038+00:00",
+  "user_rules": [
+    "10日线之下不买入",
+    "从30以下到30以上并且站上10日线是买入",
+    "跌破10线+macd死叉 或者 从70以上跌到70以下卖出+macd死叉"
+  ],
+  "user_confirmation": "状态确认：价格已在10日线下或指标已下穿70，此后MACD死叉时卖出",
+  "formula_period": 13,
+  "bottom_threshold": 30,
+  "top_threshold": 70,
+  "ma_period": 10,
+  "entry": "flat; V_previous<30<=V_current<=45 AND adjusted_close>simple_MA10; signal-day filter; no added MACD entry/golden-cross requirement",
+  "exit": "held; MACD fresh death-cross today AND (adjusted_close<MA10 OR (this position has observed V>=70 AND V_current<70)); both branches require fresh MACD death-cross, not merely DIF<DEA",
+  "top_state": "reset on every filled buy and sell; count entry-day close and subsequent held closes; pre-entry V>=70 does not qualify; if V returns to>=70, top branch waits until current V<70 again; prior-day top observation with current<70 implies a past downward crossing",
+  "macd": {
+    "fast": 12,
+    "slow": 26,
+    "signal": 9,
+    "DIF": "EMA12(C)-EMA26(C)",
+    "DEA": "EMA9(DIF)",
+    "EMA": "alpha=2/(period+1), recursive adjust=False; first EMA=first available adjusted close, first DEA=first DIF=0; use all available history before segment",
+    "death_cross": "DIF_previous>=DEA_previous AND DIF_current<DEA_current",
+    "equality": "DIF=DEA alone is not a death-cross; closes equal MA10 neither buy nor price-branch sell; V=30 qualifies recovery, V=70 counts as high, current<70 qualifies low side"
+  },
+  "strategies": {
+    "MACD_CAP45": "new user addition: same MACD_STATE rule plus signal-day V<=45 buy filter",
+    "MACD_STATE": "previous confirmed rule, no cap45",
+    "MA10_ONLY": "unchanged baseline",
+    "BUY_HOLD": "unchanged baseline"
+  },
+  "primary_comparator": "MACD_CAP45 minus MACD_STATE; sole intentional rule change is buy-signal V<=45",
+  "secondary_comparators": [
+    "MA10_ONLY",
+    "BUY_HOLD"
+  ],
+  "segments": {
+    "historical_holdout": [
+      "2021-01-01",
+      "2026-11-10"
+    ],
+    "development": [
+      "2010-01-01",
+      "2020-12-31"
+    ],
+    "all_history": [
+      "2010-01-01",
+      "2026-11-10"
+    ]
+  },
+  "segment_policy": "per ETF first available quote on/after start with >=14 closes. Historical holdout is primary; full history/development are secondary, not untouched OOS. Do not annualize segments shorter than365 days.",
+  "execution": "signal close, next observed per-ETF open; one long/flat position, no same-close fills or pyramiding; segment starts cash=1 without inherited orders; first eligible signal i>=13; positive-volume frozen input only",
+  "cost_bps_round_trip": [
+    0,
+    10,
+    30
+  ],
+  "primary_cost_bps_round_trip": 10,
+  "ledger": "reuse frozen prior engine for exact shares, separate non-reinvested dividend reserve, raw OHLC fills/marks, split factors before open, terminal close liquidation estimate charged side fee and labeled forced_end",
+  "cost_math": "side rate=roundtrip/2; buy shares=trading_cash/(open*(1+side)); sell receives shares*price*(1-side); all baselines pay both ends",
+  "dividends": "economic entitlement at ex-date into segregated dividend cash/receivable; never reinvest into later buys, no payment-date liquidity assumed",
+  "cash_return": 0,
+  "terminal": "mark/liquidate remaining shares at final close with estimated side cost; label forced_end separately, do not count it as rule-completed trade",
+  "quote_gaps": "next available per-ETF quote is execution session, not synthetic filled prices; zero-volume quote cancels that pending execution and reevaluates at close. For aggregated NAV only, forward-fill last mark on missing dates.",
+  "aggregation": "9 independent equal-initial-capital subaccounts, no cross-ETF rebalancing; aggregate only primary common period. Also show per-ETF results and all cost cases.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261113,
+    "block_sessions": 20,
+    "method": "resample nonoverlapping joint date blocks of realized aggregate paired log returns; scale by observed sessions/calendar-year; no resimulated signal/price concatenation",
+    "ci": [
+      2.5,
+      97.5
+    ]
+  },
+  "historical_return_support_criterion": "aggregate net CAGR difference>0, paired date-block CI low>0, majority of same ETFs have positive CAGR difference; never claim future confirmed advantage from this retrospective data",
+  "inputs": {
+    "audit_relative": "../固定规则验证/data_audit.json",
+    "audit_sha256": "92ce7d35e64667b31ea2d0a2a32de2116b89defae69c59ed221ee9b60f395861",
+    "eligible_symbols": [
+      {
+        "code": "159915",
+        "label": "创业板",
+        "group": "A股成长",
+        "normalized_file": "data/159915.csv.gz",
+        "normalized_sha256": "aaa31c9f3b5c8d70954bc97d8214ae1a187feb97798974e8f049aae2d2ace583"
+      },
+      {
+        "code": "510300",
+        "label": "沪深300",
+        "group": "A股宽基",
+        "normalized_file": "data/510300.csv.gz",
+        "normalized_sha256": "861253bce3b76cfdee7384792475da3a1faff0e2ff11f3cbe28cf3572e2ef571"
+      },
+      {
+        "code": "510880",
+        "label": "上证红利",
+        "group": "A股红利",
+        "normalized_file": "data/510880.csv.gz",
+        "normalized_sha256": "c036f59b02d036d50ed4df8edd32b5e384a8082a2546d09a572120476c6d296d"
+      },
+      {
+        "code": "511010",
+        "label": "国债",
+        "group": "债券",
+        "normalized_file": "data/511010.csv.gz",
+        "normalized_sha256": "bbcf29137ff6a0de2a62af6106e2ab2e3913ac001d532009fb7bb8b71e8d313a"
+      },
+      {
+        "code": "512480",
+        "label": "半导体",
+        "group": "A股行业",
+        "normalized_file": "data/512480.csv.gz",
+        "normalized_sha256": "8c1010db76321f322389588ede253ea331f6d4c8a98b3dcce8e477b292c88667"
+      },
+      {
+        "code": "512660",
+        "label": "军工",
+        "group": "A股行业",
+        "normalized_file": "data/512660.csv.gz",
+        "normalized_sha256": "7a56644150ceb9c826eabfbab61bc7d1a352e8bff999d774484f07f02acd173b"
+      },
+      {
+        "code": "513100",
+        "label": "纳斯达克100",
+        "group": "跨境股票",
+        "normalized_file": "data/513100.csv.gz",
+        "normalized_sha256": "b201cefff0f4859964c53ba5623615e1115ef11a4aa425e00ec4de24aa3b5a75"
+      },
+      {
+        "code": "518880",
+        "label": "黄金",
+        "group": "商品",
+        "normalized_file": "data/518880.csv.gz",
+        "normalized_sha256": "62156c62eeffa911509b91a0d9afbcce86f523f676b1abe9750efe42ae7d7e97"
+      },
+      {
+        "code": "588000",
+        "label": "科创50",
+        "group": "A股成长，已见过同指数样本",
+        "normalized_file": "data/588000.csv.gz",
+        "normalized_sha256": "8001e8a4e90b22fbe041eea2aeacaec5ef36c9e22a3fb03e59901ecdacbc8f9b"
+      }
+    ],
+    "source_exclusion": "510500 remains excluded for604 adjustment mismatches; no added replacements"
+  },
+  "frozen_previous_protocol_sha256": "e90f063dc2cf593e13d0eaa2ebc3f10801db234beffd549f177551787df72193",
+  "frozen_engine_sha256": "ce87bda6e6c3b9f2142fbbf03f248b0b545ae143d07ba053491e40b213c54918",
+  "frozen_runner_sha256": "adcafa0963fc63d022898f330c7ae9f49422ef223c76c30525913f88585fca19",
+  "limitations": [
+    "current-survivor small panel",
+    "known recent-market and previous indicator work; not genuinely unseen",
+    "theoretical daily open/close fills, no orderbook/lot/minimum-fee/limit-queue model",
+    "closing-NAV drawdown, not intraday true maximum drawdown",
+    "dividends segregated without reinvestment; no actual distribution payment-date ledger",
+    "MACD seeded from each ETF available history; 588000 has less than130 observations before2021, so earliest MACD state can depend on seed",
+    "no hard stop while awaiting fresh death-cross; a pre-existing bearish MACD state is not a new sell event"
+  ],
+  "retrospective": true,
+  "no_parameter_search": true,
+  "user_addition": "再加一条波段顶底大于45的macd不买",
+  "entry_cap": 45,
+  "entry_cap_policy": "V=45 eligible; V>45 skips this fresh cross30 signal; later fallback into30..45 without another fresh upcross30 does not buy; filter does not force an existing holding to sell",
+  "parent_protocol_sha256": "7ecc9a2f364d6bbb0a5c6e22d194d61ff32ca539165ea52a042145965f19ca9b",
+  "parent_rules_sha256": "20a1f326ba28625be4c7399f2f880dec01287bf09ab280c66f1819c7805329dc",
+  "parent_metrics_sha256": "a3d3c441fc32bd2b9a50d5c7487e9bbe8e70de6046f11aa66c4b31c3768c9ee9",
+  "additional_limitation": "45 chosen by user after seeing earlier historical outcomes; same historical panel reused, so this is exploratory rule revision, not new out-of-sample validation"
+}
