@@ -1,0 +1,175 @@
+{
+  "base": "repository root",
+  "files": [
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/159915.csv.gz",
+      "bytes": 75462,
+      "sha256": "aaa31c9f3b5c8d70954bc97d8214ae1a187feb97798974e8f049aae2d2ace583"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/510300.csv.gz",
+      "bytes": 76850,
+      "sha256": "861253bce3b76cfdee7384792475da3a1faff0e2ff11f3cbe28cf3572e2ef571"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/510880.csv.gz",
+      "bytes": 80832,
+      "sha256": "c036f59b02d036d50ed4df8edd32b5e384a8082a2546d09a572120476c6d296d"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/511010.csv.gz",
+      "bytes": 74989,
+      "sha256": "bbcf29137ff6a0de2a62af6106e2ab2e3913ac001d532009fb7bb8b71e8d313a"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/512480.csv.gz",
+      "bytes": 37586,
+      "sha256": "8c1010db76321f322389588ede253ea331f6d4c8a98b3dcce8e477b292c88667"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/512660.csv.gz",
+      "bytes": 47585,
+      "sha256": "7a56644150ceb9c826eabfbab61bc7d1a352e8bff999d774484f07f02acd173b"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/513100.csv.gz",
+      "bytes": 62453,
+      "sha256": "b201cefff0f4859964c53ba5623615e1115ef11a4aa425e00ec4de24aa3b5a75"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/518880.csv.gz",
+      "bytes": 64395,
+      "sha256": "62156c62eeffa911509b91a0d9afbcce86f523f676b1abe9750efe42ae7d7e97"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data/588000.csv.gz",
+      "bytes": 29724,
+      "sha256": "8001e8a4e90b22fbe041eea2aeacaec5ef36c9e22a3fb03e59901ecdacbc8f9b"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/固定规则验证/data_audit.json",
+      "bytes": 160326,
+      "sha256": "92ce7d35e64667b31ea2d0a2a32de2116b89defae69c59ed221ee9b60f395861"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/.gitignore",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/protocol.json",
+      "bytes": 8309,
+      "sha256": "7ecc9a2f364d6bbb0a5c6e22d194d61ff32ca539165ea52a042145965f19ca9b"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/render_report.py",
+      "bytes": 14133,
+      "sha256": "d8c4baf2bae58a37eef1751f91c00af91fb586fc8492969bcb5984bcc94be409"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/aggregate_metrics.csv",
+      "bytes": 3829,
+      "sha256": "4aff827c1c9bf3368db9842b59d10d851418cd636b68d21f5a421a7270cfdfaa"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/aggregate_nav.csv.gz",
+      "bytes": 387825,
+      "sha256": "6a949156b2f49adfdb6b7a70e8525d377330d496b92316267c666ca1ae05de22"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/daily_nav_cost10.csv.gz",
+      "bytes": 2913498,
+      "sha256": "0ef22584c4103644ffcf7d14cf8bca346ae2cc7ceec31020196de377c10e4000"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/features.csv.gz",
+      "bytes": 2181581,
+      "sha256": "80582d3a141c3a77add2962fbe1f878a17d24185bd135178f39f3ba3afd74114"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/holding_diagnostics.csv",
+      "bytes": 1092,
+      "sha256": "2cf70408fad573b91c62121a3202eae675ff9a8be591da975ad5541b31695461"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/independent_verification.json",
+      "bytes": 385,
+      "sha256": "493e15f1ed5bab525d27077680241c06b5a5912540f5aca5edb6c0e56b046190"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/metrics.csv",
+      "bytes": 101844,
+      "sha256": "a3d3c441fc32bd2b9a50d5c7487e9bbe8e70de6046f11aa66c4b31c3768c9ee9"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/summary.json",
+      "bytes": 3558,
+      "sha256": "9fdaa17b9e74855da34d73354ed432be47d46f98ceab5be1a0abb17c41e0af76"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/trades.csv.gz",
+      "bytes": 2500200,
+      "sha256": "9489e969461e50be57569414861f3b543454ead8178d5eb42427db433edd281b"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/results/yearly_cost10.csv",
+      "bytes": 1424,
+      "sha256": "8fdec21aabde86bf66413af16a0c1043014277edeac1a1bd5bbac7d4beef28b2"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/rules.py",
+      "bytes": 5833,
+      "sha256": "20a1f326ba28625be4c7399f2f880dec01287bf09ab280c66f1819c7805329dc"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/run_study.py",
+      "bytes": 5492,
+      "sha256": "0d26e97bb75fbe4e27c4a320bf45acbda2b52a589ef47c4cc22c41fc84eff8a8"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/test_rules.py",
+      "bytes": 5698,
+      "sha256": "bd145ad38c47ca3f3a08270f8f7dee45eb855d2b94643532b71b14c77e1c9a2b"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/verify_bundle.py",
+      "bytes": 1769,
+      "sha256": "f3f6a9d0de5f40fc9cb5c9a3708be918c3334e5e7e0502db7dee2325028830ca"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/verify_study.py",
+      "bytes": 11950,
+      "sha256": "d160d118d1837ba36fdcc135b4c6be21b5e3172b84e1281d645525ea8f47f59f"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升MA10加MACD/结果报告.md",
+      "bytes": 13577,
+      "sha256": "ba1fcb8b4d57255fcd838ce4adebcbf90715d2f5e61a072a9bf3385d76d9c698"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升结合MA10/protocol.json",
+      "bytes": 7347,
+      "sha256": "e90f063dc2cf593e13d0eaa2ebc3f10801db234beffd549f177551787df72193"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升结合MA10/results/metrics.csv",
+      "bytes": 81835,
+      "sha256": "2924bb668ea0cefec1be8868c85530d970d98ac51572744adcf5431518c1276b"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升结合MA10/run_backtest.py",
+      "bytes": 8116,
+      "sha256": "adcafa0963fc63d022898f330c7ae9f49422ef223c76c30525913f88585fca19"
+    },
+    {
+      "path": "output/同花顺ETF波段顶底/research/底部回升结合MA10/strategy.py",
+      "bytes": 7088,
+      "sha256": "ce87bda6e6c3b9f2142fbbf03f248b0b545ae143d07ba053491e40b213c54918"
+    },
+    {
+      "path": "output/布鲁斯的金融宝藏/replica/bruce_replica/etf_band.py",
+      "bytes": 12316,
+      "sha256": "82a464440c7a81ce10f2cc4aece6a8a5950c799ff322598a90d903019ac0c0fd"
+    }
+  ]
+}

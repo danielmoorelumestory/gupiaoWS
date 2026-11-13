@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "unchanged_control_metrics_checked": 324,
+  "macd_feature_rows_checked": 26779,
+  "independent": "Fraction V/MA, Decimal60 MACD, interval search, closed-form share/coupon ledger",
+  "metrics_checked": 405,
+  "trades_checked": 20235,
+  "daily_account_nav_checked": 266620,
+  "aggregate_nav_checked": 7085,
+  "max_absolute_numeric_error": 4.085620730620576e-14
+}
