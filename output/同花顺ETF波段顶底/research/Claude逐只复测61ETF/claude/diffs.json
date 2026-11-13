@@ -1,0 +1,31 @@
+{
+  "total": 3,
+  "main_scope_total": 0,
+  "by_kind": {
+    "per_etf": 3
+  },
+  "main_groups_with_per_etf_diff": [],
+  "first_200": [
+    {
+      "kind": "per_etf",
+      "key": "test|0|e6ecc034065e|512070",
+      "field": "wins",
+      "retest": "4",
+      "original": "3"
+    },
+    {
+      "kind": "per_etf",
+      "key": "test|0|e6ecc034065e|512070",
+      "field": "wr",
+      "retest": "0.4",
+      "original": "0.3"
+    },
+    {
+      "kind": "per_etf",
+      "key": "test|0|e6ecc034065e|512070",
+      "field": "pooled_wr",
+      "retest": "0.4",
+      "original": "0.3"
+    }
+  ]
+}

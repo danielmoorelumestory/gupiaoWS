@@ -1,0 +1,181 @@
+{
+  "created_at_utc": "2026-11-13T14:44:25.937728+00:00",
+  "source_study": "output/同花顺ETF波段顶底/research/数据训练优化ETF",
+  "items": [
+    {
+      "code": "515790",
+      "name": "光伏ETF华泰柏瑞",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ]
+    },
+    {
+      "code": "159851",
+      "name": "金融科技ETF华宝",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ]
+    },
+    {
+      "code": "562500",
+      "name": "机器人ETF华夏",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ]
+    },
+    {
+      "code": "512480",
+      "name": "半导体ETF国联安",
+      "groups": [
+        "MACD优秀"
+      ]
+    },
+    {
+      "code": "588200",
+      "name": "科创芯片ETF嘉实",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ]
+    },
+    {
+      "code": "513130",
+      "name": "恒生科技ETF华泰柏瑞",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ]
+    },
+    {
+      "code": "512200",
+      "name": "房地产ETF南方",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ]
+    },
+    {
+      "code": "159852",
+      "name": "软件ETF嘉实",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ]
+    },
+    {
+      "code": "516160",
+      "name": "新能源ETF南方",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ]
+    },
+    {
+      "code": "512880",
+      "name": "证券ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ]
+    },
+    {
+      "code": "513090",
+      "name": "香港证券ETF易方达",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ]
+    },
+    {
+      "code": "159667",
+      "name": "工业母机ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "高端制造"
+      ]
+    },
+    {
+      "code": "159792",
+      "name": "港股通互联网ETF富国",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ]
+    },
+    {
+      "code": "159883",
+      "name": "医疗器械ETF永赢",
+      "groups": [
+        "MACD优秀",
+        "医药医疗"
+      ]
+    },
+    {
+      "code": "512070",
+      "name": "证券保险ETF易方达",
+      "groups": [
+        "MACD优秀",
+        "金融地产基建"
+      ]
+    },
+    {
+      "code": "159865",
+      "name": "养殖ETF国泰",
+      "groups": [
+        "MACD优秀",
+        "农业周期"
+      ]
+    },
+    {
+      "code": "159869",
+      "name": "游戏ETF华夏",
+      "groups": [
+        "MACD优秀",
+        "TMT科技"
+      ]
+    }
+  ],
+  "cutoff_requested": "2026-11-13",
+  "primary_candidate_role": "prelocked annual_leader B, not newly selected from lifetime outcomes",
+  "configs": {
+    "MACD": {
+      "ma": 10,
+      "n": null,
+      "lo": null,
+      "macd": [
+        12,
+        26,
+        9
+      ],
+      "hi": null,
+      "cap": null,
+      "wait": null,
+      "entry": "MACD",
+      "exit": "X2"
+    },
+    "B": {
+      "entry": "E1",
+      "exit": "X3",
+      "ma": 10,
+      "n": 9,
+      "lo": 30,
+      "macd": [
+        16,
+        35,
+        9
+      ],
+      "hi": 70,
+      "cap": null,
+      "wait": null
+    }
+  },
+  "warmup": 120,
+  "cost_bps_round_trip": 20,
+  "holding": "buy first available IPO-history raw open with fee; dividend cash separated, no reinvestment; estimate finalclose exit with fee",
+  "strategies": "same existing120row prewarm, start cash1 at IPO, all prior cash calendar included in lifetime annual denominator; show same-after-warm-start hold as secondary",
+  "source_pin": "721b0c733b0231aab4201bb54c6fce04fe61557c77b3b96cad5e1d9fadd48cef",
+  "interpretation": "full-history retrospective includes training/validation data, not independent confirmation; source first date is first cached available trading quote, not separately verified exchange IPO date"
+}

@@ -1,0 +1,4 @@
+kind,key,field,retest,original
+per_etf,test|0|e6ecc034065e|512070,wins,4,3
+per_etf,test|0|e6ecc034065e|512070,wr,0.4,0.3
+per_etf,test|0|e6ecc034065e|512070,pooled_wr,0.4,0.3

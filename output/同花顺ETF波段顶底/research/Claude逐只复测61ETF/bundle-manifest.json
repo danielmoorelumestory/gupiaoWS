@@ -1,0 +1,30 @@
+{
+  "sha256": {
+    ".gitattributes": "e80a5edbbcb9ee509aed057730ca7e988510c32cfe8a204adb4a16785333ab25",
+    ".gitignore": "8ebf4ebc5b3e57b51be9fac8bdd1c211948af0eb0cad597493fd8697a2656a2f",
+    "claude/diffs.csv": "f3e8f9b483e4983b38a4911d8d91051ab9b8cc5f8e719a029e92dfc1fbf08e19",
+    "claude/diffs.json": "67aa4b964e745e4c16aee11578c65a583dfdfcda87dfa3f7fdee834c9c84f7bc",
+    "claude/full_history/full_history.py": "2b3ffaf071732835403177e334e5ea8f98c4fc22e1ff70875804ae22ff5fb784",
+    "claude/full_history/full_history_61_brief.csv": "1a25eeb8856bc35beb3965172657cc2ec78f3d088e37cfd2b0c99fda49b82909",
+    "claude/full_history/full_history_long.csv": "8966ae9c47eca8e88765d77a33219113f0c5d8238ba4e46540df044ef6c10632",
+    "claude/full_history/run.log": "8948867407274bf9d57d420046736d124678f7aa34041bf3fb4e6620efca9c05",
+    "claude/integrity_end_verify_bundle.log": "8d74c1159d70c302b80de4e9c5c4f8e05b12a73596dfe7b3cfe50451a98b9e9c",
+    "claude/integrity_start_verify_bundle.log": "8d74c1159d70c302b80de4e9c5c4f8e05b12a73596dfe7b3cfe50451a98b9e9c",
+    "claude/make_report.py": "41d5ee4b488759f41179ab35facea4acbd4fa9b1d13a6bac84b696de1ef08a93",
+    "claude/per_etf_61_brief.csv": "2292c6763267c23df5f5d906e0bf539514f7e6a03d9d0431fa007ca129f357ba",
+    "claude/per_etf_61_wide.csv": "ef17f31e96ff5fbff2a3b3f6c364ab588a6667521e7697f447b65076e6ca52b7",
+    "claude/retest61.py": "21cb856d0753465caaa952d4b0144ed1770ffe4f977258978b35293fd5650447",
+    "claude/retest_extra_cost_subperiod.csv": "db1b078a41d636964a1f52ee4431b8e84649fc889434f1ddf7c8ea9611b9823f",
+    "claude/retest_long_366.csv": "0f24de7d42e1c7857c40684465471b8f87a08852f7e881e63318291ee29fef21",
+    "claude/retest_nav.csv.gz": "f6463563e8726c2bbb6bb403fd26fc8a139b3c9890d97620dff6e7b46b8ae2d5",
+    "claude/retest_trades.csv": "ce126ff94f296d159618ff315282383b1c49741728e2955fefacf24eec33df1e",
+    "claude/run.log": "e4266edb20ea695aa2a7cef4e47d61022a0d819afd4f285169f3ccab4fa24961",
+    "claude/run_main_only.log": "9a28bcfe711b70959be72fa9924a3c2b589af9b72e97a6f264e5ec4e21dc2131",
+    "claude/verification.json": "7ab812e84284b2f7411907df46cf0284f4c9b6158df7a166924e903b1b088ec1",
+    "claude/verification_main_only.json": "59aaa112702dd447912299f3d905a66c75bc601e7c0d8d699bb56732df67f9fa",
+    "claude/结果报告.md": "6b4c2101ae32b5c890c857f98f9ca258a2509318d429bfcdd55c4b54086dd69b",
+    "inputs.json": "b0ffddf146ae6d7c598f617cd26dd7d769bbb32d88557778359efa3219fba2cf",
+    "verify_bundle.py": "52089f42e57e94fd2a8ed5e294126cc5fc2375eebb85fd6cd7f01025de77c72e",
+    "任务说明.md": "0c44327753f9bcf740365c47375fd26fce19a8725b18331acbe3a10b4febafaf"
+  }
+}

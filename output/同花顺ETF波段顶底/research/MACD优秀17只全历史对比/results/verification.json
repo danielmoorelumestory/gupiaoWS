@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "strategies_checked": 34,
+  "daily_nav_checked": 48440,
+  "max_absolute_error": 4.707345624410664e-14,
+  "holding_closed_form_vs_sequential": true,
+  "primary_history_and_overlap_unchanged": true
+}

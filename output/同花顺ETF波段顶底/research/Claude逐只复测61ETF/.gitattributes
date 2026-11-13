@@ -1,0 +1,2 @@
+# Preserve the delivered RFC-style CSV bytes; CRLF is a valid record ending.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

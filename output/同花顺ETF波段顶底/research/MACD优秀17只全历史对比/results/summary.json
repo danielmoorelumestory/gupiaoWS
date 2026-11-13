@@ -1,0 +1,28 @@
+{
+  "HOLD": {
+    "cagr_median": -0.03203100983285391,
+    "cagr_mean": -0.011803870730478451,
+    "total_return_median": -0.1467082917082917,
+    "wr_equal": null,
+    "natural_trades": 0,
+    "positive_etfs": 7
+  },
+  "MACD": {
+    "cagr_median": 0.04770434554385996,
+    "cagr_mean": 0.05900164454470603,
+    "total_return_median": 0.34699532692023616,
+    "wr_equal": 0.35083603536976904,
+    "natural_trades": 862,
+    "positive_etfs": 11
+  },
+  "B": {
+    "cagr_median": 0.023414330846958244,
+    "cagr_mean": 0.021989319603872928,
+    "total_return_median": 0.13676823719661502,
+    "wr_equal": 0.41513805808105575,
+    "natural_trades": 312,
+    "positive_etfs": 11
+  },
+  "B_beats_MACD_annual_etfs": 7,
+  "B_beats_HOLD_annual_etfs": 10
+}

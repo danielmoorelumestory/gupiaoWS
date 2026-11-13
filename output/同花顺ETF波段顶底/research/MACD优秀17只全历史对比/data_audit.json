@@ -1,0 +1,311 @@
+{
+  "downloaded_at_utc": "2026-11-13T14:44:46.251029+00:00",
+  "symbols": [
+    {
+      "code": "159667",
+      "first": "2022-10-26",
+      "last": "2026-11-13",
+      "rows": 983,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159667,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159667,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sz159667/hfq.js",
+      "source_sha256": "0ae1cd22f7d8cbd8104438b712c8fb7875dd0d21e6c44e9685bad793c38b10b9",
+      "merged_sha256": "576d82477d6751a14f154d5f32ac000603426b1a0c1a3b4a0732e21b5b9384f6"
+    },
+    {
+      "code": "159792",
+      "first": "2021-09-28",
+      "last": "2026-11-13",
+      "rows": 1241,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159792,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159792,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sz159792/hfq.js",
+      "source_sha256": "39b2e7f7b471bfa20497b7c2a1da4f1b949ad11c56eecd25f37d67691902effd",
+      "merged_sha256": "489b2a032a7a61de3e90e0700a7eea21c34c16e4dc5ba3f99c48a24a21ed3c28"
+    },
+    {
+      "code": "159851",
+      "first": "2021-03-19",
+      "last": "2026-11-13",
+      "rows": 1371,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159851,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159851,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sz159851/hfq.js",
+      "source_sha256": "0f6afb4a8addd97a1af4b76b7700681b410045afc27255fdaab75c2a17799502",
+      "merged_sha256": "408e2da71e7da56439de719cdb10c6bbe8ff2f40a472d23965219ba090a0f31b"
+    },
+    {
+      "code": "159852",
+      "first": "2021-02-09",
+      "last": "2026-11-13",
+      "rows": 1394,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159852,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159852,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sz159852/hfq.js",
+      "source_sha256": "9abcdfa10705a020b8b9e038fabd44ecae57b7345d6d57f2931b992eae71726a",
+      "merged_sha256": "32f72da243ef44d787c12e8c900fcc3bb298cda727761593871578e4cf36de56"
+    },
+    {
+      "code": "159865",
+      "first": "2021-03-08",
+      "last": "2026-11-13",
+      "rows": 1380,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159865,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159865,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sz159865/hfq.js",
+      "source_sha256": "116c961e1e27648b703a612cdfac4b811eee0e5836616b81e5b65104e80e3304",
+      "merged_sha256": "8688ef5af652b585884be6cb16533a8398038b3ec53f36edd93bf5b4e13559c6"
+    },
+    {
+      "code": "159869",
+      "first": "2021-03-05",
+      "last": "2026-11-13",
+      "rows": 1381,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159869,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159869,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sz159869/hfq.js",
+      "source_sha256": "f520a6e870bc689697aa7b018356cfff08b59c76b2049dc88f817b2063887536",
+      "merged_sha256": "9d48dc7e4b34193a381f87fcc273cf727785c824174ec3477b663dba6dc74b28"
+    },
+    {
+      "code": "159883",
+      "first": "2021-04-30",
+      "last": "2026-11-13",
+      "rows": 1342,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159883,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159883,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sz159883/hfq.js",
+      "source_sha256": "87763244b93574050e54ca59339c7342d553de4326a013563deea36852ddf8e4",
+      "merged_sha256": "b812a1764682589f31384ce3309f72846586b1565f6399a78db5437e180b2269"
+    },
+    {
+      "code": "512070",
+      "first": "2015-08-04",
+      "last": "2026-11-13",
+      "rows": 2738,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512070,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512070,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh512070/hfq.js",
+      "source_sha256": "7aee1d1f7dcd38c241c9bc7edde42c995ae572ba52e9a47d7de72edb433d4fb2",
+      "merged_sha256": "78ef17ad8f88bcaab5b494535f32840a20b1ab2d6b806eb903674398b995e767"
+    },
+    {
+      "code": "512200",
+      "first": "2017-09-25",
+      "last": "2026-11-13",
+      "rows": 2215,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512200,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512200,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh512200/hfq.js",
+      "source_sha256": "bcc720be43f53009722058131b5e92c669ecfa590edf501fefc6286506aae000",
+      "merged_sha256": "13b13a0a174f1a82aa27aed5ca17dcf5fd0b88267ca02806ef174ad370993ab2"
+    },
+    {
+      "code": "512480",
+      "first": "2019-06-12",
+      "last": "2026-11-13",
+      "rows": 1801,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512480,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512480,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh512480/hfq.js",
+      "source_sha256": "95f20a1bd36cd8070d8789f8a956ec13613e681a362fe74caee7d82858be9e05",
+      "merged_sha256": "ff4be17cc54d046ecf182e19457723635e5269c5b2f9a7220578fb0660638ffe"
+    },
+    {
+      "code": "512880",
+      "first": "2016-08-08",
+      "last": "2026-11-13",
+      "rows": 2492,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512880,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512880,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh512880/hfq.js",
+      "source_sha256": "426700e5eae7af7b1a62a1e24a56c0e0caf9c210799ed78ae44fe778ebfbf885",
+      "merged_sha256": "38da6a9d4ee1bb114f3fcf86d887e686c14dedb6714238c0e698d62379b646d4"
+    },
+    {
+      "code": "513090",
+      "first": "2020-03-26",
+      "last": "2026-11-13",
+      "rows": 1609,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh513090,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh513090,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh513090/hfq.js",
+      "source_sha256": "c6a471e5f5809138fa81658ab7846397a52f44a445454de3363c48e68bc68165",
+      "merged_sha256": "6b4d8bc6abf34e019d076e3072501d429786eda687141f58de5864d01786f3d9"
+    },
+    {
+      "code": "513130",
+      "first": "2021-06-01",
+      "last": "2026-11-13",
+      "rows": 1323,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh513130,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh513130,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh513130/hfq.js",
+      "source_sha256": "4a363d7d7e11c2ac34c622a9332015875fd806c5c326b1a10d4494be7f99cbff",
+      "merged_sha256": "b48f2916d0be4545a3d79e1764d259a6d8b1ec4f1e08fb949c2d67a3082d9336"
+    },
+    {
+      "code": "515790",
+      "first": "2020-12-18",
+      "last": "2026-11-13",
+      "rows": 1430,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh515790,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh515790,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh515790/hfq.js",
+      "source_sha256": "cf87695b8b6c2e627b951b4de54279b62289e63df30fc559baf58d1f89fe9a23",
+      "merged_sha256": "79e27b15f3ad9b54dfcb5527cd08b6ce09bb093948f5988afeea209c34c6bb68"
+    },
+    {
+      "code": "516160",
+      "first": "2021-02-04",
+      "last": "2026-11-13",
+      "rows": 1397,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh516160,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh516160,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh516160/hfq.js",
+      "source_sha256": "9f734d9229f762e2ed2ac20fe1617c65ed923404875fd5fadddaf3fce50f0dc7",
+      "merged_sha256": "91f526fb918a3765de4d39ad994c0629511b2a3c20e4d2c4ec8fcb864b979e8f"
+    },
+    {
+      "code": "562500",
+      "first": "2021-12-29",
+      "last": "2026-11-13",
+      "rows": 1180,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh562500,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh562500,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh562500/hfq.js",
+      "source_sha256": "889c04ba82c3221a36e1c1884ff393c9cb35f2ca342fce291ed61f1ca8129b9b",
+      "merged_sha256": "b7372aa3f9cf719723b7f6a37175e1a5702a69fc87777a2cffb4f8a277f83cdf"
+    },
+    {
+      "code": "588200",
+      "first": "2022-10-26",
+      "last": "2026-11-13",
+      "rows": 983,
+      "added_dates": [
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "raw_overlap_quotes_checked": 16,
+      "hfq_quotes_checked": 19,
+      "raw_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh588200,day,2026-10-20,2026-11-14,100,",
+      "hfq_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh588200,day,2026-10-20,2026-11-14,100,hfq",
+      "factor_url": "https://finance.sina.com.cn/realstock/company/sh588200/hfq.js",
+      "source_sha256": "d290661d20293767a90ef14f0f54beb25289b0e91d1f07886d8d908e2b9d1736",
+      "merged_sha256": "9a3c0e39260a17e7c9a39a6e59b03c15764e1599eddc7a49ef9fb1b21120b417"
+    }
+  ]
+}
