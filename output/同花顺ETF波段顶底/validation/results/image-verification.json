@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "method": "Claude 段中点及同列暗像素范围，路径已改为项目相对路径",
+  "long_tolerance_pixels": 1.5,
+  "short": [
+    {
+      "period": 13,
+      "segments": 64,
+      "image_rmse_points": 0.06194110463023706,
+      "image_max_abs_points": 0.34307929779362567
+    },
+    {
+      "period": 12,
+      "segments": 64,
+      "image_rmse_points": 3.6862128807474237,
+      "image_max_abs_points": 9.96775229134952
+    },
+    {
+      "period": 14,
+      "segments": 64,
+      "image_rmse_points": 3.5894425210885195,
+      "image_max_abs_points": 9.16404783233937
+    }
+  ],
+  "long": [
+    {
+      "period": 13,
+      "covered_columns": 1156,
+      "total_columns": 1159,
+      "coverage": 0.997411561691113
+    },
+    {
+      "period": 12,
+      "covered_columns": 544,
+      "total_columns": 1159,
+      "coverage": 0.46937014667817084
+    },
+    {
+      "period": 14,
+      "covered_columns": 522,
+      "total_columns": 1159,
+      "coverage": 0.45038826574633306
+    }
+  ],
+  "note": "图像吻合度，不是App逐日精确数值误差。"
+}

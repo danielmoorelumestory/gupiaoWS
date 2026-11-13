@@ -1,0 +1,14 @@
+{
+  "kind": "user_readback_in_claude_session",
+  "source_dispatch": "ctx_1c919b42bce9",
+  "source_user_message_id": "287ffde4-583b-439a-9bd6-b201e12184a0",
+  "source_orca_message_id": "msg_2f7abd3dbb39",
+  "source_transcript_timestamp_ms": 1794565698976,
+  "user_text": "10-19 是 3.478，08-18 是 71.661",
+  "symbol": "sh588060",
+  "readings": {
+    "2026-10-19": "3.478",
+    "2026-08-18": "71.661"
+  },
+  "provenance_note": "协调者已在Orca worker-read的Claude会话转录中核对该用户原话。为用户App十字光标回读，不附加声称有这两个点的新截图。"
+}

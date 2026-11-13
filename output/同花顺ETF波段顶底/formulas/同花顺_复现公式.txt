@@ -1,0 +1,10 @@
+{同花顺ETF波段顶底：截图及行情核验的复现，非官方源码}
+{周期13、SUM滚动求和已核验；柱宽3为近似，未在同花顺编译实测}
+{本文本不规定分母为0或不足13次变化的行为；Python实现对此返回None}
+N:=13;
+LC:=REF(CLOSE,1);
+波段值:100*SUM(MAX(CLOSE-LC,0),N)/SUM(ABS(CLOSE-LC),N),COLORBLACK;
+高位线:70,COLORGREEN;
+低位线:30,COLORRED;
+STICKLINE(波段值<30,波段值,30,3,0),COLORRED;
+STICKLINE(波段值>70,70,波段值,3,0),COLORGREEN;

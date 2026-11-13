@@ -1,0 +1,65 @@
+{
+  "indicator": "ETF波段顶底",
+  "formula_version": "1.0.0",
+  "status": "high_confidence_reconstruction",
+  "official_source_obtained": false,
+  "verified_on": "2026-11-13",
+  "symbol": "sh588060",
+  "period": 13,
+  "high_line": 70,
+  "low_line": 30,
+  "formula": "100*SUM(MAX(CLOSE-REF(CLOSE,1),0),13)/SUM(ABS(CLOSE-REF(CLOSE,1)),13)",
+  "input_unit": "absolute_price_changes_not_percent_returns",
+  "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh588060,day,2025-01-01,2026-11-13,700,qfq",
+  "requested_adjustment": "qfq",
+  "returned_series_key": "day",
+  "adjustment_note": "不将请求qfq等同实际前复权保证；OHLC及MA5至MA120与App前复权截图一致。",
+  "bars": 451,
+  "date_range": [
+    "2025-01-02",
+    "2026-11-13"
+  ],
+  "final_bar_confirmed": false,
+  "screenshots": [
+    {
+      "file": "screenshots/588060-short-20261113.png",
+      "visible_range": [
+        "2026-08-07",
+        "2026-11-13"
+      ],
+      "bars": 65,
+      "displayed_value": "53.115"
+    },
+    {
+      "file": "screenshots/588060-long-20261113.png",
+      "visible_range": [
+        "2025-07-10",
+        "2026-11-13"
+      ],
+      "bars": 327,
+      "displayed_value": "53.115"
+    }
+  ],
+  "exact_current_check": {
+    "sum_up": "0.162",
+    "sum_absolute": "0.305",
+    "value": "53.11475409836065573770491803",
+    "display_value": "53.115"
+  },
+  "implementation_choices": {
+    "incomplete_window": null,
+    "zero_denominator": null,
+    "missing_close": "reset_window",
+    "threshold_equality": "middle_zone"
+  },
+  "limitations": [
+    "只验证一个标的，两张图重叠，不合计为392根独立样本",
+    "长区间为图像核验；仅三个分散点有App数值确认，未逐日读取",
+    "公式绘图宽度、同花顺内编译、除零与初始窗口行为未实测"
+  ],
+  "historical_app_readbacks": {
+    "2026-08-18": "71.661",
+    "2026-10-19": "3.478"
+  },
+  "historical_readback_source": "user-app-readback.json"
+}
