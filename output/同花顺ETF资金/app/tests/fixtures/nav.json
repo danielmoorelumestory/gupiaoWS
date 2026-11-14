@@ -1,0 +1,64 @@
+{
+  "Data": {
+    "LSJZList": [
+      {
+        "FSRQ": "2026-11-12",
+        "DWJZ": "4.1203",
+        "LJJZ": "1.8549",
+        "SDATE": null,
+        "ACTUALSYI": "",
+        "NAVTYPE": "1",
+        "JZZZL": "-0.78",
+        "SGZT": "场内买入",
+        "SHZT": "场内卖出",
+        "FHFCZ": "",
+        "FHFCZ10": "",
+        "FHFCBZ": "",
+        "DTYPE": null,
+        "FHSP": ""
+      },
+      {
+        "FSRQ": "2026-11-11",
+        "DWJZ": "4.1528",
+        "LJJZ": "1.8669",
+        "SDATE": null,
+        "ACTUALSYI": "",
+        "NAVTYPE": "1",
+        "JZZZL": "0.40",
+        "SGZT": "场内买入",
+        "SHZT": "场内卖出",
+        "FHFCZ": "",
+        "FHFCZ10": "",
+        "FHFCBZ": "",
+        "DTYPE": null,
+        "FHSP": ""
+      },
+      {
+        "FSRQ": "2026-11-10",
+        "DWJZ": "4.1361",
+        "LJJZ": "1.8607",
+        "SDATE": null,
+        "ACTUALSYI": "",
+        "NAVTYPE": "1",
+        "JZZZL": "0.07",
+        "SGZT": "场内买入",
+        "SHZT": "场内卖出",
+        "FHFCZ": "",
+        "FHFCZ10": "",
+        "FHFCBZ": "",
+        "DTYPE": null,
+        "FHSP": ""
+      }
+    ],
+    "FundType": "001",
+    "SYType": null,
+    "isNewType": false,
+    "Feature": "010,050,051,053"
+  },
+  "ErrCode": 0,
+  "ErrMsg": null,
+  "TotalCount": 3,
+  "Expansion": null,
+  "PageSize": 5,
+  "PageIndex": 1
+}

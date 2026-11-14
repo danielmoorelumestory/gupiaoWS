@@ -1,0 +1,4 @@
+requests>=2.31
+pytest>=8.0
+# akshare 仅深市历史回补一次性使用，按需安装
+# akshare>=1.12
