@@ -35,7 +35,14 @@ def _retry(fn, *args, tries: int = 3, delay: float = 3.0):
 
 def run_daily(conn, date: str, data_path: str = DEFAULT_JSON) -> None:
     """采集 date 当日份额，结合前一交易日算净流入，落库并重导出 data.json。"""
-    shares = _retry(fetch.fetch_shares, date)
+    sse = _retry(fetch.fetch_sse_shares, date)
+    if not sse:
+        # 沪市份额为空：非交易日或当日未披露。落库残缺快照会毒化次一交易日的前值
+        # 基准（沪市全跳过），故跳过不落库、不计算。
+        log.warning("%s 沪市份额为空（非交易日/未披露），跳过", date)
+        return
+    szse = _retry(fetch.fetch_szse_shares, date)
+    shares = {**sse, **szse}
     store.save_shares(conn, date, shares)
 
     prev_date = store.latest_date_before(conn, date)
