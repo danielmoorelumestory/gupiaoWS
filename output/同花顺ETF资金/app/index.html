@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ETF资金净流入</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f6f7f9; --panel:#ffffff; --fg:#1b2230; --muted:#5f6a7d; --line:#dfe3ea; --grid:#eceff4;
+  --up:#d6403a; --down:#1f9d63; --idx:#5f6a7d; --accent:#d6403a;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --panel:#1a2029; --fg:#e4e8ef; --muted:#97a1b3; --line:#2c3440; --grid:#232a35;
+  --up:#ef5f57; --down:#35b97b; --idx:#97a1b3; --accent:#ef5f57; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --panel:#1a2029; --fg:#e4e8ef; --muted:#97a1b3; --line:#2c3440; --grid:#232a35;
+  --up:#ef5f57; --down:#35b97b; --idx:#97a1b3; --accent:#ef5f57; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:22px max(16px,env(safe-area-inset-left,0px)) 48px}
+h1{font-size:1.5rem;margin:0 0 2px;font-weight:700}
+.sub{color:var(--muted);font-size:.86rem;margin:0}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:8px;padding:10px 14px;margin:14px 0;font-size:.84rem;color:var(--muted)}
+.badge{display:inline-block;background:var(--accent);color:#fff;border-radius:4px;
+  padding:1px 8px;font-size:.75rem;font-weight:700;margin-left:8px;vertical-align:middle}
+.tabs{display:flex;gap:8px;margin:16px 0 12px}
+.tab{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--fg);
+  font-family:var(--sans);font-size:.92rem;font-weight:700;padding:7px 20px;border-radius:8px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card .k{color:var(--muted);font-size:.84rem}
+.card .v{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:1.5rem;font-weight:500;margin-top:4px}
+.pos{color:var(--up)} .neg{color:var(--down)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 6px 4px}
+#chart{width:100%;height:440px}
+.foot{color:var(--muted);font-size:.8rem;margin-top:10px}
+.err{color:var(--up);font-size:.9rem}
+@media(max-width:560px){#chart{height:360px}h1{font-size:1.3rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>ETF资金净流入 <span id="badge" class="badge" hidden>示例数据</span></h1>
+  <p class="sub">全A / 宽基 · 日度净申赎（份额差×NAV 估算）· 上证指数叠加</p>
+  <div id="note" class="note"></div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-scope="all" aria-selected="true">全A</button>
+    <button class="tab" role="tab" data-scope="broad" aria-selected="false">宽基</button>
+  </div>
+
+  <div class="cards">
+    <div class="card"><div class="k">昨日净流入（亿元）</div><div class="v" id="kpi-yesterday">—</div></div>
+    <div class="card"><div class="k">近60日累计（亿元）</div><div class="v" id="kpi-cum60">—</div></div>
+  </div>
+
+  <div class="panel"><div id="chart"></div></div>
+  <p class="foot">红=净流入、绿=净流出。顶部盘中预估曲线、单只资金榜不在本页范围（匿名不可得）。<span id="updated"></span></p>
+  <p id="err" class="err"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<script>
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let DATA = null, scope = "all", chart = null;
+
+function fmt(v){ return (v>0?"+":"") + v.toFixed(2); }
+
+function renderKPI(){
+  const k = DATA.kpi[scope];
+  const y = document.getElementById("kpi-yesterday");
+  const c = document.getElementById("kpi-cum60");
+  y.textContent = fmt(k.yesterday); y.className = "v " + (k.yesterday>=0?"pos":"neg");
+  c.textContent = fmt(k.cum60);     c.className = "v " + (k.cum60>=0?"pos":"neg");
+}
+
+function renderChart(){
+  const s = DATA.series;
+  const dates = s.map(r=>r.date);
+  const key = scope==="all" ? "flow_all" : "flow_broad";
+  const up = css("--up"), down = css("--down");
+  const bars = s.map(r=>({ value:r[key], itemStyle:{color: r[key]>=0?up:down} }));
+  const idx  = s.map(r=>r.index);
+  chart.setOption({
+    animation:false,
+    grid:{left:56,right:56,top:24,bottom:64},
+    tooltip:{trigger:"axis", backgroundColor:css("--panel"), borderColor:css("--line"),
+      textStyle:{color:css("--fg")},
+      formatter:p=>{ const d=p[0].axisValue; let o=d; p.forEach(x=>{ o+="<br>"+x.marker+x.seriesName+": "+(typeof x.value==="number"?x.value.toFixed(2):x.value); }); return o; }},
+    legend:{data:["净流入(亿元)","上证指数"], textStyle:{color:css("--muted")}, top:0, right:8},
+    xAxis:{type:"category", data:dates, axisLine:{lineStyle:{color:css("--line")}},
+      axisLabel:{color:css("--muted")}},
+    yAxis:[
+      {type:"value", name:"亿元", nameTextStyle:{color:css("--muted")},
+       splitLine:{lineStyle:{color:css("--grid")}}, axisLabel:{color:css("--muted")}},
+      {type:"value", name:"上证指数", position:"right", nameTextStyle:{color:css("--muted")},
+       splitLine:{show:false}, axisLabel:{color:css("--muted")}, scale:true}
+    ],
+    dataZoom:[
+      {type:"inside", start:40, end:100},
+      {type:"slider", start:40, end:100, height:18, bottom:24,
+       borderColor:css("--line"), textStyle:{color:css("--muted")}}
+    ],
+    series:[
+      {name:"净流入(亿元)", type:"bar", data:bars, yAxisIndex:0, barMaxWidth:14},
+      {name:"上证指数", type:"line", data:idx, yAxisIndex:1, showSymbol:false,
+       lineStyle:{color:css("--idx"), width:1.4}, itemStyle:{color:css("--idx")}}
+    ]
+  }, true);
+}
+
+function render(){ renderKPI(); renderChart(); }
+
+function selectScope(sc){
+  scope = sc;
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected", String(t.dataset.scope===sc)));
+  render();
+}
+
+fetch("data.json", {cache:"no-store"}).then(r=>r.json()).then(d=>{
+  DATA = d;
+  document.getElementById("note").textContent = d.note || "";
+  document.getElementById("badge").hidden = !d.sample;
+  document.getElementById("updated").textContent = d.updated ? " · 更新于 "+d.updated.replace("T"," ") : "";
+  chart = echarts.init(document.getElementById("chart"));
+  document.querySelectorAll(".tab").forEach(t=> t.addEventListener("click", ()=>selectScope(t.dataset.scope)));
+  window.addEventListener("resize", ()=> chart && chart.resize());
+  render();
+}).catch(e=>{ document.getElementById("err").textContent = "加载 data.json 失败：" + e.message; });
+</script>
+</body>
+</html>
