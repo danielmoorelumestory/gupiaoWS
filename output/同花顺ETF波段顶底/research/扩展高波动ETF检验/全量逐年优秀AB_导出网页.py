@@ -1,4 +1,5 @@
-"""把 全量逐年优秀AB_最终分组.json 导出为 BusinessWeb 两个回测分组的数据文件（创业板择时优选 = A 组；沪深300择时优选 = B 组）。"""
+"""把 全量逐年优秀AB_最终分组.json 导出为 BusinessWeb 两个回测分组的数据文件（创业板择时优选 = A 组；沪深300择时优选 = B 组）。
+【2026-11-18 起不再使用】现行分组见 网页口径重新分组.py（网页回测口径、只算已平仓、归组按逐年平均→年化→盈利年份/波动→回撤）。本文件保留作历史记录。"""
 import json, sys, importlib.util
 from multiprocessing import Pool
 spec = importlib.util.spec_from_file_location("S", "全量逐年优秀AB筛选.py"); S = importlib.util.module_from_spec(spec); spec.loader.exec_module(S)

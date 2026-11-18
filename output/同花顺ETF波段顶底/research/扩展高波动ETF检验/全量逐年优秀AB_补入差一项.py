@@ -5,7 +5,8 @@
 候选：该方案 5 项条件只差 1 项，且尚未在任一组。
 「比较优秀」：该方案 逐年均 ≥ 10% 且 全历史卡玛 ≥ 0.7。
 「关联度不高」：与本组每一只现有标的的日收益相关系数都 < 0.80（重叠 ≥120 天才计）。
-三者都满足 → 补入对应组。另报所有差一项候选的最高相关对象，供参考。"""
+三者都满足 → 补入对应组。另报所有差一项候选的最高相关对象，供参考。
+【2026-11-18 起不再使用】现行分组见 网页口径重新分组.py（网页回测口径、只算已平仓、归组按逐年平均→年化→盈利年份/波动→回撤）。本文件保留作历史记录。"""
 import json, math, statistics, importlib.util
 import run_extended as X, regime_multi as RM
 spec = importlib.util.spec_from_file_location("S", "全量逐年优秀AB筛选.py"); S = importlib.util.module_from_spec(spec); spec.loader.exec_module(S)
