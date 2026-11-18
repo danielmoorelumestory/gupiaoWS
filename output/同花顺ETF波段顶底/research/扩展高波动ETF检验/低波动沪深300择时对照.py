@@ -15,7 +15,7 @@ VAR = {"纯MACD": {**T.BASE, "N": "ALL"}, "现行·R2": T.BASE, "现行·H1": {*
        "Y1·R2": Y.VAR["Y1"], "Y1·H1": {**Y.VAR["Y1"], "N": "H1"}, "Y1·H2": {**Y.VAR["Y1"], "N": "H2"}}
 KEYS = list(VAR); WINDOWS = K.WINDOWS; FULL = ("1900-01-01", "2026-11-10")
 def init():
-    T.init(); hs = RM.index_series("sh000300"); p880 = RM.load_new("510880")
+    T.init(); hs = RM.index_series("sh000300"); p880 = RM.ratio_leg("510880")  # 2026-11-18 起用腾讯后复权，与网页一致
     h1 = RM.ma_state(RM.ratio(hs, p880), 20); h2 = RM.ma_state(hs, 20)
     for d in T.M.PANEL.values():
         d["reg"]["ALL"] = [True] * len(d["dates"]); d["reg"]["H1"] = RM.last_known(h1, d["dates"]); d["reg"]["H2"] = RM.last_known(h2, d["dates"])
