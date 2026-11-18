@@ -53,7 +53,7 @@ def entry(code, rows, r2, h1):
 def sim(d, plan, w=C.FULL):
     return C.Y.simulate_y(d, {**C.Y.VAR["Y1"], "N": "R2-20"}, w, 20, retain=True) if plan == "A" else C.K.simulate_kd(d, {**C.T.BASE, "N": "H1"}, w, 20, retain=True)
 def work(code):
-    p880 = RM.load_new("510880"); r2 = RM.ma_state(RM.ratio(RM.load_new("159915"), p880), 20); h1 = RM.ma_state(RM.ratio(RM.index_series("sh000300"), p880), 20)
+    p880 = RM.ratio_leg("510880"); r2 = RM.ma_state(RM.ratio(RM.ratio_leg("159915"), p880), 20); h1 = RM.ma_state(RM.ratio(RM.index_series("sh000300"), p880), 20)
     rows = index_rows(INDEX[code]); d = entry(code, rows, r2, h1); r = sim(d, C.PLAN[code])
     nav = {x["date"]: x["nav"] for x in r["nav"]}
     base = None; hold = {}

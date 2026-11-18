@@ -13,6 +13,14 @@ def series_from_rows(rows): return {r["date"]: float(r["adjusted_close"]) for r 
 def load_new(code):
     rows = list(csv.DictReader(io.StringIO(gzip.decompress((HERE / f"data/{code}.csv.gz").read_bytes()).decode())))
     return series_from_rows(rows)
+# 择时比值两条腿（创业板 159915、红利 510880）的数据源。2026-11-18 用户决定统一为腾讯后复权，与 BusinessWeb 页面 / Telegram 提醒一致；
+# 原口径（data/*.csv.gz 的 adjusted_close = 收盘 + 累计分红现金）设 RATIO_SRC = "cash" 可复现旧结果。两者牛熊判断仅个别贴线日不同。
+RATIO_SRC = "tencent"
+def ratio_leg(code):
+    if RATIO_SRC == "tencent":
+        import tencent_hfq as T
+        return T.load(("sh" if code[0] == "5" else "sz") + code)
+    return load_new(code)
 def load_510880():
     import prepare_new as P
     r = P.prepare("510880", "红利ETF")  # 生成 data/510880.csv.gz（unchecked 时也写出？）
@@ -64,7 +72,7 @@ def build_signals(pool):
     sig["B20h"] = h
     sig["B2060"] = {d: None if br[20][d] is None or br[60][d] is None else (br[20][d] >= .5 and br[60][d] >= .5) for d in dates}
     p949, p890 = load_new("159949"), series_from_rows(pool["512890"]["rows"])
-    p915 = load_new("159915"); p880 = load_new("510880")
+    p915 = ratio_leg("159915"); p880 = ratio_leg("510880")
     r1, r2 = ratio(p949, p890), ratio(p915, p880)
     sig["R1-20"], sig["R1-60"] = ma_state(r1, 20), ma_state(r1, 60)
     sig["R2-20"], sig["R2-60"] = ma_state(r2, 20), ma_state(r2, 60)
