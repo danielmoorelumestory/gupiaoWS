@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+scratch/
+data/cache/
+data/raw/
+*.pyc
+.pytest_cache/
+data/server-state.json
+data/server-jobs.log
+data/last_run.json
+data/.run.lock
+data/cache19/

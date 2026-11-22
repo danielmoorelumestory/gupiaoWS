@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>重点宽基观察池 · ETF 份额与汇金披露</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a id="back" class="back" href="../#overview" hidden>← 返回资金观测台</a>
+    <h1>重点宽基观察池</h1>
+    <p class="sub">场内份额 / 规模 / 成交额（盘后数据，非实时）· 汇金具名持有人（仅来自定期报告原文）</p>
+    <div id="status" class="status">加载中…</div>
+    <div id="svc" class="status svc" role="status" aria-live="polite"></div>
+    <nav class="tabs" role="tablist">
+      <button data-tab="rank" class="on">成交排名</button>
+      <button data-tab="detail">单只走势</button>
+      <button data-tab="hold">汇金披露</button>
+      <button data-tab="composite">合成观察</button>
+      <button data-tab="about">口径与来源</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="tab-rank" class="tab on">
+    <div class="note">按 <b id="rank-day">—</b> 成交额排序。成交额是买卖成交总额，<b>不是资金净流入</b>；份额变化是全市场申赎结果，<b>不能直接等同于任何机构（含汇金）买入</b>。</div>
+    <div class="tablebox"><table id="rank-table" class="grid"></table></div>
+  </section>
+
+  <section id="tab-detail" class="tab">
+    <div class="controls">
+      <label>ETF <select id="sel-etf"></select></label>
+      <label>起 <input type="date" id="d-from"></label>
+      <label>止 <input type="date" id="d-to"></label>
+      <span class="presets">
+        <button data-p="20">20日</button><button data-p="60">60日</button><button data-p="120">半年</button>
+        <button data-p="250">1年</button><button data-p="ytd">今年</button><button data-p="all">全部</button>
+      </span>
+      <label class="scale-sel">规模口径
+        <select id="scale-basis"><option value="scale_nav">份额×同日净值</option><option value="scale_close">份额×收盘价（估算）</option></select>
+      </label>
+    </div>
+    <div id="cards" class="cards"></div>
+    <div class="chart-box">
+      <div class="chart-title"><span class="dot purple"></span>收盘价（元，不复权）<span class="mut">· 实际市场价格；分红/份额折算会形成跳变，不代表复权收益</span></div>
+      <svg id="ch-price" class="chart" preserveAspectRatio="none"></svg>
+      <div class="chart-title"><span class="dot orange"></span>场内份额（亿份，左轴） <span class="dot blue"></span><span id="scale-title">规模（亿元，右轴）</span></div>
+      <svg id="ch-share" class="chart" preserveAspectRatio="none"></svg>
+      <div class="chart-title"><span class="dot gray"></span>成交额（亿元）</div>
+      <svg id="ch-amt" class="chart short" preserveAspectRatio="none"></svg>
+      <div id="tip" class="tip" hidden></div>
+    </div>
+    <div class="note small" id="coverage"></div>
+    <div class="row-actions"><button id="btn-csv">下载 CSV（原始单位 份/元）</button></div>
+    <div class="tablebox"><table id="day-table" class="grid"></table></div>
+  </section>
+
+  <section id="tab-hold" class="tab">
+    <div class="three">
+      <div><b>① 已披露历史事实</b>：定期报告原文“期末上市基金前十名持有人”中的具名持有人与份额，只代表该期末时点。</div>
+      <div><b>② ETF 全市场份额变化</b>：交易所日频份额是所有投资者申赎的合计，不能拆出汇金。</div>
+      <div><b>③ 无法确认账户身份</b>：匿名“机构”、未进前十、未披露期，一律是“未知”，不是 0；不存在免费公开的实时账户明细。</div>
+    </div>
+    <div class="note warn" id="fmt2026"></div>
+    <div id="hold-list"></div>
+  </section>
+
+  <section id="tab-composite" class="tab">
+    <div class="note"><b>视频19只ETF观察池 · 份额合计观察指数（近似观察版）</b>：观察指数 = 100 × 19 只场内份额合计 ÷ 2025-11-20 合计；当日份额变化 = 19 只合计较前一交易日之差（亿份）。
+      这是按视频名单做的<b>近似观察</b>，<b>不是作者的完整算法</b>，也不是全市场宽基或“国家队”持仓。份额跨基金直接相加只描述名义份额（每份等权），<b>不代表人民币资金流</b>。
+      19 只任一缺数据时当日合计不计算（不补 0、不缩池）。价格与份额同向/背离<b>仅供观察，预测能力尚未验证</b>；本页不设阈值、不给买卖提示。</div>
+    <div id="c-status" class="status">加载中…</div>
+    <div class="controls">
+      <span class="presets" id="c-presets"><button data-p="all" id="c-all-btn">全部历史</button><button data-p="750">近3年</button><button data-p="250">近1年</button><button data-p="base">从基期</button><button data-p="ytd">今年</button></span>
+      <label>起 <input type="date" id="c-from"></label>
+      <label>止 <input type="date" id="c-to"></label>
+      <label>价格对照 <select id="c-bench"></select></label>
+    </div>
+    <div id="c-cards" class="cards"></div>
+    <div id="c-cover" class="note small"></div>
+    <div id="c-split"></div>
+    <div class="chart-box" id="c-chartbox">
+      <div class="chart-title"><span class="dot blue"></span>观察指数（点，基期 2025-11-20 = 100）</div>
+      <svg id="c-ch-idx" class="chart" preserveAspectRatio="none"></svg>
+      <div class="chart-title"><span class="dot red"></span><span class="dot green"></span>当日份额变化（亿份，19 只合计；红=增加 绿=减少）</div>
+      <svg id="c-ch-chg" class="chart short2" preserveAspectRatio="none"></svg>
+      <div class="chart-title"><span class="dot purple"></span><span id="c-bench-title">价格对照</span></div>
+      <svg id="c-ch-px" class="chart short2" preserveAspectRatio="none"></svg>
+      <div id="c-tip" class="tip" hidden></div>
+    </div>
+    <div class="note small">三张图共用日期轴、各自独立 Y 轴；悬停/触摸显示同日数值与横纵虚线，点击图表可查看该日成员明细。价格为 BaoStock 不复权收盘（指数为点、ETF 为元），不是净值。</div>
+    <h3 class="sec">成员明细 · <span id="c-mem-day">—</span></h3>
+    <div class="tablebox"><table id="c-members" class="grid"></table></div>
+  </section>
+
+  <section id="tab-about" class="tab">
+    <div id="about"></div>
+  </section>
+</main>
+<footer class="wrap foot">数据仅供研究，不构成投资建议。生成于 <span id="gen">—</span></footer>
+<script src="core.js"></script>
+<script src="composite.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
